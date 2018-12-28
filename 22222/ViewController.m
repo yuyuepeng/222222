@@ -21,6 +21,8 @@ extern NSString *CTSettingCopyMyPhoneNumber(void);
 #import "CalendarController.h"
 #import "TableViewRefreshController.h"
 #import "JianBianCirleController.h"
+#import "SiriController.h"
+
 #import <CoreMotion/CoreMotion.h>
 
 //FOUNDATION_EXPORT NSArray *getArr(NSString *str);
@@ -75,8 +77,12 @@ NSArray *getArr(NSString *str) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSArray *arr = getArr(@"wqehqjweehqjehq,ejq,h,e,q");
+    NSLog(@"naviHeight = %f",self.navigationController.navigationBar.height);
+    NSLog(@"tabbar = %f",self.tabBarController.tabBar.height);
+    NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
     
-    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈"];
+//    NSLog(@"",self.navigationController);
+    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit"];
     [self.view addSubview:self.tableView];
    
     
@@ -161,6 +167,12 @@ NSArray *getArr(NSString *str) {
         case 9:
         {
             JianBianCirleController *vc = [[JianBianCirleController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 10:
+        {
+            SiriController *vc = [[SiriController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

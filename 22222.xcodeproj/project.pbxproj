@@ -23,6 +23,7 @@
 		C128E940215BA8F000556BD4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C128E93F215BA8F000556BD4 /* CoreGraphics.framework */; };
 		C128E942215BA8FD00556BD4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C128E941215BA8FD00556BD4 /* libc++.tbd */; };
 		C13382A021251198001C05DA /* YYPBezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = C133829F21251198001C05DA /* YYPBezierView.m */; };
+		C14614DE21D611E100D9D3CF /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14614DD21D611E100D9D3CF /* Speech.framework */; };
 		C15051172175827E00C4B8A8 /* TTSConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C15050E12175827D00C4B8A8 /* TTSConfigViewController.m */; };
 		C15051182175827E00C4B8A8 /* TTSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C15050E22175827D00C4B8A8 /* TTSConfig.m */; };
 		C15051192175827E00C4B8A8 /* TTSUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = C15050E32175827D00C4B8A8 /* TTSUIController.m */; };
@@ -50,6 +51,9 @@
 		C150512F2175827E00C4B8A8 /* OneshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C15051162175827E00C4B8A8 /* OneshotViewController.m */; };
 		C152A8CD21708C9300AE41A7 /* TableViewRefreshController.m in Sources */ = {isa = PBXBuildFile; fileRef = C152A8CC21708C9300AE41A7 /* TableViewRefreshController.m */; };
 		C15416A920F3060100C20F79 /* HXFAnimationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C15416A820F3060100C20F79 /* HXFAnimationTools.m */; };
+		C17DC5F421D1DB7300AADE82 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17DC5F321D1DB7300AADE82 /* Intents.framework */; };
+		C17DC5F621D1DBE100AADE82 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17DC5F521D1DBE100AADE82 /* IntentsUI.framework */; };
+		C17DC64821D2104200AADE82 /* SiriController.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DC64721D2104200AADE82 /* SiriController.m */; };
 		C183386E21549C69001A8C20 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = C183386D21549C69001A8C20 /* ViewController2.m */; };
 		C19E9F37215DD2C1000C4910 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19E9F36215DD2C1000C4910 /* LocalAuthentication.framework */; };
 		C1A69338216B3FAF0092F82A /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A69337216B3FAF0092F82A /* HomeKit.framework */; };
@@ -137,6 +141,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C17DC61B21D2062500AADE82 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		03FB8E4DC71BB6EA6D57266A /* Pods-22222Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222Tests/Pods-22222Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		09492881E221F08FC3116AD0 /* libPods-22222Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-22222Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +177,7 @@
 		C128E941215BA8FD00556BD4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		C133829E21251198001C05DA /* YYPBezierView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYPBezierView.h; sourceTree = "<group>"; };
 		C133829F21251198001C05DA /* YYPBezierView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYPBezierView.m; sourceTree = "<group>"; };
+		C14614DD21D611E100D9D3CF /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		C15050DF2175827D00C4B8A8 /* TTSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSConfig.h; sourceTree = "<group>"; };
 		C15050E02175827D00C4B8A8 /* TTSUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSUIController.h; sourceTree = "<group>"; };
 		C15050E12175827D00C4B8A8 /* TTSConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSConfigViewController.m; sourceTree = "<group>"; };
@@ -214,6 +232,10 @@
 		C152A8CC21708C9300AE41A7 /* TableViewRefreshController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewRefreshController.m; sourceTree = "<group>"; };
 		C15416A720F3060100C20F79 /* HXFAnimationTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXFAnimationTools.h; sourceTree = "<group>"; };
 		C15416A820F3060100C20F79 /* HXFAnimationTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXFAnimationTools.m; sourceTree = "<group>"; };
+		C17DC5F321D1DB7300AADE82 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		C17DC5F521D1DBE100AADE82 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		C17DC64621D2104200AADE82 /* SiriController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SiriController.h; sourceTree = "<group>"; };
+		C17DC64721D2104200AADE82 /* SiriController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SiriController.m; sourceTree = "<group>"; };
 		C183386C21549C69001A8C20 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		C183386D21549C69001A8C20 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		C19E9F36215DD2C1000C4910 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
@@ -347,6 +369,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C14614DE21D611E100D9D3CF /* Speech.framework in Frameworks */,
+				C17DC5F621D1DBE100AADE82 /* IntentsUI.framework in Frameworks */,
+				C17DC5F421D1DB7300AADE82 /* Intents.framework in Frameworks */,
 				C1A6933E216B40A20092F82A /* CoreMotion.framework in Frameworks */,
 				C1A6933C216B403D0092F82A /* HealthKitUI.framework in Frameworks */,
 				C1A6933A216B40360092F82A /* HealthKit.framework in Frameworks */,
@@ -595,6 +620,9 @@
 		C1C27D792110157F00E49385 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C14614DD21D611E100D9D3CF /* Speech.framework */,
+				C17DC5F521D1DBE100AADE82 /* IntentsUI.framework */,
+				C17DC5F321D1DB7300AADE82 /* Intents.framework */,
 				C1A6933D216B40A20092F82A /* CoreMotion.framework */,
 				C1A6933B216B403D0092F82A /* HealthKitUI.framework */,
 				C1A69339216B40360092F82A /* HealthKit.framework */,
@@ -654,6 +682,8 @@
 				C152A8CC21708C9300AE41A7 /* TableViewRefreshController.m */,
 				C1DC898A2177042B009477E3 /* JianBianCirleController.h */,
 				C1DC898B2177042B009477E3 /* JianBianCirleController.m */,
+				C17DC64621D2104200AADE82 /* SiriController.h */,
+				C17DC64721D2104200AADE82 /* SiriController.m */,
 			);
 			path = functions;
 			sourceTree = "<group>";
@@ -833,6 +863,7 @@
 				C1F5AA7020EDF529008968A4 /* Frameworks */,
 				C1F5AA7120EDF529008968A4 /* Resources */,
 				33016E8A6FD3001176294E57 /* [CP] Copy Pods Resources */,
+				C17DC61B21D2062500AADE82 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -897,6 +928,9 @@
 								enabled = 1;
 							};
 							com.apple.HomeKit = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
 								enabled = 1;
 							};
 						};
@@ -1099,6 +1133,7 @@
 				C1E0F920212FD6AF00DC1051 /* IShootJianBianSlider.m in Sources */,
 				C15051262175827E00C4B8A8 /* ISEResultFinal.m in Sources */,
 				C1E0F924212FD6AF00DC1051 /* IShootJianBianSliderJia.m in Sources */,
+				C17DC64821D2104200AADE82 /* SiriController.m in Sources */,
 				C1DC899321770FA4009477E3 /* HXFPhoneNumView.m in Sources */,
 				C1C1CD76215C625900A7C2A2 /* SBJson4Writer.m in Sources */,
 				C1C1CD73215C625900A7C2A2 /* SBJson4StreamTokeniser.m in Sources */,

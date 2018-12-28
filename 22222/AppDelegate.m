@@ -39,7 +39,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     UITabBarController *tab = [[UITabBarController alloc] init];
     ViewController *vc = [[ViewController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [tab addChildViewController:vc];
+
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:tab];
     //    [tab setViewControllers:@[vc]];
     
     self.window.rootViewController = nc;

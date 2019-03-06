@@ -226,6 +226,12 @@
     [color getRed:&red green:&green blue:&blue alpha:&al];
     return  (__bridge id)[UIColor colorWithRed:red green:green blue:blue alpha:alpha].CGColor;
 }
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//
+//}
+//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//
+//}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

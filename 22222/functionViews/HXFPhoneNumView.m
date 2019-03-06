@@ -117,7 +117,12 @@
 - (UIColor *)colorWithHexString:(NSString *)color {
     return [self colorWithHexString:color alpha:1.0];
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+}
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+}
 - (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha {
     NSString *cString = [[color stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     

@@ -40,7 +40,7 @@
     UITabBarController *tab = [[UITabBarController alloc] init];
     ViewController *vc = [[ViewController alloc] init];
     [tab addChildViewController:vc];
-
+   
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:tab];
     //    [tab setViewControllers:@[vc]];
     

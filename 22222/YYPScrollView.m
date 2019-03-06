@@ -43,6 +43,7 @@
     }
     
 }
+
 - (void)removeImageViews {
     for (UIImageView *imageView in self.subviews) {
         [imageView removeFromSuperview];

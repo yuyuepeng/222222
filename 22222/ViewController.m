@@ -22,6 +22,8 @@ extern NSString *CTSettingCopyMyPhoneNumber(void);
 #import "TableViewRefreshController.h"
 #import "JianBianCirleController.h"
 #import "SiriController.h"
+#import "ARController.h"
+#import "GifTwoController.h"
 
 #import <CoreMotion/CoreMotion.h>
 
@@ -80,9 +82,9 @@ NSArray *getArr(NSString *str) {
     NSLog(@"naviHeight = %f",self.navigationController.navigationBar.height);
     NSLog(@"tabbar = %f",self.tabBarController.tabBar.height);
     NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
-    
+    NSLog(@"mainwidth %lf",mainWidth);
 //    NSLog(@"",self.navigationController);
-    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit"];
+    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体"];
     [self.view addSubview:self.tableView];
    
     
@@ -176,13 +178,33 @@ NSArray *getArr(NSString *str) {
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 11:
+        {
+            ARController *vc = [[ARController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        case 12:
+        {
+            GifTwoController *vc = [[GifTwoController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             
+        }
+            break;
+        case 13:
+        {
+            [self.navigationController pushViewController:[[NSClassFromString(@"AllFontsController") alloc] init] animated:YES];
+            
+        }
+            break;
         default:
             break;
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    return 64;
+}
 
 
 

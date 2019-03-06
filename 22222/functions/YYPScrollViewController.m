@@ -22,6 +22,7 @@
     NSArray *imageArray = [NSArray arrayWithObjects:@"img1.jpg",@"img2.jpg",@"img3.jpg",@"img4.jpg",@"img5.jpg",@"img6.jpg",@"img7.jpg",@"img8.jpg",@"img9.jpg",@"img10.jpg", nil];
     scrollView.imageSize = CGSizeMake(200, 200);
     scrollView.separatorWidth = 15;
+    scrollView.userInteractionEnabled = false;
     [scrollView customImageViewWithImageUrls:imageArray];
     
     [self.view addSubview:scrollView];

@@ -1,0 +1,6 @@
+framework module Pods_22222Tests {
+  umbrella header "Pods-22222Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

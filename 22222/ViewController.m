@@ -24,7 +24,7 @@ extern NSString *CTSettingCopyMyPhoneNumber(void);
 #import "SiriController.h"
 #import "ARController.h"
 #import "GifTwoController.h"
-
+#import "_2222-Swift.h"
 #import <CoreMotion/CoreMotion.h>
 
 //FOUNDATION_EXPORT NSArray *getArr(NSString *str);
@@ -84,7 +84,7 @@ NSArray *getArr(NSString *str) {
     NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
     NSLog(@"mainwidth %lf",mainWidth);
 //    NSLog(@"",self.navigationController);
-    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体"];
+    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie"];
     [self.view addSubview:self.tableView];
    
     
@@ -193,6 +193,14 @@ NSArray *getArr(NSString *str) {
         case 13:
         {
             [self.navigationController pushViewController:[[NSClassFromString(@"AllFontsController") alloc] init] animated:YES];
+            
+        }
+            break;
+        case 14:
+        {
+            LottieController *lottie = [[LottieController alloc] init];
+            
+            [self.navigationController pushViewController:lottie animated:YES];
             
         }
             break;

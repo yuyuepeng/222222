@@ -8,7 +8,6 @@
 //
 
 #import "AllFontsController.h"
-
 @interface AllFontsController ()
 
 @property(nonatomic, strong) UIScrollView *scrollView;
@@ -19,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     NSArray *arr = [UIFont familyNames];
     _scrollView.contentSize = CGSizeMake(mainWidth, 44 * arr.count);

@@ -8,6 +8,7 @@
 
 #import "HanziController.h"
 //master
+//这是new
 @interface HanziController ()
 
 @property (nonatomic, strong) UITextField *textField;

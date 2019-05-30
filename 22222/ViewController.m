@@ -85,7 +85,7 @@ NSArray *getArr(NSString *str) {
     NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
     NSLog(@"mainwidth %lf",mainWidth);
 //    NSLog(@"",self.navigationController);
-    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文"];
+    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表"];
     [self.view addSubview:self.tableView];
    
     
@@ -206,6 +206,14 @@ NSArray *getArr(NSString *str) {
         }
             break;
         case 15:
+        {
+            HanziController *lottie = [[HanziController alloc] init];
+            
+            [self.navigationController pushViewController:lottie animated:YES];
+            
+        }
+            break;
+        case 16:
         {
             HanziController *lottie = [[HanziController alloc] init];
             

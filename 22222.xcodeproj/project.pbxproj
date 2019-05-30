@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6077359E2B9BC405B66A8B16 /* Pods_22222UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE60F772972A000C4DC7B862 /* Pods_22222UITests.framework */; };
 		B3DA4AD114B17CB5D49CC69F /* Pods_22222Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CA150A60AD39643C25B6C5 /* Pods_22222Tests.framework */; };
+		C115FEDD229FC09A0018B79C /* LinkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEDC229FC09A0018B79C /* LinkListController.m */; };
 		C128E828215B97BD00556BD4 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C128E827215B97BD00556BD4 /* iflyMSC.framework */; };
 		C128E92C215BA87B00556BD4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C128E92B215BA87B00556BD4 /* libz.tbd */; };
 		C128E92E215BA88900556BD4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C128E92D215BA88900556BD4 /* AVFoundation.framework */; };
@@ -183,6 +184,8 @@
 		B09C27B595B76483A1A0003D /* Pods-22222UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B73167CAC309998045534766 /* Pods-22222Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222Tests/Pods-22222Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA0D756271ACAA2A2EF42620 /* Pods_22222.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_22222.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C115FEDB229FC09A0018B79C /* LinkListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkListController.h; sourceTree = "<group>"; };
+		C115FEDC229FC09A0018B79C /* LinkListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkListController.m; sourceTree = "<group>"; };
 		C128E827215B97BD00556BD4 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		C128E92B215BA87B00556BD4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C128E92D215BA88900556BD4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -784,6 +787,8 @@
 				C12E2B47226727D8008A340E /* LottieController.swift */,
 				C16171732280387500AB3714 /* HanziController.h */,
 				C16171742280387500AB3714 /* HanziController.m */,
+				C115FEDB229FC09A0018B79C /* LinkListController.h */,
+				C115FEDC229FC09A0018B79C /* LinkListController.m */,
 			);
 			path = functions;
 			sourceTree = "<group>";
@@ -1266,6 +1271,7 @@
 				C1DA12B8216DE8EC00E8D928 /* ChangeStrController.m in Sources */,
 				C1C1CD7A215C625900A7C2A2 /* PcmPlayer.m in Sources */,
 				C1E0F929212FD98900DC1051 /* UIView_extra.m in Sources */,
+				C115FEDD229FC09A0018B79C /* LinkListController.m in Sources */,
 				C152A8CD21708C9300AE41A7 /* TableViewRefreshController.m in Sources */,
 				C1DC898C2177042B009477E3 /* JianBianCirleController.m in Sources */,
 				C1E0F91F212FD6AF00DC1051 /* WLArcChart.m in Sources */,

@@ -46,6 +46,22 @@
     
     self.window.rootViewController = nc;
     [self.window makeKeyAndVisible];
+    int n = 11;
+    int a[n];
+    for (int i = 0; i < 11; i ++) {
+        a[i] = i + 1;
+    }
+    for (int i = 0; i < (n + 1)/2 ; i ++) {
+        int temp = a[i];
+        a[i] = a[n - i - 1];
+
+        a[n - 1 - i] = temp;
+    }
+    for (int i = 0; i < n; i ++) {
+        printf("int === %d",a[i]);
+        
+    }
+    
     return YES;
 }
 

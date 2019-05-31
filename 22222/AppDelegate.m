@@ -28,8 +28,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachePath = [paths objectAtIndex:0];
     [IFlySetting setLogFilePath:cachePath];
-    
-    
+
     //Set APPID
     NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"5b359cb2"];
     

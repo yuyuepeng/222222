@@ -1,0 +1,6 @@
+framework module ZSSModel {
+  umbrella header "ZSSModel-umbrella.h"
+
+  export *
+  module * { export * }
+}

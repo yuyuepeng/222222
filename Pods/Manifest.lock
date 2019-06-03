@@ -4,23 +4,27 @@ PODS:
   - SDWebImage (5.0.0-beta3):
     - SDWebImage/Core (= 5.0.0-beta3)
   - SDWebImage/Core (5.0.0-beta3)
+  - ZSSModel (0.0.2)
 
 DEPENDENCIES:
   - lottie-ios
   - MJRefresh (~> 3.1.15.3)
   - SDWebImage (~> 5.0.0-beta3)
+  - ZSSModel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - lottie-ios
     - MJRefresh
     - SDWebImage
+    - ZSSModel
 
 SPEC CHECKSUMS:
   lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   SDWebImage: e52654ceef9fdc19f4c612d64a5b6d3f05dd81a4
+  ZSSModel: f63bd88a6b5c94109a992d488693e03d58d271dd
 
-PODFILE CHECKSUM: 319d1382236ea0130cc1b70eb49e43951a692272
+PODFILE CHECKSUM: 171123faccbc66ac38dd1d34cac0b8f94b5083ea
 
 COCOAPODS: 1.6.1

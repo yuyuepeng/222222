@@ -27,7 +27,8 @@ extern NSString *CTSettingCopyMyPhoneNumber(void);
 #import "_2222-Swift.h"
 #import "HanziController.h"
 #import <CoreMotion/CoreMotion.h>
-
+#import "KVOVCController.h"
+#import "LinkListController.h"
 //FOUNDATION_EXPORT NSArray *getArr(NSString *str);
 
 NSArray *getArr(NSString *str) {
@@ -35,22 +36,6 @@ NSArray *getArr(NSString *str) {
 }
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
-
-
-//@property (nonatomic, strong) PopupView *popUpView;
-//
-//@property (weak, nonatomic) IBOutlet UIButton *startRecBtn;
-//@property (weak, nonatomic) IBOutlet UIButton *stopRecBtn;
-//@property (weak, nonatomic) IBOutlet UIButton *cancelRecBtn;
-//@property (weak, nonatomic) IBOutlet UIButton *upContactBtn;
-//@property (weak, nonatomic) IBOutlet UIButton *upWordListBtn;
-//@property (weak, nonatomic) IBOutlet UIButton *audioStreamBtn;
-
-//@property (weak, nonatomic) IBOutlet UITextView *textView;
-//@property (weak, nonatomic) IBOutlet UIBarButtonItem *settingBtn;
-//
-//@property (nonatomic, strong) NSString * result;
-//@property (nonatomic, assign) BOOL isCanceled;
 
 
 @property (nonatomic, copy) NSArray *arr5;//P
@@ -85,7 +70,7 @@ NSArray *getArr(NSString *str) {
     NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
     NSLog(@"mainwidth %lf",mainWidth);
 //    NSLog(@"",self.navigationController);
-    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表"];
+    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime"];
     [self.view addSubview:self.tableView];
    
     
@@ -207,17 +192,25 @@ NSArray *getArr(NSString *str) {
             break;
         case 15:
         {
-            HanziController *lottie = [[HanziController alloc] init];
+            HanziController *hanzi = [[HanziController alloc] init];
             
-            [self.navigationController pushViewController:lottie animated:YES];
+            [self.navigationController pushViewController:hanzi animated:YES];
             
         }
             break;
         case 16:
         {
-            HanziController *lottie = [[HanziController alloc] init];
+            LinkListController *linkVC = [[LinkListController alloc] init];
             
-            [self.navigationController pushViewController:lottie animated:YES];
+            [self.navigationController pushViewController:linkVC animated:YES];
+            
+        }
+            break;
+        case 17:
+        {
+            KVOVCController *kvoVC = [[KVOVCController alloc] init];
+            
+            [self.navigationController pushViewController:kvoVC animated:YES];
             
         }
             break;

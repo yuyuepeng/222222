@@ -13,6 +13,8 @@
 		C115FEDD229FC09A0018B79C /* LinkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEDC229FC09A0018B79C /* LinkListController.m */; };
 		C115FEE522A0FD4B0018B79C /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEE422A0FD4B0018B79C /* List.m */; };
 		C115FEEB22A107D90018B79C /* AbstractList.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEEA22A107D90018B79C /* AbstractList.m */; };
+		C115FEEE22AE58340018B79C /* KVOVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEED22AE58340018B79C /* KVOVCController.m */; };
+		C115FEF222AE5D500018B79C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEF122AE5D500018B79C /* Person.m */; };
 		C128E828215B97BD00556BD4 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C128E827215B97BD00556BD4 /* iflyMSC.framework */; };
 		C128E92C215BA87B00556BD4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C128E92B215BA87B00556BD4 /* libz.tbd */; };
 		C128E92E215BA88900556BD4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C128E92D215BA88900556BD4 /* AVFoundation.framework */; };
@@ -195,6 +197,10 @@
 		C115FEE422A0FD4B0018B79C /* List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		C115FEE922A107D90018B79C /* AbstractList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractList.h; sourceTree = "<group>"; };
 		C115FEEA22A107D90018B79C /* AbstractList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractList.m; sourceTree = "<group>"; };
+		C115FEEC22AE58340018B79C /* KVOVCController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOVCController.h; sourceTree = "<group>"; };
+		C115FEED22AE58340018B79C /* KVOVCController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOVCController.m; sourceTree = "<group>"; };
+		C115FEF022AE5D500018B79C /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C115FEF122AE5D500018B79C /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		C128E827215B97BD00556BD4 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		C128E92B215BA87B00556BD4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C128E92D215BA88900556BD4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -508,6 +514,15 @@
 			path = LinkList;
 			sourceTree = "<group>";
 		};
+		C115FEEF22AE5D020018B79C /* runtimeModel */ = {
+			isa = PBXGroup;
+			children = (
+				C115FEF022AE5D500018B79C /* Person.h */,
+				C115FEF122AE5D500018B79C /* Person.m */,
+			);
+			path = runtimeModel;
+			sourceTree = "<group>";
+		};
 		C133829621250639001C05DA /* YYPBeisaier */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,6 +826,8 @@
 				C16171742280387500AB3714 /* HanziController.m */,
 				C115FEDB229FC09A0018B79C /* LinkListController.h */,
 				C115FEDC229FC09A0018B79C /* LinkListController.m */,
+				C115FEEC22AE58340018B79C /* KVOVCController.h */,
+				C115FEED22AE58340018B79C /* KVOVCController.m */,
 			);
 			path = functions;
 			sourceTree = "<group>";
@@ -895,6 +912,7 @@
 		C1F5AA7520EDF529008968A4 /* 22222 */ = {
 			isa = PBXGroup;
 			children = (
+				C115FEEF22AE5D020018B79C /* runtimeModel */,
 				C115FEE222A0FD260018B79C /* LinkList */,
 				C1B9004321F862C000605B0C /* source */,
 				C19594BF21EC39E500FAB629 /* view */,
@@ -1304,6 +1322,7 @@
 				C1E0F91E212FD6AF00DC1051 /* YLLineChart.m in Sources */,
 				C1C1CD75215C625900A7C2A2 /* SBJson4StreamWriterState.m in Sources */,
 				C1DA12B2216DE7A300E8D928 /* YYPBezierViewController.m in Sources */,
+				C115FEEE22AE58340018B79C /* KVOVCController.m in Sources */,
 				C1DA12CC216DF9E000E8D928 /* CalendarController.m in Sources */,
 				C150512F2175827E00C4B8A8 /* OneshotViewController.m in Sources */,
 				C1C1CD6F215C625900A7C2A2 /* SAMultisectorControl.m in Sources */,
@@ -1343,6 +1362,7 @@
 				C1DA12C7216DF93400E8D928 /* HXFCalendarView.m in Sources */,
 				C115FEE522A0FD4B0018B79C /* List.m in Sources */,
 				C1C1CD6E215C625900A7C2A2 /* AKPickerView.m in Sources */,
+				C115FEF222AE5D500018B79C /* Person.m in Sources */,
 				C15416A920F3060100C20F79 /* HXFAnimationTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,18 @@
 
 #import "LinkList.h"
 
+@implementation Node
+
+- (instancetype)initWithElement:(id)element next:(Node *)next {
+    self = [super init];
+    if (self) {
+        self.element = element;
+        self.next = next;
+    }
+    return self;
+}
+
+@end
 
 
 @interface LinkList()
@@ -16,4 +28,9 @@
 
 @implementation LinkList
 
+
+//- (Node *)node:(NSInteger)index {
+//    []
+//    return <#expression#>
+//}
 @end

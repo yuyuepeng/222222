@@ -10,13 +10,15 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface Node : NSObject
 
+@property(nonatomic, strong) Node *next;
+
+@property(nonatomic, strong) id element;
+
+- (instancetype)initWithElement:(id)element next:(Node *)next;
+
 @end
 
-@implementation Node
 
-
-
-@end
 @interface LinkList : AbstractList
 
 @end

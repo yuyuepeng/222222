@@ -14,6 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, copy) NSString *name;
 
+@property(nonatomic, copy) NSString *age;
+
+//- (void)log1;
+//- (void)log2;
+- (void)showObjectInfo;
 @end
 
 NS_ASSUME_NONNULL_END

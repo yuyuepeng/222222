@@ -8,15 +8,28 @@
 
 #import "Person.h"
 
+
+
 @implementation Person
+
+
+- (void)showObjectInfo {
+    NSLog(@"Object instance address is %p, Object isa content is %p",self,*((void **)(__bridge void *)self));
+}
 + (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {//控制KVO的触发机制
     BOOL automatic = NO;
     if ([key isEqualToString:@"name"]) {
-        automatic = YES;//
+        automatic = YES;//返回yes是调用kvo的代理方法   返回no是不调用
     }
     else {
         automatic = [super automaticallyNotifiesObserversForKey:key];
     }
     return automatic;
 }
+//- (void)log1 {
+//    NSLog(@"log1");
+//}
+//- (void)log2 {
+//    NSLog(@"log2");
+//}
 @end

@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6077359E2B9BC405B66A8B16 /* Pods_22222UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE60F772972A000C4DC7B862 /* Pods_22222UITests.framework */; };
-		A6D2540B22A5608B006D14C0 /* LinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2540A22A5608B006D14C0 /* LinkList.m */; };
+		A6D2540B22A5608B006D14C0 /* SingleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2540A22A5608B006D14C0 /* SingleLinkList.m */; };
 		B3DA4AD114B17CB5D49CC69F /* Pods_22222Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CA150A60AD39643C25B6C5 /* Pods_22222Tests.framework */; };
+		C1060B3C22B39103002DA11D /* DoubleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = C1060B3B22B39103002DA11D /* DoubleLinkList.m */; };
 		C115FEDD229FC09A0018B79C /* LinkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEDC229FC09A0018B79C /* LinkListController.m */; };
 		C115FEE522A0FD4B0018B79C /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEE422A0FD4B0018B79C /* List.m */; };
 		C115FEEB22A107D90018B79C /* AbstractList.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEEA22A107D90018B79C /* AbstractList.m */; };
@@ -186,11 +187,13 @@
 /* Begin PBXFileReference section */
 		03FB8E4DC71BB6EA6D57266A /* Pods-22222Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222Tests/Pods-22222Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		829B5714657A6A0184431866 /* Pods-22222UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.release.xcconfig"; sourceTree = "<group>"; };
-		A6D2540922A5608B006D14C0 /* LinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
-		A6D2540A22A5608B006D14C0 /* LinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkList.m; sourceTree = "<group>"; };
+		A6D2540922A5608B006D14C0 /* SingleLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLinkList.h; sourceTree = "<group>"; };
+		A6D2540A22A5608B006D14C0 /* SingleLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleLinkList.m; sourceTree = "<group>"; };
 		B09C27B595B76483A1A0003D /* Pods-22222UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B73167CAC309998045534766 /* Pods-22222Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222Tests/Pods-22222Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA0D756271ACAA2A2EF42620 /* Pods_22222.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_22222.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1060B3A22B39103002DA11D /* DoubleLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleLinkList.h; sourceTree = "<group>"; };
+		C1060B3B22B39103002DA11D /* DoubleLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleLinkList.m; sourceTree = "<group>"; };
 		C115FEDB229FC09A0018B79C /* LinkListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkListController.h; sourceTree = "<group>"; };
 		C115FEDC229FC09A0018B79C /* LinkListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkListController.m; sourceTree = "<group>"; };
 		C115FEE322A0FD4B0018B79C /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
@@ -508,8 +511,10 @@
 				C115FEE422A0FD4B0018B79C /* List.m */,
 				C115FEE922A107D90018B79C /* AbstractList.h */,
 				C115FEEA22A107D90018B79C /* AbstractList.m */,
-				A6D2540922A5608B006D14C0 /* LinkList.h */,
-				A6D2540A22A5608B006D14C0 /* LinkList.m */,
+				C1060B3A22B39103002DA11D /* DoubleLinkList.h */,
+				C1060B3B22B39103002DA11D /* DoubleLinkList.m */,
+				A6D2540922A5608B006D14C0 /* SingleLinkList.h */,
+				A6D2540A22A5608B006D14C0 /* SingleLinkList.m */,
 			);
 			path = LinkList;
 			sourceTree = "<group>";
@@ -1311,7 +1316,7 @@
 				C1DA12B5216DE81400E8D928 /* MaksController.m in Sources */,
 				C15051222175827E00C4B8A8 /* ISEResultSentence.m in Sources */,
 				C14614E121D619FF00D9D3CF /* ARController.m in Sources */,
-				A6D2540B22A5608B006D14C0 /* LinkList.m in Sources */,
+				A6D2540B22A5608B006D14C0 /* SingleLinkList.m in Sources */,
 				C1DA12B8216DE8EC00E8D928 /* ChangeStrController.m in Sources */,
 				C1C1CD7A215C625900A7C2A2 /* PcmPlayer.m in Sources */,
 				C1E0F929212FD98900DC1051 /* UIView_extra.m in Sources */,
@@ -1359,6 +1364,7 @@
 				C150511A2175827E00C4B8A8 /* IVWViewController.m in Sources */,
 				C1C1CD71215C625900A7C2A2 /* PopupView.m in Sources */,
 				C1C1CD77215C625900A7C2A2 /* SBJson4Parser.m in Sources */,
+				C1060B3C22B39103002DA11D /* DoubleLinkList.m in Sources */,
 				C1DA12C7216DF93400E8D928 /* HXFCalendarView.m in Sources */,
 				C115FEE522A0FD4B0018B79C /* List.m in Sources */,
 				C1C1CD6E215C625900A7C2A2 /* AKPickerView.m in Sources */,

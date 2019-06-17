@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) NSInteger size;
 
+- (void)rangeCheck:(NSInteger)index;
+
+- (void)outOfBounds:(NSInteger)index;
+
+- (void)rangeCheckForAdd:(NSInteger)index;
+
 @end
 
 NS_ASSUME_NONNULL_END

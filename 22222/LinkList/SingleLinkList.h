@@ -1,5 +1,5 @@
 //
-//  LinkList.h
+//  SingleLinkList.h
 //  22222
 //
 //  Created by 扶摇先生 on 2019/6/3.
@@ -16,9 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithElement:(id)element next:(Node *)next;
 
+
 @end
 
-@interface LinkList : AbstractList
+@interface SingleLinkList : AbstractList
+
+- (NSString *)formatToString;
 
 @end
 

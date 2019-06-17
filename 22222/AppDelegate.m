@@ -60,10 +60,37 @@
         printf("int === %d",a[i]);
         
     }
-    
+    [self seekRandomThreeElementSum:5 Arr:@[@(1),@(2),@(4),@(5),@(6),@(7),@(3)]];//没有
+    [self seekRandomThreeElementSum:6 Arr:@[@(1),@(2),@(3),@(4),@(5),@(6),@(7)]];//有
+    [self seekRandomThreeElementSum:7 Arr:@[@(1),@(4),@(3),@(5),@(6),@(7)]];//没有
+    [self seekRandomThreeElementSum:8 Arr:@[@(1),@(4),@(3),@(5),@(6),@(7)]];//有
+    [self seekRandomThreeElementSum:3 Arr:@[@(1),@(4),@(3),@(5),@(6),@(7)]];//没有
+
     return YES;
 }
-
+- (BOOL)seekRandomThreeElementSum:(NSInteger)sum Arr:(NSArray *)array {
+    NSInteger b,c,d,i,j,k;
+    
+    for (i = 0; i < array.count; i ++) {
+        b = [array[i] integerValue];
+        for (j = 0 ; j < array.count; j ++) {
+            if (j != i) {
+                c = [array[j] integerValue];
+                for (k = 0; k < array.count; k ++) {
+                    if (k != i && k != j) {
+                        d = [array[k] integerValue];
+                        if (b + c + d == sum) {
+                            NSLog(@"have the sum");
+                            return YES;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    NSLog(@"have not the sum");
+    return NO;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

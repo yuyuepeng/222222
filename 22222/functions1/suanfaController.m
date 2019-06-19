@@ -54,7 +54,7 @@
         }
             break;
         case 1:{
-            
+            NSLog(@"arr1 = %@",[self jiOushuRankWithArr:@[@(1),@(2),@(3),@(4),@(5),@(6),@(7),@(8),@(9),@(10),@(11),@(12),@(13),@(14),@(15),@(16)]]);
         }
             break;
         case 2:{
@@ -145,23 +145,61 @@
     NSMutableArray *arr3 = [NSMutableArray array];
     for (NSInteger i = 0; i < arr.count; i ++) {
         if ([arr[i] integerValue]%2) {
-            [arr2 addObject:arr[i]];
+            [arr2 addObject:arr[i]];//奇数
         }else {
-            [arr3 addObject:arr[i]];
+            [arr3 addObject:arr[i]];//偶数
         }
     }
     NSMutableArray *arr1 = [NSMutableArray array];
     if (arr2.count > arr3.count) {
-        for (NSInteger i = 0; i < arr3.count/2; i ++) {
-//            for (NSInteger j = 0; j < 2; i ++) {
-//                if (i%2) {
-//                    [arr1 addObject:arr2[i]];
-//                }else {
-//                    [arr1 addObject:arr2[i]];
-//                }
-//            }
+        for (NSInteger i = 0; i < arr3.count - 1; i ++) {
+            for (NSInteger j = 0; j < 4; j ++) {
+                switch (j) {
+                    case 0:
+                        [arr1 addObject:arr2[i]];
+                        break;
+                    case 1:
+                        [arr1 addObject:arr2[i + 1]];
+                        break;
+                    case 2:
+                        [arr1 addObject:arr3[i]];
+                        break;
+                    case 3:
+                        [arr1 addObject:arr3[i + 1]];
+                        break;
+                        
+                    default:
+                        break;
+                }
+            }
         }
+        [arr1 addObjectsFromArray:[arr2 subarrayWithRange:NSMakeRange(arr3.count, arr2.count - arr3.count)]];
+    }else {
+        for (NSInteger i = 0; i < arr2.count; i ++) {
+            NSInteger m = i/2 + i % 4;
+            NSInteger n = (i - 2)/2 + i % 4;
+            NSInteger l = i % 4;
+            switch (l) {
+                case 0:
+                    [arr1 addObject:arr2[m]];
+                    break;
+                case 1:
+                    [arr1 addObject:arr2[m]];
+                    break;
+                case 2:
+                    [arr1 addObject:arr3[n]];
+                    break;
+                case 3:
+                    [arr1 addObject:arr3[n]];
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+        [arr1 addObjectsFromArray:[arr3 subarrayWithRange:NSMakeRange(arr2.count, arr3.count - arr2.count)]];
     }
+    NSLog(@"arr2 = %@, arr3 = %@",arr2,arr3);
     return arr1;
 }
 

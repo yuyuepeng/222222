@@ -29,7 +29,7 @@
     [self addElement:element index:_size];
 }
 - (void)outOfBounds:(NSInteger)index {
-    NSLog(@"index + %ld + size + %ld",index,_size);
+    NSLog(@"index + %ld + size + %ld",(long)index,(long)_size);
 }
 - (void)rangeCheck:(NSInteger)index {
     if (index<0 || index >= _size) {

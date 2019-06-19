@@ -7,6 +7,7 @@
 //
 
 #import "LinkListController.h"
+#import "SingleLinkList.h"
 
 @interface LinkListController ()
 
@@ -16,6 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    SingleLinkList *singleLinkList = [[SingleLinkList alloc] init];
+    [singleLinkList addElement:@(2)];
+    [singleLinkList addElement:@(3)];
+    [singleLinkList addElement:@(4)];
+    [singleLinkList addElement:@(5)];
+    [singleLinkList addElement:@(6)];
+    [singleLinkList addElement:@(7)];
+    [singleLinkList addElement:@(8)];
+    [singleLinkList addElement:@(9)];
+    for (NSInteger i = 0; i < 9; i ++) {
+        [singleLinkList removeWithIndex:0];
+    }
+    
+    NSLog(@"wodeSingleLinkList = %@",[singleLinkList formatToString]);
     // Do any additional setup after loading the view.
 }
 

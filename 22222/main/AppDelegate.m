@@ -60,11 +60,83 @@
         printf("int === %d",a[i]);
         
     }
-    
+    [self seekRandomThreeElementSum1:5 Arr1:@[@(1),@(2),@(4),@(5),@(6),@(7),@(3)]];//没有
+    [self seekRandomThreeElementSum1:6 Arr1:@[@(1),@(2),@(3),@(4),@(5),@(6),@(7)]];//有
+    [self seekRandomThreeElementSum1:7 Arr1:@[@(1),@(4),@(3),@(5),@(6),@(7)]];//没有
+    [self seekRandomThreeElementSum1:8 Arr1:@[@(1),@(4),@(3),@(5),@(6),@(7)]];//有
+    [self seekRandomThreeElementSum1:3 Arr1:@[@(1),@(4),@(3),@(5),@(6),@(7)]];//没有
+
+
+
     return YES;
 }
+- (BOOL)seekRandomThreeElementSum:(NSInteger)sum Arr:(NSArray *)array {
+    NSInteger b,c,d,i,j,k;
+//    for (i = 0; i < array.count - 2; i ++) {
+//        b = [array[i] integerValue];
+//        for (j = i + 1 ; j < array.count - 1; j ++) {
+//            c = [array[j] integerValue];
+//            for (k = j + 1; k < array.count; k ++) {
+//                d = [array[k] integerValue];
+//                if (b + c + d == sum) {
+//                    NSLog(@"have the sum");
+//                    return YES;
+//                }
+//            }
+//        }
+//    }
+    for (i = 0; i < array.count; i ++) {
+        b = [array[i] integerValue];
+        for (j = 0 ; j < array.count; j ++) {
+            if (j != i) {
+                c = [array[j] integerValue];
+                for (k = 0; k < array.count; k ++) {
+                    if (k != i && k != j) {
+                        d = [array[k] integerValue];
+                        if (b + c + d == sum) {
+                            NSLog(@"have the sum");
+                            return YES;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-
+    NSLog(@"have not the sum");
+    return NO;
+}
+- (BOOL)seekRandomThreeElementSum1:(NSInteger)sum Arr1:(NSArray *)array {
+    NSArray *arr1 = [array sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2];
+    }];//将数组排序
+    NSLog(@"arr == %@",arr1);
+    NSInteger length = arr1.count;
+    // 三个数 只需循环length - 2次；
+    for (NSInteger i = 0; i < length - 2; i ++) {
+        NSInteger left = i + 1;
+        NSInteger right = length - 1;
+        NSInteger m, n, l, all;
+        while (left < right) {
+            m = [arr1[i] integerValue];
+            n = [arr1[left] integerValue];
+            l = [arr1[right] integerValue];
+            all = m + n + l;
+            if (all == sum) {
+                NSLog(@"have the sum");
+                return YES;
+            }
+            if (all < sum) {
+                left ++;
+            }
+            if (all > sum) {
+                right --;
+            }
+        }
+    }
+    NSLog(@"have not the sum");
+    return NO;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

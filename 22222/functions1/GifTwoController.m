@@ -32,7 +32,9 @@
 - (void)buttonClick:(UIButton *)button {
     if (button.tag == 10) {
         GifController1 *vc = [[GifController1 alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+//        [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:vc animated:YES completion:nil];
+
+        [(UINavigationController *)[UIApplication sharedApplication].delegate.window.rootViewController pushViewController:vc animated:YES];
     }else {
         GIFController *vc = [[GIFController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];

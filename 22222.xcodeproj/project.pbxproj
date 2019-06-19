@@ -121,6 +121,7 @@
 		C1E0F925212FD6AF00DC1051 /* YLCyclicChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0F91C212FD6AF00DC1051 /* YLCyclicChart.m */; };
 		C1E0F929212FD98900DC1051 /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0F928212FD98900DC1051 /* UIView_extra.m */; };
 		C1E0F92C212FDA0600DC1051 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0F92A212FDA0600DC1051 /* UIColor+Hex.m */; };
+		C1E9BED422BA3D9B002587F0 /* suanfaController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E9BED322BA3D9B002587F0 /* suanfaController.m */; };
 		C1EF7DCA222CC3E3001DF6E1 /* d6be61f56e4b19040b9c69dc604da465.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1EF7DC7222CC3E3001DF6E1 /* d6be61f56e4b19040b9c69dc604da465.jpg */; };
 		C1EF7DCB222CC3E3001DF6E1 /* BX_合成_1.html in Resources */ = {isa = PBXBuildFile; fileRef = C1EF7DC8222CC3E3001DF6E1 /* BX_合成_1.html */; };
 		C1EF7DCC222CC3E3001DF6E1 /* BX_合成_1_style.css in Resources */ = {isa = PBXBuildFile; fileRef = C1EF7DC9222CC3E3001DF6E1 /* BX_合成_1_style.css */; };
@@ -391,6 +392,8 @@
 		C1E0F928212FD98900DC1051 /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_extra.m; sourceTree = "<group>"; };
 		C1E0F92A212FDA0600DC1051 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		C1E0F92B212FDA0600DC1051 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		C1E9BED222BA3D9B002587F0 /* suanfaController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = suanfaController.h; sourceTree = "<group>"; };
+		C1E9BED322BA3D9B002587F0 /* suanfaController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = suanfaController.m; sourceTree = "<group>"; };
 		C1EF7DC7222CC3E3001DF6E1 /* d6be61f56e4b19040b9c69dc604da465.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d6be61f56e4b19040b9c69dc604da465.jpg; sourceTree = "<group>"; };
 		C1EF7DC8222CC3E3001DF6E1 /* BX_合成_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "BX_合成_1.html"; sourceTree = "<group>"; };
 		C1EF7DC9222CC3E3001DF6E1 /* BX_合成_1_style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "BX_合成_1_style.css"; sourceTree = "<group>"; };
@@ -641,6 +644,8 @@
 		C19594BF21EC39E500FAB629 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				C1F5AACC20EE08AE008968A4 /* YYPScrollView.h */,
+				C1F5AACD20EE08AF008968A4 /* YYPScrollView.m */,
 				C19594C021EC3A0A00FAB629 /* GifLoadCell.h */,
 				C19594C121EC3A0A00FAB629 /* GifLoadCell.m */,
 				C1B9004C21F863B300605B0C /* GifLoadCell1.h */,
@@ -684,12 +689,12 @@
 		C1C1CD31215C625900A7C2A2 /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
+				C1C1CD35215C625900A7C2A2 /* SAMath.h */,
 				C1C1CD32215C625900A7C2A2 /* SAMath.m */,
 				C1C1CD33215C625900A7C2A2 /* SAMultisectorControl.h */,
-				C1C1CD34215C625900A7C2A2 /* AKPickerView.m */,
-				C1C1CD35215C625900A7C2A2 /* SAMath.h */,
 				C1C1CD36215C625900A7C2A2 /* SAMultisectorControl.m */,
 				C1C1CD37215C625900A7C2A2 /* AKPickerView.h */,
+				C1C1CD34215C625900A7C2A2 /* AKPickerView.m */,
 			);
 			path = SettingView;
 			sourceTree = "<group>";
@@ -697,13 +702,16 @@
 		C1C1CD38215C625900A7C2A2 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				C1C1CD7B215C630600A7C2A2 /* Definition.h */,
+				C15416A720F3060100C20F79 /* HXFAnimationTools.h */,
+				C15416A820F3060100C20F79 /* HXFAnimationTools.m */,
 				C1C1CD39215C625900A7C2A2 /* AlertView.h */,
-				C1C1CD3A215C625900A7C2A2 /* contact */,
-				C1C1CD3D215C625900A7C2A2 /* PopupView.m */,
-				C1C1CD3E215C625900A7C2A2 /* SBJson */,
 				C1C1CD4E215C625900A7C2A2 /* AlertView.m */,
-				C1C1CD4F215C625900A7C2A2 /* pcmPlayerCode */,
 				C1C1CD53215C625900A7C2A2 /* PopupView.h */,
+				C1C1CD3D215C625900A7C2A2 /* PopupView.m */,
+				C1C1CD3A215C625900A7C2A2 /* contact */,
+				C1C1CD3E215C625900A7C2A2 /* SBJson */,
+				C1C1CD4F215C625900A7C2A2 /* pcmPlayerCode */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -791,7 +799,7 @@
 			path = calendarViews;
 			sourceTree = "<group>";
 		};
-		C1DA12C9216DF94700E8D928 /* functions */ = {
+		C1DA12C9216DF94700E8D928 /* functions1 */ = {
 			isa = PBXGroup;
 			children = (
 				C1DA12AD216DE33000E8D928 /* YYPScrollViewController.h */,
@@ -833,8 +841,10 @@
 				C115FEDC229FC09A0018B79C /* LinkListController.m */,
 				C115FEEC22AE58340018B79C /* KVOVCController.h */,
 				C115FEED22AE58340018B79C /* KVOVCController.m */,
+				C1E9BED222BA3D9B002587F0 /* suanfaController.h */,
+				C1E9BED322BA3D9B002587F0 /* suanfaController.m */,
 			);
-			path = functions;
+			path = functions1;
 			sourceTree = "<group>";
 		};
 		C1DC898D21770E13009477E3 /* functionViews */ = {
@@ -872,6 +882,29 @@
 				C1E0F919212FD6AF00DC1051 /* YLRotateCyclic.m */,
 			);
 			path = YLChart;
+			sourceTree = "<group>";
+		};
+		C1E9BED022BA3C55002587F0 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				C183386C21549C69001A8C20 /* ViewController2.h */,
+				C183386D21549C69001A8C20 /* ViewController2.m */,
+				C1E0F926212FD7CE00DC1051 /* PrefixHeader.pch */,
+				C1F5AA7620EDF529008968A4 /* AppDelegate.h */,
+				C1F5AA7720EDF529008968A4 /* AppDelegate.m */,
+				C1DA12AA216DCE9400E8D928 /* RootViewController.h */,
+				C1DA12AB216DCE9400E8D928 /* RootViewController.m */,
+				C1F5AA7920EDF529008968A4 /* ViewController.h */,
+				C1F5AA7A20EDF529008968A4 /* ViewController.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		C1E9BED122BA3C72002587F0 /* functions2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = functions2;
 			sourceTree = "<group>";
 		};
 		C1EF7DC5222CC3E3001DF6E1 /* 321 */ = {
@@ -917,6 +950,8 @@
 		C1F5AA7520EDF529008968A4 /* 22222 */ = {
 			isa = PBXGroup;
 			children = (
+				C1E9BED122BA3C72002587F0 /* functions2 */,
+				C1E9BED022BA3C55002587F0 /* main */,
 				C115FEEF22AE5D020018B79C /* runtimeModel */,
 				C115FEE222A0FD260018B79C /* LinkList */,
 				C1B9004321F862C000605B0C /* source */,
@@ -925,28 +960,14 @@
 				C1DC898D21770E13009477E3 /* functionViews */,
 				C1DA12C2216DF93300E8D928 /* calendarViews */,
 				C1A6933F216B41390092F82A /* 22222.entitlements */,
-				C1C1CD7B215C630600A7C2A2 /* Definition.h */,
 				C1C1CCF7215C625800A7C2A2 /* business */,
 				C1C1CD31215C625900A7C2A2 /* SettingView */,
 				C1C1CD38215C625900A7C2A2 /* tools */,
 				C128E827215B97BD00556BD4 /* iflyMSC.framework */,
 				C1E0F90C212FD6AF00DC1051 /* YLChart */,
 				C133829621250639001C05DA /* YYPBeisaier */,
-				C1F5AACC20EE08AE008968A4 /* YYPScrollView.h */,
-				C1F5AACD20EE08AF008968A4 /* YYPScrollView.m */,
-				C15416A720F3060100C20F79 /* HXFAnimationTools.h */,
-				C15416A820F3060100C20F79 /* HXFAnimationTools.m */,
 				C1F5AAA820EDF5AD008968A4 /* test2 */,
-				C1F5AA7620EDF529008968A4 /* AppDelegate.h */,
-				C1F5AA7720EDF529008968A4 /* AppDelegate.m */,
-				C1DA12AA216DCE9400E8D928 /* RootViewController.h */,
-				C1DA12AB216DCE9400E8D928 /* RootViewController.m */,
-				C1F5AA7920EDF529008968A4 /* ViewController.h */,
-				C1F5AA7A20EDF529008968A4 /* ViewController.m */,
-				C1DA12C9216DF94700E8D928 /* functions */,
-				C183386C21549C69001A8C20 /* ViewController2.h */,
-				C183386D21549C69001A8C20 /* ViewController2.m */,
-				C1E0F926212FD7CE00DC1051 /* PrefixHeader.pch */,
+				C1DA12C9216DF94700E8D928 /* functions1 */,
 				C1F5AA7C20EDF529008968A4 /* Main.storyboard */,
 				C1F5AA7F20EDF52B008968A4 /* Assets.xcassets */,
 				C1F5AA8120EDF52B008968A4 /* LaunchScreen.storyboard */,
@@ -1316,6 +1337,7 @@
 				C1DA12B5216DE81400E8D928 /* MaksController.m in Sources */,
 				C15051222175827E00C4B8A8 /* ISEResultSentence.m in Sources */,
 				C14614E121D619FF00D9D3CF /* ARController.m in Sources */,
+				C1E9BED422BA3D9B002587F0 /* suanfaController.m in Sources */,
 				A6D2540B22A5608B006D14C0 /* SingleLinkList.m in Sources */,
 				C1DA12B8216DE8EC00E8D928 /* ChangeStrController.m in Sources */,
 				C1C1CD7A215C625900A7C2A2 /* PcmPlayer.m in Sources */,
@@ -1550,7 +1572,7 @@
 					"$(PROJECT_DIR)/22222",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/22222/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/22222/main/PrefixHeader.pch";
 				INFOPLIST_FILE = 22222/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1582,7 +1604,7 @@
 					"$(PROJECT_DIR)/22222",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/22222/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/22222/main/PrefixHeader.pch";
 				INFOPLIST_FILE = 22222/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

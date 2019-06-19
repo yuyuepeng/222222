@@ -24,6 +24,8 @@
 #define kMyUserDefult [NSUserDefaults standardUserDefaults] //保存本地
 
 #define shareAppdelegate [UIApplication sharedApplication].delegate
+#define mainWidth [UIScreen mainScreen].bounds.size.width
+#define mainHeight [UIScreen mainScreen].bounds.size.height
 
 //系统版本号
 #define iOSVersion [[[UIDevice currentDevice] systemVersion] floatValue]

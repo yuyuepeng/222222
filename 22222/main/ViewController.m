@@ -8,8 +8,6 @@
 
 #import "ViewController.h"
 extern NSString *CTSettingCopyMyPhoneNumber(void);
-#define mainWidth [UIScreen mainScreen].bounds.size.width
-#define mainHeight [UIScreen mainScreen].bounds.size.height
 #import "TestViewConteroller.h"
 #import "YYPScrollViewController.h"
 #import "YYPBezierViewController.h"
@@ -70,7 +68,7 @@ NSArray *getArr(NSString *str) {
     NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
     NSLog(@"mainwidth %lf",mainWidth);
 //    NSLog(@"",self.navigationController);
-    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime"];
+    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法"];
     [self.view addSubview:self.tableView];
    
     
@@ -211,7 +209,12 @@ NSArray *getArr(NSString *str) {
             KVOVCController *kvoVC = [[KVOVCController alloc] init];
             
             [self.navigationController pushViewController:kvoVC animated:YES];
-            
+
+        }
+            break;
+        case 18:
+        {
+            [self.navigationController pushViewController:[[NSClassFromString(@"suanfaController") alloc] init] animated:YES];
         }
             break;
         default:

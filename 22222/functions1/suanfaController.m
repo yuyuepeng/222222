@@ -138,7 +138,7 @@
     NSLog(@"have not the sum");
     return NO;
 }
-#pragma --mark 数组奇偶数排列
+#pragma --mark 数组奇偶数排列两个奇数两个偶数
 - (NSArray *)jiOushuRankWithArr:(NSArray *)arr {
     //两个基数两个偶数
     NSMutableArray *arr2 = [NSMutableArray array];

@@ -88,6 +88,7 @@
         weakSelf.page ++;
         [weakSelf loadData];
     }];
+//    [self.tableView addObserver:self forKeyPath:@"contentInset" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
     // Do any additional setup after loading the view.
 }
 
@@ -108,8 +109,11 @@
         [weakSelf.tableView.mj_header endRefreshing];
 
     });
-
-  
+}
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"contentInset"] && [object isEqual:self.tableView]) {
+        NSLog(@"change == %@",change);
+    }
 }
 #pragma mark tableViewdelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -119,7 +123,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCellID"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCellID"];
+        NSLog(@"第%ld个 cell",indexPath.row);
+
     }
+    NSLog(@"外部第%ld个 cell",indexPath.row);
+
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = self.datasouce[indexPath.row];
     return cell;

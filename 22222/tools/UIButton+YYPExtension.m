@@ -82,7 +82,7 @@ static NSString *yypUserDisabled = @"yypUserDisabled";
         }
         self.backgroundColor = color;
     }else {
-//        self.backgroundColor = (UIColor *)[self.stateBackgroundColor objectForKey:yypNormal];
+
     }
 }
 - (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled {

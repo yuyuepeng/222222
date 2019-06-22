@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6077359E2B9BC405B66A8B16 /* Pods_22222UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE60F772972A000C4DC7B862 /* Pods_22222UITests.framework */; };
+		A698675322BD117900A9420E /* UIButton+YYPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A698675222BD117900A9420E /* UIButton+YYPExtension.m */; };
+		A698675622BD11E200A9420E /* BtnCateTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A698675522BD11E200A9420E /* BtnCateTestController.m */; };
 		A6D2540B22A5608B006D14C0 /* SingleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2540A22A5608B006D14C0 /* SingleLinkList.m */; };
 		B3DA4AD114B17CB5D49CC69F /* Pods_22222Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CA150A60AD39643C25B6C5 /* Pods_22222Tests.framework */; };
 		C1060B3C22B39103002DA11D /* DoubleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = C1060B3B22B39103002DA11D /* DoubleLinkList.m */; };
@@ -188,6 +190,10 @@
 /* Begin PBXFileReference section */
 		03FB8E4DC71BB6EA6D57266A /* Pods-22222Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222Tests/Pods-22222Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		829B5714657A6A0184431866 /* Pods-22222UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.release.xcconfig"; sourceTree = "<group>"; };
+		A698675122BD117900A9420E /* UIButton+YYPExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYPExtension.h"; sourceTree = "<group>"; };
+		A698675222BD117900A9420E /* UIButton+YYPExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYPExtension.m"; sourceTree = "<group>"; };
+		A698675422BD11E200A9420E /* BtnCateTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BtnCateTestController.h; sourceTree = "<group>"; };
+		A698675522BD11E200A9420E /* BtnCateTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BtnCateTestController.m; sourceTree = "<group>"; };
 		A6D2540922A5608B006D14C0 /* SingleLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLinkList.h; sourceTree = "<group>"; };
 		A6D2540A22A5608B006D14C0 /* SingleLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleLinkList.m; sourceTree = "<group>"; };
 		B09C27B595B76483A1A0003D /* Pods-22222UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -705,6 +711,8 @@
 				C1C1CD7B215C630600A7C2A2 /* Definition.h */,
 				C15416A720F3060100C20F79 /* HXFAnimationTools.h */,
 				C15416A820F3060100C20F79 /* HXFAnimationTools.m */,
+				A698675122BD117900A9420E /* UIButton+YYPExtension.h */,
+				A698675222BD117900A9420E /* UIButton+YYPExtension.m */,
 				C1C1CD39215C625900A7C2A2 /* AlertView.h */,
 				C1C1CD4E215C625900A7C2A2 /* AlertView.m */,
 				C1C1CD53215C625900A7C2A2 /* PopupView.h */,
@@ -843,6 +851,8 @@
 				C115FEED22AE58340018B79C /* KVOVCController.m */,
 				C1E9BED222BA3D9B002587F0 /* suanfaController.h */,
 				C1E9BED322BA3D9B002587F0 /* suanfaController.m */,
+				A698675422BD11E200A9420E /* BtnCateTestController.h */,
+				A698675522BD11E200A9420E /* BtnCateTestController.m */,
 			);
 			path = functions1;
 			sourceTree = "<group>";
@@ -1330,6 +1340,7 @@
 				C15051182175827E00C4B8A8 /* TTSConfig.m in Sources */,
 				C15051192175827E00C4B8A8 /* TTSUIController.m in Sources */,
 				C1EF7DD5222F94CB001DF6E1 /* AllFontsController.m in Sources */,
+				A698675322BD117900A9420E /* UIButton+YYPExtension.m in Sources */,
 				C1C1CD70215C625900A7C2A2 /* IFlyContact.m in Sources */,
 				C1C1CD79215C625900A7C2A2 /* AlertView.m in Sources */,
 				C15051292175827E00C4B8A8 /* IATConfigViewController.m in Sources */,
@@ -1384,6 +1395,7 @@
 				C150512C2175827E00C4B8A8 /* IATViewController.m in Sources */,
 				C1DA12AC216DCE9400E8D928 /* RootViewController.m in Sources */,
 				C150511A2175827E00C4B8A8 /* IVWViewController.m in Sources */,
+				A698675622BD11E200A9420E /* BtnCateTestController.m in Sources */,
 				C1C1CD71215C625900A7C2A2 /* PopupView.m in Sources */,
 				C1C1CD77215C625900A7C2A2 /* SBJson4Parser.m in Sources */,
 				C1060B3C22B39103002DA11D /* DoubleLinkList.m in Sources */,

@@ -12,7 +12,9 @@
 		A698675622BD11E200A9420E /* BtnCateTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A698675522BD11E200A9420E /* BtnCateTestController.m */; };
 		A6D2540B22A5608B006D14C0 /* SingleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2540A22A5608B006D14C0 /* SingleLinkList.m */; };
 		B3DA4AD114B17CB5D49CC69F /* Pods_22222Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CA150A60AD39643C25B6C5 /* Pods_22222Tests.framework */; };
+		C102292A22D5DC8200DC835F /* HudController.m in Sources */ = {isa = PBXBuildFile; fileRef = C102292922D5DC8200DC835F /* HudController.m */; };
 		C1060B3C22B39103002DA11D /* DoubleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = C1060B3B22B39103002DA11D /* DoubleLinkList.m */; };
+		C108D06222F045C000FF428B /* GCDHighLevelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C108D06122F045C000FF428B /* GCDHighLevelVC.m */; };
 		C115FEDD229FC09A0018B79C /* LinkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEDC229FC09A0018B79C /* LinkListController.m */; };
 		C115FEE522A0FD4B0018B79C /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEE422A0FD4B0018B79C /* List.m */; };
 		C115FEEB22A107D90018B79C /* AbstractList.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEEA22A107D90018B79C /* AbstractList.m */; };
@@ -199,8 +201,12 @@
 		B09C27B595B76483A1A0003D /* Pods-22222UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B73167CAC309998045534766 /* Pods-22222Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222Tests/Pods-22222Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA0D756271ACAA2A2EF42620 /* Pods_22222.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_22222.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C102292822D5DC8200DC835F /* HudController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HudController.h; sourceTree = "<group>"; };
+		C102292922D5DC8200DC835F /* HudController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HudController.m; sourceTree = "<group>"; };
 		C1060B3A22B39103002DA11D /* DoubleLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleLinkList.h; sourceTree = "<group>"; };
 		C1060B3B22B39103002DA11D /* DoubleLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleLinkList.m; sourceTree = "<group>"; };
+		C108D06022F045C000FF428B /* GCDHighLevelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDHighLevelVC.h; sourceTree = "<group>"; };
+		C108D06122F045C000FF428B /* GCDHighLevelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDHighLevelVC.m; sourceTree = "<group>"; };
 		C115FEDB229FC09A0018B79C /* LinkListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkListController.h; sourceTree = "<group>"; };
 		C115FEDC229FC09A0018B79C /* LinkListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkListController.m; sourceTree = "<group>"; };
 		C115FEE322A0FD4B0018B79C /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
@@ -853,6 +859,10 @@
 				C1E9BED322BA3D9B002587F0 /* suanfaController.m */,
 				A698675422BD11E200A9420E /* BtnCateTestController.h */,
 				A698675522BD11E200A9420E /* BtnCateTestController.m */,
+				C102292822D5DC8200DC835F /* HudController.h */,
+				C102292922D5DC8200DC835F /* HudController.m */,
+				C108D06022F045C000FF428B /* GCDHighLevelVC.h */,
+				C108D06122F045C000FF428B /* GCDHighLevelVC.m */,
 			);
 			path = functions1;
 			sourceTree = "<group>";
@@ -1380,6 +1390,7 @@
 				C150511F2175827E00C4B8A8 /* ISEResultReadSentence.m in Sources */,
 				C1F5AACE20EE08AF008968A4 /* YYPScrollView.m in Sources */,
 				C15051212175827E00C4B8A8 /* ISEResultPhone.m in Sources */,
+				C108D06222F045C000FF428B /* GCDHighLevelVC.m in Sources */,
 				C15051272175827E00C4B8A8 /* ISESettingViewController.m in Sources */,
 				C1C1CD6D215C625900A7C2A2 /* SAMath.m in Sources */,
 				C150512B2175827E00C4B8A8 /* IATConfig.m in Sources */,
@@ -1388,6 +1399,7 @@
 				C1E0F922212FD6AF00DC1051 /* YLArcChart.m in Sources */,
 				C1F5AA7820EDF529008968A4 /* AppDelegate.m in Sources */,
 				C17C06AF221D5510007EEF98 /* wodexiaobaobei.m in Sources */,
+				C102292A22D5DC8200DC835F /* HudController.m in Sources */,
 				C19594C221EC3A0A00FAB629 /* GifLoadCell.m in Sources */,
 				C15051202175827E00C4B8A8 /* ISEResultReadWord.m in Sources */,
 				C150511D2175827E00C4B8A8 /* ISEResult.m in Sources */,

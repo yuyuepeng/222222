@@ -9,7 +9,7 @@
 #import "GIFController.h"
 #import "GifLoadCell.h"
 #import <WebKit/WebKit.h>
-@interface GIFController ()<UITableViewDelegate,UITableViewDataSource,WKUIDelegate,WKNavigationDelegate>
+@interface GIFController ()<UITableViewDelegate,UITableViewDataSource,WKUIDelegate,WKNavigationDelegate,UIWebViewDelegate>
 
 @property(nonatomic, strong) UITableView *tableView;
 
@@ -32,12 +32,11 @@
     [super viewDidLoad];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"downLoadHtml" ofType:@"html"];
     NSURL *url;// = [NSURL fileURLWithPath:path/*[[NSBundle mainBundle] pathForResource:@"BX_合成_1" ofType:@"html"]*/];
-    url = [NSURL URLWithString:@"http://download.ad6755.com/extend?type=landing_page&channel=hexin"];
+    url = [NSURL URLWithString:@"http://app.test.qiaokelii.cn/#/agreement/productService"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, mainWidth, mainHeight)];
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, mainWidth, mainHeight)];
     
-    webView.UIDelegate = self;
-    webView.navigationDelegate = self;
+    webView.delegate = self;
     [self.view addSubview:webView];
     [webView loadRequest:request];
 //    [self.view addSubview:self.tableView];

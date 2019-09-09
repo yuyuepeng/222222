@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 //- (void)log1;
 //- (void)log2;
 - (void)showObjectInfo;
+
+- (void)sayhahahaToAmy;
+
++ (void)sayHelloToAmy;
 @end
 
 NS_ASSUME_NONNULL_END

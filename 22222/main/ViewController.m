@@ -27,6 +27,9 @@ extern NSString *CTSettingCopyMyPhoneNumber(void);
 #import <CoreMotion/CoreMotion.h>
 #import "KVOVCController.h"
 #import "LinkListController.h"
+
+#import "Person.h"
+
 //FOUNDATION_EXPORT NSArray *getArr(NSString *str);
 
 NSArray *getArr(NSString *str) {
@@ -70,7 +73,8 @@ NSArray *getArr(NSString *str) {
 //    NSLog(@"",self.navigationController);
     _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法",@"修饰词"];
     [self.view addSubview:self.tableView];
-   
+    [[[Person alloc] init] sayhahahaToAmy];
+    [Person sayHelloToAmy];
     
 
     // Do any additional setup after loading the view, typically from a nib.

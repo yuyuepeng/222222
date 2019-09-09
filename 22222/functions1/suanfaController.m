@@ -26,7 +26,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _dataSource = @[@"判断数组中随机三个数之和等于一个已知数",@"数组奇偶数排列"];
+    _dataSource = @[@"判断数组中随机三个数之和等于一个已知数",@"数组奇偶数排列",@"斐波那契数"];
     [self.view addSubview:self.tableView];
     // Do any additional setup after loading the view.
 }
@@ -58,7 +58,8 @@
         }
             break;
         case 2:{
-            
+            NSInteger m = [self fib:10];
+            NSLog(@"%ld",m);
         }
             break;
         case 3:{
@@ -193,7 +194,23 @@
     }
     return arr1;
 }
+#pragma mark -- 斐波那契数列 求第n个斐波那契数
 
+- (NSInteger)fib:(NSInteger)n {
+    if (n <= 1) {
+        return n;
+    }
+    NSInteger first = 0;
+    NSInteger second = 1;
+    NSLog(@"0 \n1");
+    while (n -- > 1) {
+        second += first;//fib(2) = fib(1) + fib(0);
+        first = second - first;//first = 原来的second = 现在的second - 原来的first
+        NSLog(@"%ld",second);
+    }
+    return second;
+}
+ 
 /*
 #pragma mark - Navigation
 

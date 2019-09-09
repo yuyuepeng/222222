@@ -26,6 +26,16 @@
     }
     return automatic;
 }
++ (void)load {
+    
+}
++ (void)sayHelloToAmy {
+    NSLog(@"hello Amy");
+}
+- (void)sayhahahaToAmy {
+    NSLog(@"hahaha Amy");
+}
+
 //- (void)log1 {
 //    NSLog(@"log1");
 //}

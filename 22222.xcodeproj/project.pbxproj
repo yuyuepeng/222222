@@ -68,6 +68,7 @@
 		C152A8CD21708C9300AE41A7 /* TableViewRefreshController.m in Sources */ = {isa = PBXBuildFile; fileRef = C152A8CC21708C9300AE41A7 /* TableViewRefreshController.m */; };
 		C15416A920F3060100C20F79 /* HXFAnimationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C15416A820F3060100C20F79 /* HXFAnimationTools.m */; };
 		C16171752280387500AB3714 /* HanziController.m in Sources */ = {isa = PBXBuildFile; fileRef = C16171742280387500AB3714 /* HanziController.m */; };
+		C16194AB23161A6600152FD7 /* Person+cate.m in Sources */ = {isa = PBXBuildFile; fileRef = C16194AA23161A6600152FD7 /* Person+cate.m */; };
 		C17C06AF221D5510007EEF98 /* wodexiaobaobei.m in Sources */ = {isa = PBXBuildFile; fileRef = C17C06AE221D5510007EEF98 /* wodexiaobaobei.m */; };
 		C17DC5F421D1DB7300AADE82 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17DC5F321D1DB7300AADE82 /* Intents.framework */; };
 		C17DC5F621D1DBE100AADE82 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17DC5F521D1DBE100AADE82 /* IntentsUI.framework */; };
@@ -298,6 +299,8 @@
 		C15416A820F3060100C20F79 /* HXFAnimationTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXFAnimationTools.m; sourceTree = "<group>"; };
 		C16171732280387500AB3714 /* HanziController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HanziController.h; sourceTree = "<group>"; };
 		C16171742280387500AB3714 /* HanziController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HanziController.m; sourceTree = "<group>"; };
+		C16194A923161A6600152FD7 /* Person+cate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+cate.h"; sourceTree = "<group>"; };
+		C16194AA23161A6600152FD7 /* Person+cate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+cate.m"; sourceTree = "<group>"; };
 		C17C06AD221D5510007EEF98 /* wodexiaobaobei.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wodexiaobaobei.h; sourceTree = "<group>"; };
 		C17C06AE221D5510007EEF98 /* wodexiaobaobei.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wodexiaobaobei.m; sourceTree = "<group>"; };
 		C17DC5F321D1DB7300AADE82 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
@@ -542,6 +545,8 @@
 			children = (
 				C115FEF022AE5D500018B79C /* Person.h */,
 				C115FEF122AE5D500018B79C /* Person.m */,
+				C16194A923161A6600152FD7 /* Person+cate.h */,
+				C16194AA23161A6600152FD7 /* Person+cate.m */,
 			);
 			path = runtimeModel;
 			sourceTree = "<group>";
@@ -1330,6 +1335,7 @@
 				C1C1CD74215C625900A7C2A2 /* SBJson4StreamParserState.m in Sources */,
 				C15051252175827E00C4B8A8 /* ISEResultTools.m in Sources */,
 				C1C1CD72215C625900A7C2A2 /* SBJson4StreamParser.m in Sources */,
+				C16194AB23161A6600152FD7 /* Person+cate.m in Sources */,
 				C1E0F92C212FDA0600DC1051 /* UIColor+Hex.m in Sources */,
 				C1F5AA7B20EDF529008968A4 /* ViewController.m in Sources */,
 				C150511E2175827E00C4B8A8 /* ISEResultReadSyllable.m in Sources */,

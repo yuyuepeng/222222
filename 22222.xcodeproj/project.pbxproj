@@ -15,6 +15,7 @@
 		C102292A22D5DC8200DC835F /* HudController.m in Sources */ = {isa = PBXBuildFile; fileRef = C102292922D5DC8200DC835F /* HudController.m */; };
 		C1060B3C22B39103002DA11D /* DoubleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = C1060B3B22B39103002DA11D /* DoubleLinkList.m */; };
 		C108D06222F045C000FF428B /* GCDHighLevelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C108D06122F045C000FF428B /* GCDHighLevelVC.m */; };
+		C10BB7E523290311009A260B /* aboutBlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C10BB7E423290311009A260B /* aboutBlockVC.m */; };
 		C10F73E822FAA579004BE43A /* XiushiciController.m in Sources */ = {isa = PBXBuildFile; fileRef = C10F73E722FAA579004BE43A /* XiushiciController.m */; };
 		C115FEDD229FC09A0018B79C /* LinkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEDC229FC09A0018B79C /* LinkListController.m */; };
 		C115FEE522A0FD4B0018B79C /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEE422A0FD4B0018B79C /* List.m */; };
@@ -209,6 +210,8 @@
 		C1060B3B22B39103002DA11D /* DoubleLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleLinkList.m; sourceTree = "<group>"; };
 		C108D06022F045C000FF428B /* GCDHighLevelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDHighLevelVC.h; sourceTree = "<group>"; };
 		C108D06122F045C000FF428B /* GCDHighLevelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDHighLevelVC.m; sourceTree = "<group>"; };
+		C10BB7E323290311009A260B /* aboutBlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aboutBlockVC.h; sourceTree = "<group>"; };
+		C10BB7E423290311009A260B /* aboutBlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = aboutBlockVC.m; sourceTree = "<group>"; };
 		C10F73E622FAA579004BE43A /* XiushiciController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiushiciController.h; sourceTree = "<group>"; };
 		C10F73E722FAA579004BE43A /* XiushiciController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiushiciController.m; sourceTree = "<group>"; };
 		C115FEDB229FC09A0018B79C /* LinkListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkListController.h; sourceTree = "<group>"; };
@@ -873,6 +876,8 @@
 				C108D06122F045C000FF428B /* GCDHighLevelVC.m */,
 				C10F73E622FAA579004BE43A /* XiushiciController.h */,
 				C10F73E722FAA579004BE43A /* XiushiciController.m */,
+				C10BB7E323290311009A260B /* aboutBlockVC.h */,
+				C10BB7E423290311009A260B /* aboutBlockVC.m */,
 			);
 			path = functions1;
 			sourceTree = "<group>";
@@ -1347,6 +1352,7 @@
 				C1B9005421F8651700605B0C /* GifController1.m in Sources */,
 				C1DA12C1216DEE4F00E8D928 /* iFlyController.m in Sources */,
 				C1B9004E21F863B300605B0C /* GifLoadCell1.m in Sources */,
+				C10BB7E523290311009A260B /* aboutBlockVC.m in Sources */,
 				C12E2B0322670EF7008A340E /* test.swift in Sources */,
 				C150511B2175827E00C4B8A8 /* ISEParams.m in Sources */,
 				C1E0F925212FD6AF00DC1051 /* YLCyclicChart.m in Sources */,

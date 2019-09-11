@@ -240,6 +240,12 @@ NSArray *getArr(NSString *str) {
         {
             [self.navigationController pushViewController:[[NSClassFromString(@"XiushiciController") alloc] init] animated:YES];
         }
+            break;
+        case 23:
+        {
+            [self.navigationController pushViewController:[[NSClassFromString(@"aboutBlockVC") alloc] init] animated:YES];
+        }
+            break;
         default:
             break;
     }

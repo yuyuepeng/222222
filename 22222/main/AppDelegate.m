@@ -12,6 +12,8 @@
 #import "IFlyMSC/IFlyMSC.h"
 @interface AppDelegate ()
 
+@property(nonatomic, copy) NSString *sss;
+
 @end
 
 @implementation AppDelegate
@@ -34,6 +36,8 @@
     
     //Configure and initialize iflytek services.(This interface must been invoked in application:didFinishLaunchingWithOptions:)
     [IFlySpeechUtility createUtility:initString];
+    [self setValue:@"1213" forKey:@"sss"];
+    NSLog(@"%@",[self valueForKey:@"sss"]);
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     UITabBarController *tab = [[UITabBarController alloc] init];
@@ -88,6 +92,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
++ (BOOL)accessInstanceVariablesDirectly {
+    return NO;
+}
 
 @end

@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"GCD的高级用法";
-    _dataSource = @[@"延时执行",@"串行，异步顺序下载",@"并行同步顺序下载",@"任务1、2在子线程上先顺序执行后，任务3、4在主线程上执行，最后任务5、6、7在子线程上并发无序执行",@"队列组1",@"队列组2",@"两个网络请求同步问题"];
+    _dataSource = @[@"延时执行",@"串行，异步顺序下载",@"并行同步顺序下载",@"任务1、2在子线程上先顺序执行后，任务3、4在主线程上执行，最后任务5、6、7在子线程上并发无序执行",@"队列组1",@"队列组2",@"两个网络请求同步问题",@"dispatch_barrier_sync栅栏函数"];
     [self.view addSubview:self.tableView];
     [self.tableView reloadData];
     // Do any additional setup after loading the view.
@@ -62,6 +62,7 @@
     [self performSelector:NSSelectorFromString([NSString stringWithFormat:@"test%ld",indexPath.row])];
 }
 - (void)test0 {
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSLog(@"3秒以后");
     });
@@ -85,6 +86,7 @@
             });
         });
     });
+    NSLog(@"外部主线程");
 }
 - (void)test2 {
     dispatch_queue_t currentQueue = dispatch_queue_create("currentQueue", DISPATCH_QUEUE_CONCURRENT);

@@ -37,8 +37,18 @@
     
     return shareThread;
 }
-- (void)threadTest {
-    NSLog(@"test:%@", [NSThread currentThread]);
++ (void)threadTest {
+    @autoreleasepool {
+        
+        NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+        
+        [runLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
+
+        [runLoop run];
+        NSLog(@"test:%@", [NSThread currentThread]);
+
+    }
+//    NSLog(@"test:%@", [NSThread currentThread]);
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

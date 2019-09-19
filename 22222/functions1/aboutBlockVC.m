@@ -8,7 +8,12 @@
 
 #import "aboutBlockVC.h"
 
+typedef void(^newname)(void);
+
 @interface aboutBlockVC ()
+
+@property(nonatomic, copy) newname block;
+
 
 @end
 static NSInteger nnn3 = 300;
@@ -17,6 +22,7 @@ NSInteger nnn4 = 3000;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     //1、不使用外部变量的block是全局block
     NSLog(@"%@",[ ^{
         NSLog(@"globalBlock");

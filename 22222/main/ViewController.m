@@ -27,6 +27,9 @@ extern NSString *CTSettingCopyMyPhoneNumber(void);
 #import <CoreMotion/CoreMotion.h>
 #import "KVOVCController.h"
 #import "LinkListController.h"
+#import "InterViewController.h"
+#import "Person.h"
+
 //FOUNDATION_EXPORT NSArray *getArr(NSString *str);
 
 NSArray *getArr(NSString *str) {
@@ -41,6 +44,7 @@ NSArray *getArr(NSString *str) {
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *dataSource;
+@property (nonatomic, strong) InterViewController *intVC;
 
 @end
 
@@ -68,9 +72,10 @@ NSArray *getArr(NSString *str) {
     NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
     NSLog(@"mainwidth %lf",mainWidth);
 //    NSLog(@"",self.navigationController);
-    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法",@"修饰词"];
+    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法",@"修饰词",@"关于block",@"面试题"];
     [self.view addSubview:self.tableView];
-   
+    [[[Person alloc] init] sayhahahaToAmy];
+    [Person sayHelloToAmy];
     
 
     // Do any additional setup after loading the view, typically from a nib.
@@ -236,6 +241,18 @@ NSArray *getArr(NSString *str) {
         {
             [self.navigationController pushViewController:[[NSClassFromString(@"XiushiciController") alloc] init] animated:YES];
         }
+            break;
+        case 23:
+        {
+            [self.navigationController pushViewController:[[NSClassFromString(@"aboutBlockVC") alloc] init] animated:YES];
+        }
+            break;
+        case 24:
+        {
+            InterViewController *intVC = [[InterViewController alloc] init];
+            [self.navigationController pushViewController:intVC animated:YES];
+        }
+            break;
         default:
             break;
     }

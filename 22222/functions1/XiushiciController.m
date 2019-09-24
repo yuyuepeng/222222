@@ -8,6 +8,63 @@
 
 #import "XiushiciController.h"
 
+@interface father : NSObject
+
+@end
+
+@implementation father
+
+
+
+@end
+
+@interface son : father
+
+@end
+
+@implementation son
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        NSLog(@"%@", NSStringFromClass([self class]));
+        NSLog(@"%@", NSStringFromClass([super class]));
+        BOOL res1 = [(id)[NSObject class] isKindOfClass:[NSObject class]];
+        BOOL res2 = [(id)[NSObject class] isMemberOfClass:[NSObject class]];
+        father *dd = [[father alloc] init];
+        BOOL res3 = [dd isKindOfClass:[father class]];
+        BOOL res4 = [(id)[father class] isMemberOfClass:object_getClass((id)[father class])];
+        NSLog(@"%d--%d--%d--%d", res1, res2, res3, res4);
+
+//        NSStringFromClass([self class]) = Son
+//        NSStringFromClass([super class]) = Son
+//        详解：这个题目主要是考察关于 Objective-C 中对 self 和 super 的理解。
+//        self 是类的隐藏参数，指向当前调用方法的这个类的实例；
+//        super 本质是一个编译器标示符，和 self 是指向的同一个消息接受者。不同点在于：super 会告诉编译器，当调用方法时，去调用父类的方法，而不是本类中的方法。
+//        当使用 self 调用方法时，会从当前类的方法列表中开始找，如果没有，就从父类中再找；而当使用 super 时，则从父类的方法列表中开始找。然后调用父类的这个方法。
+//        在调用[super class]的时候，runtime会去调用objc_msgSendSuper方法，而不是objc_msgSend；
+
+//由于找到了父类NSObject里面的class方法的IMP，又因为传入的入参objc_super->receiver = self。self就是son，调用class，所以父类的方法class执行IMP之后，输出还是son，最后输出两个都一样，都是输出son。        作者：全网iOS面试题总结
+      
+        
+   
+    }
+    return self;
+}
+
+@end
+
+@interface Personaaaaaa :NSObject
+
+
+@end
+
+@implementation Personaaaaaa
+
+
+
+@end
+
 @interface XiushiciController ()
 
 @property(nonatomic, assign) NSMutableArray *arr;
@@ -50,6 +107,8 @@
     指针拷贝 - 实际上相当于引用计数+1，被拷贝的和拷贝的引用同一个对象。
     接下来我们分两个方面做测试：
     */
+    Personaaaaaa *p = [[Personaaaaaa alloc] init];
+    NSObject *aaa = [[NSObject alloc] init];
     
     NSMutableArray *arr4 = [NSMutableArray array]; //arr4引用计数为1；
     NSLog(@"retainCount4 -- %ld",CFGetRetainCount((__bridge CFTypeRef)(arr4)));
@@ -68,6 +127,9 @@
     NSLog(@"%@,%@",self.arr3,arr4);
 
     // Do any additional setup after loading the view.
+    
+    son *s = [[son alloc] init];
+    
 }
 
 /*

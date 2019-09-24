@@ -9,7 +9,7 @@
 #import "HXFBaseViewController.h"
 
 
-typedef void(^block)();
+typedef void(^block)(void);
 
 @interface TestViewConteroller : HXFBaseViewController
 

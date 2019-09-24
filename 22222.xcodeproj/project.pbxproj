@@ -15,6 +15,7 @@
 		C102292A22D5DC8200DC835F /* HudController.m in Sources */ = {isa = PBXBuildFile; fileRef = C102292922D5DC8200DC835F /* HudController.m */; };
 		C1060B3C22B39103002DA11D /* DoubleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = C1060B3B22B39103002DA11D /* DoubleLinkList.m */; };
 		C108D06222F045C000FF428B /* GCDHighLevelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C108D06122F045C000FF428B /* GCDHighLevelVC.m */; };
+		C10BB7E82329D8B4009A260B /* aboutBlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C10BB7E72329D8B4009A260B /* aboutBlockVC.m */; };
 		C10F73E822FAA579004BE43A /* XiushiciController.m in Sources */ = {isa = PBXBuildFile; fileRef = C10F73E722FAA579004BE43A /* XiushiciController.m */; };
 		C115FEDD229FC09A0018B79C /* LinkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEDC229FC09A0018B79C /* LinkListController.m */; };
 		C115FEE522A0FD4B0018B79C /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = C115FEE422A0FD4B0018B79C /* List.m */; };
@@ -68,6 +69,7 @@
 		C152A8CD21708C9300AE41A7 /* TableViewRefreshController.m in Sources */ = {isa = PBXBuildFile; fileRef = C152A8CC21708C9300AE41A7 /* TableViewRefreshController.m */; };
 		C15416A920F3060100C20F79 /* HXFAnimationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C15416A820F3060100C20F79 /* HXFAnimationTools.m */; };
 		C16171752280387500AB3714 /* HanziController.m in Sources */ = {isa = PBXBuildFile; fileRef = C16171742280387500AB3714 /* HanziController.m */; };
+		C16194AB23161A6600152FD7 /* Person+cate.m in Sources */ = {isa = PBXBuildFile; fileRef = C16194AA23161A6600152FD7 /* Person+cate.m */; };
 		C17C06AF221D5510007EEF98 /* wodexiaobaobei.m in Sources */ = {isa = PBXBuildFile; fileRef = C17C06AE221D5510007EEF98 /* wodexiaobaobei.m */; };
 		C17DC5F421D1DB7300AADE82 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17DC5F321D1DB7300AADE82 /* Intents.framework */; };
 		C17DC5F621D1DBE100AADE82 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17DC5F521D1DBE100AADE82 /* IntentsUI.framework */; };
@@ -157,6 +159,8 @@
 		C1F5AACA20EDF64D008968A4 /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1F5AAC020EDF64D008968A4 /* img1.jpg */; };
 		C1F5AACB20EDF64D008968A4 /* img10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1F5AAC120EDF64D008968A4 /* img10.jpg */; };
 		C1F5AACE20EE08AF008968A4 /* YYPScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F5AACD20EE08AF008968A4 /* YYPScrollView.m */; };
+		C1F8C1A5233319E8005D3EEE /* InterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F8C1A4233319E8005D3EEE /* InterViewController.m */; };
+		C1F8C1A823332779005D3EEE /* AmyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F8C1A723332779005D3EEE /* AmyView.m */; };
 		CB5AC1DD2013268562914D0A /* Pods_22222.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0D756271ACAA2A2EF42620 /* Pods_22222.framework */; };
 /* End PBXBuildFile section */
 
@@ -208,6 +212,8 @@
 		C1060B3B22B39103002DA11D /* DoubleLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleLinkList.m; sourceTree = "<group>"; };
 		C108D06022F045C000FF428B /* GCDHighLevelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDHighLevelVC.h; sourceTree = "<group>"; };
 		C108D06122F045C000FF428B /* GCDHighLevelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDHighLevelVC.m; sourceTree = "<group>"; };
+		C10BB7E62329D8B4009A260B /* aboutBlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aboutBlockVC.h; sourceTree = "<group>"; };
+		C10BB7E72329D8B4009A260B /* aboutBlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = aboutBlockVC.m; sourceTree = "<group>"; };
 		C10F73E622FAA579004BE43A /* XiushiciController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiushiciController.h; sourceTree = "<group>"; };
 		C10F73E722FAA579004BE43A /* XiushiciController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiushiciController.m; sourceTree = "<group>"; };
 		C115FEDB229FC09A0018B79C /* LinkListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkListController.h; sourceTree = "<group>"; };
@@ -298,6 +304,8 @@
 		C15416A820F3060100C20F79 /* HXFAnimationTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXFAnimationTools.m; sourceTree = "<group>"; };
 		C16171732280387500AB3714 /* HanziController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HanziController.h; sourceTree = "<group>"; };
 		C16171742280387500AB3714 /* HanziController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HanziController.m; sourceTree = "<group>"; };
+		C16194A923161A6600152FD7 /* Person+cate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+cate.h"; sourceTree = "<group>"; };
+		C16194AA23161A6600152FD7 /* Person+cate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+cate.m"; sourceTree = "<group>"; };
 		C17C06AD221D5510007EEF98 /* wodexiaobaobei.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wodexiaobaobei.h; sourceTree = "<group>"; };
 		C17C06AE221D5510007EEF98 /* wodexiaobaobei.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wodexiaobaobei.m; sourceTree = "<group>"; };
 		C17DC5F321D1DB7300AADE82 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
@@ -453,6 +461,10 @@
 		C1F5AAC120EDF64D008968A4 /* img10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img10.jpg; sourceTree = "<group>"; };
 		C1F5AACC20EE08AE008968A4 /* YYPScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPScrollView.h; sourceTree = "<group>"; };
 		C1F5AACD20EE08AF008968A4 /* YYPScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPScrollView.m; sourceTree = "<group>"; };
+		C1F8C1A3233319E8005D3EEE /* InterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterViewController.h; sourceTree = "<group>"; };
+		C1F8C1A4233319E8005D3EEE /* InterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterViewController.m; sourceTree = "<group>"; };
+		C1F8C1A623332779005D3EEE /* AmyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmyView.h; sourceTree = "<group>"; };
+		C1F8C1A723332779005D3EEE /* AmyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmyView.m; sourceTree = "<group>"; };
 		CCDF1F528AA34F4CB8C99439 /* Pods-22222.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222/Pods-22222.release.xcconfig"; sourceTree = "<group>"; };
 		D8CA150A60AD39643C25B6C5 /* Pods_22222Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_22222Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBCB94836CA98B0D4C01C42 /* Pods-22222.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222/Pods-22222.debug.xcconfig"; sourceTree = "<group>"; };
@@ -542,6 +554,8 @@
 			children = (
 				C115FEF022AE5D500018B79C /* Person.h */,
 				C115FEF122AE5D500018B79C /* Person.m */,
+				C16194A923161A6600152FD7 /* Person+cate.h */,
+				C16194AA23161A6600152FD7 /* Person+cate.m */,
 			);
 			path = runtimeModel;
 			sourceTree = "<group>";
@@ -667,6 +681,8 @@
 				C1B9004D21F863B300605B0C /* GifLoadCell1.m */,
 				C17C06AD221D5510007EEF98 /* wodexiaobaobei.h */,
 				C17C06AE221D5510007EEF98 /* wodexiaobaobei.m */,
+				C1F8C1A623332779005D3EEE /* AmyView.h */,
+				C1F8C1A723332779005D3EEE /* AmyView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -868,6 +884,8 @@
 				C108D06122F045C000FF428B /* GCDHighLevelVC.m */,
 				C10F73E622FAA579004BE43A /* XiushiciController.h */,
 				C10F73E722FAA579004BE43A /* XiushiciController.m */,
+				C10BB7E62329D8B4009A260B /* aboutBlockVC.h */,
+				C10BB7E72329D8B4009A260B /* aboutBlockVC.m */,
 			);
 			path = functions1;
 			sourceTree = "<group>";
@@ -975,6 +993,7 @@
 		C1F5AA7520EDF529008968A4 /* 22222 */ = {
 			isa = PBXGroup;
 			children = (
+				C1F8C1A2233319B7005D3EEE /* InterViewQuestion */,
 				C1E9BED122BA3C72002587F0 /* functions2 */,
 				C1E9BED022BA3C55002587F0 /* main */,
 				C115FEEF22AE5D020018B79C /* runtimeModel */,
@@ -1067,6 +1086,15 @@
 				C1F5AAC120EDF64D008968A4 /* img10.jpg */,
 			);
 			path = SourceImage;
+			sourceTree = "<group>";
+		};
+		C1F8C1A2233319B7005D3EEE /* InterViewQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				C1F8C1A3233319E8005D3EEE /* InterViewController.h */,
+				C1F8C1A4233319E8005D3EEE /* InterViewController.m */,
+			);
+			path = InterViewQuestion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1330,6 +1358,7 @@
 				C1C1CD74215C625900A7C2A2 /* SBJson4StreamParserState.m in Sources */,
 				C15051252175827E00C4B8A8 /* ISEResultTools.m in Sources */,
 				C1C1CD72215C625900A7C2A2 /* SBJson4StreamParser.m in Sources */,
+				C16194AB23161A6600152FD7 /* Person+cate.m in Sources */,
 				C1E0F92C212FDA0600DC1051 /* UIColor+Hex.m in Sources */,
 				C1F5AA7B20EDF529008968A4 /* ViewController.m in Sources */,
 				C150511E2175827E00C4B8A8 /* ISEResultReadSyllable.m in Sources */,
@@ -1341,12 +1370,14 @@
 				C1B9005421F8651700605B0C /* GifController1.m in Sources */,
 				C1DA12C1216DEE4F00E8D928 /* iFlyController.m in Sources */,
 				C1B9004E21F863B300605B0C /* GifLoadCell1.m in Sources */,
+				C10BB7E82329D8B4009A260B /* aboutBlockVC.m in Sources */,
 				C12E2B0322670EF7008A340E /* test.swift in Sources */,
 				C150511B2175827E00C4B8A8 /* ISEParams.m in Sources */,
 				C1E0F925212FD6AF00DC1051 /* YLCyclicChart.m in Sources */,
 				C1C1CD78215C625900A7C2A2 /* SBJson4StreamWriter.m in Sources */,
 				C1DA12BB216DE94C00E8D928 /* HealthStepController.m in Sources */,
 				C1F5AAB620EDF5E0008968A4 /* HXFBaseViewController.m in Sources */,
+				C1F8C1A823332779005D3EEE /* AmyView.m in Sources */,
 				C1F5AA8620EDF52B008968A4 /* main.m in Sources */,
 				C1E0F923212FD6AF00DC1051 /* YLRotateCyclic.m in Sources */,
 				C1F5AAB320EDF5AD008968A4 /* HXFTransverseTableViewCell.m in Sources */,
@@ -1376,6 +1407,7 @@
 				C1C1CD75215C625900A7C2A2 /* SBJson4StreamWriterState.m in Sources */,
 				C1DA12B2216DE7A300E8D928 /* YYPBezierViewController.m in Sources */,
 				C115FEEE22AE58340018B79C /* KVOVCController.m in Sources */,
+				C1F8C1A5233319E8005D3EEE /* InterViewController.m in Sources */,
 				C1DA12CC216DF9E000E8D928 /* CalendarController.m in Sources */,
 				C150512F2175827E00C4B8A8 /* OneshotViewController.m in Sources */,
 				C1C1CD6F215C625900A7C2A2 /* SAMultisectorControl.m in Sources */,

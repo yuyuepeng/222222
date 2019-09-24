@@ -1,8 +1,8 @@
 //
-//  GCDHighLevelVC.h
+//  AmyView.h
 //  22222
 //
-//  Created by 玉岳鹏 on 2019/7/30.
+//  Created by 玉岳鹏 on 2019/9/19.
 //  Copyright © 2019 玉岳鹏. All rights reserved.
 //
 
@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GCDHighLevelVC : UIViewController
-
-+ (NSThread *)shareThread;
+@interface AmyView : UIView
 
 @end
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6077359E2B9BC405B66A8B16 /* Pods_22222UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE60F772972A000C4DC7B862 /* Pods_22222UITests.framework */; };
+		A600CA6A236C3AB200AA4E55 /* UIButton+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA69236C3AB200AA4E55 /* UIButton+extension.m */; };
+		A600CA6D2370685B00AA4E55 /* NSData+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA6C2370685B00AA4E55 /* NSData+Add.m */; };
 		A698675322BD117900A9420E /* UIButton+YYPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A698675222BD117900A9420E /* UIButton+YYPExtension.m */; };
 		A698675622BD11E200A9420E /* BtnCateTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A698675522BD11E200A9420E /* BtnCateTestController.m */; };
 		A6D2540B22A5608B006D14C0 /* SingleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2540A22A5608B006D14C0 /* SingleLinkList.m */; };
@@ -197,6 +199,10 @@
 /* Begin PBXFileReference section */
 		03FB8E4DC71BB6EA6D57266A /* Pods-22222Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222Tests/Pods-22222Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		829B5714657A6A0184431866 /* Pods-22222UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.release.xcconfig"; sourceTree = "<group>"; };
+		A600CA68236C3AB200AA4E55 /* UIButton+extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+extension.h"; sourceTree = "<group>"; };
+		A600CA69236C3AB200AA4E55 /* UIButton+extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+extension.m"; sourceTree = "<group>"; };
+		A600CA6B2370685B00AA4E55 /* NSData+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Add.h"; sourceTree = "<group>"; };
+		A600CA6C2370685B00AA4E55 /* NSData+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Add.m"; sourceTree = "<group>"; };
 		A698675122BD117900A9420E /* UIButton+YYPExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYPExtension.h"; sourceTree = "<group>"; };
 		A698675222BD117900A9420E /* UIButton+YYPExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYPExtension.m"; sourceTree = "<group>"; };
 		A698675422BD11E200A9420E /* BtnCateTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BtnCateTestController.h; sourceTree = "<group>"; };
@@ -726,6 +732,8 @@
 				C1C1CD36215C625900A7C2A2 /* SAMultisectorControl.m */,
 				C1C1CD37215C625900A7C2A2 /* AKPickerView.h */,
 				C1C1CD34215C625900A7C2A2 /* AKPickerView.m */,
+				A600CA68236C3AB200AA4E55 /* UIButton+extension.h */,
+				A600CA69236C3AB200AA4E55 /* UIButton+extension.m */,
 			);
 			path = SettingView;
 			sourceTree = "<group>";
@@ -736,6 +744,8 @@
 				C1C1CD7B215C630600A7C2A2 /* Definition.h */,
 				C15416A720F3060100C20F79 /* HXFAnimationTools.h */,
 				C15416A820F3060100C20F79 /* HXFAnimationTools.m */,
+				A600CA6B2370685B00AA4E55 /* NSData+Add.h */,
+				A600CA6C2370685B00AA4E55 /* NSData+Add.m */,
 				A698675122BD117900A9420E /* UIButton+YYPExtension.h */,
 				A698675222BD117900A9420E /* UIButton+YYPExtension.m */,
 				C1C1CD39215C625900A7C2A2 /* AlertView.h */,
@@ -1360,6 +1370,7 @@
 				C1C1CD72215C625900A7C2A2 /* SBJson4StreamParser.m in Sources */,
 				C16194AB23161A6600152FD7 /* Person+cate.m in Sources */,
 				C1E0F92C212FDA0600DC1051 /* UIColor+Hex.m in Sources */,
+				A600CA6A236C3AB200AA4E55 /* UIButton+extension.m in Sources */,
 				C1F5AA7B20EDF529008968A4 /* ViewController.m in Sources */,
 				C150511E2175827E00C4B8A8 /* ISEResultReadSyllable.m in Sources */,
 				C1E0F921212FD6AF00DC1051 /* YLGradientArcChart.m in Sources */,
@@ -1417,6 +1428,7 @@
 				C150511C2175827E00C4B8A8 /* ISEResultSyll.m in Sources */,
 				C1E0F920212FD6AF00DC1051 /* IShootJianBianSlider.m in Sources */,
 				C115FEEB22A107D90018B79C /* AbstractList.m in Sources */,
+				A600CA6D2370685B00AA4E55 /* NSData+Add.m in Sources */,
 				C15051262175827E00C4B8A8 /* ISEResultFinal.m in Sources */,
 				C1E0F924212FD6AF00DC1051 /* IShootJianBianSliderJia.m in Sources */,
 				C17DC64821D2104200AADE82 /* SiriController.m in Sources */,

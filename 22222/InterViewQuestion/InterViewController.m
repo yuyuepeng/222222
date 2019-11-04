@@ -7,6 +7,9 @@
 //
 
 #import "InterViewController.h"
+
+#import "UIButton+extension.h"
+
 @interface InterViewController ()
 
 @property(nonatomic, copy) NSString *brand;
@@ -22,19 +25,49 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(testPointerView) name:@"wodexiaobaobao" object:nil];
     self.brand = @"wqeqweq";
 //    self.hhView
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
+    
+    [button addTarget:self action:@selector(mamade) forControlEvents:UIControlEventTouchUpInside];
+    button.backgroundColor = [UIColor lightGrayColor];
+    [button setClickAreaWithTop:50.0f left:50.0f bottom:50.0f right:50.0f];
+//    [self.view addSubview:button];
      AmyView *view = [[AmyView alloc] initWithFrame:CGRectMake(80, 100, 100, 100)];
     view.backgroundColor = [UIColor blueColor];
     view.tag = 101;
     self.hhView = view;
-    [self.view addSubview:view];
+//    [self.view addSubview:view];
     [view removeFromSuperview];
     NSLog(@"%p,%p",self.hhView,view);
+//    for (NSInteger i = 0; i < 10; i ++) {
+//        [self somethingRelease];
+//    }
+    
+    
+    NSMutableArray *arr1 = [NSMutableArray arrayWithObjects:[NSMutableArray arrayWithObject:@(3)],[NSMutableArray arrayWithObject:@(2)],nil];
+    NSMutableArray *arr2 = [arr1 mutableCopy];
+    NSLog(@"%@,%@",arr1,arr2);
+    NSLog(@"%p,%p",arr1,arr2);
+    NSLog(@"%p,%p",arr1[0],arr2[0]);
+    for (NSInteger i = 0; i < arr1.count; i ++) {
+        NSMutableArray *arr3 = [arr1[i] copy];
+        [arr2 replaceObjectAtIndex:i withObject:arr3];
+    }
+    NSLog(@"%@,%@",arr1,arr2);
+    NSLog(@"%p,%p",arr1,arr2);
+    NSLog(@"%p,%p",arr1[0],arr2[0]);
     // Do any additional setup after loading the view.
+}
+
+- (void)mamade {
+    NSLog(@"%@---",NSStringFromSelector(_cmd));
 }
 - (void)testPointerView {
     AmyView *view = (AmyView *)[self.view viewWithTag:101];
     NSLog(@"%p,%p",self.hhView,view);
 
+}
+- (void)somethingRelease {
+   
 }
 //在 MRC 下如何重写属性的 Setter 和 Getter? setter
 

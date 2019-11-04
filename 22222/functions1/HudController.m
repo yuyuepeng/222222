@@ -52,10 +52,19 @@
     self.activityIndicator.frame= CGRectMake(100, 100, 100, 100);
     //设置小菊花颜色
     self.activityIndicator.color = [UIColor whiteColor];
-    UIView *view = (UIView *)[self.activityIndicator valueForKey:@"internalView"];
-//    view.backgroundColor = [UIColor brownColor];
-    view.frame = CGRectMake(0, 0, 30, 30);
-    view.center = CGPointMake(50, 50);
+//    UIView *view = (UIView *)[self.activityIndicator valueForKey:@"internalView"];
+////    view.backgroundColor = [UIColor brownColor];
+//    view.frame = CGRectMake(0, 0, 30, 30);
+//    view.center = CGPointMake(50, 50);
+    UIButton *littleButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 200, 50)];
+    [littleButton setTitle:@"dasdasda" forState:UIControlStateNormal];
+    littleButton.backgroundColor = [UIColor blackColor];
+    
+    UIView *view = (UIView *)[littleButton valueForKey:@"imageView"];
+    view.backgroundColor = [UIColor redColor];
+    UILabel *label = [littleButton valueForKey:@"titleLabel"];
+    label.text = @"我爱你";
+    [self.view addSubview:littleButton];
     //设置背景颜色
     self.activityIndicator.backgroundColor = [UIColor blackColor];
     //刚进入这个界面会显示控件，并且停止旋转也会显示，只是没有在转动而已，没有设置或者设置为YES的时候，刚进入页面不会显示
@@ -65,7 +74,7 @@
     
     
     unsigned int outCount;
-    objc_property_t *properties = class_copyPropertyList([UIActivityIndicatorView class], &outCount);
+    objc_property_t *properties = class_copyPropertyList([UIButton class], &outCount);
     for (int i = 0; i < outCount; i ++) {
         objc_property_t property = properties[i];
         //通过property_getName函数获得属性的名字

@@ -35,8 +35,13 @@
     view.backgroundColor = [UIColor blueColor];
     view.tag = 101;
     self.hhView = view;
-//    [self.view addSubview:view];
-    [view removeFromSuperview];
+    [self.view addSubview:view];
+    
+    UIView *nnn = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
+    nnn.backgroundColor = [UIColor whiteColor];
+    [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(mamade)]];
+    [view addSubview:nnn];
+//    [view removeFromSuperview];
     NSLog(@"%p,%p",self.hhView,view);
 //    for (NSInteger i = 0; i < 10; i ++) {
 //        [self somethingRelease];

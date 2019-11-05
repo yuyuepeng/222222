@@ -297,16 +297,45 @@
     
     dispatch_group_t group = dispatch_group_create();
     
-    
-    for (NSInteger i = 0; i < 10; i++) {
+    dispatch_group_async(group, concurrentQueue, ^{
+               
+               sleep(1.0f);
+               NSLog(@"网络请求");
         
-        dispatch_group_async(group, concurrentQueue, ^{
-            
-            sleep(1);
-            
-            NSLog(@"%zd:网络请求 %@",i);
-        });
-    }
+    });
+    dispatch_group_async(group, concurrentQueue, ^{
+               
+               sleep(1.0f);
+               NSLog(@"网络请求0");
+        
+    });
+    dispatch_group_async(group, concurrentQueue, ^{
+               
+               sleep(1.0f);
+               NSLog(@"网络请求1");
+        
+    });
+    dispatch_group_async(group, concurrentQueue, ^{
+               
+               sleep(1.0f);
+               NSLog(@"网络请求2");
+        
+    });
+    dispatch_group_async(group, concurrentQueue, ^{
+               
+               sleep(1.0f);
+               NSLog(@"网络请求3");
+        
+    });
+//    for (NSInteger i = 0; i < 10; i++) {
+//
+//        dispatch_group_async(group, concurrentQueue, ^{
+//
+//            sleep(1);
+//
+//            NSLog(@"%zd:网络请求 %@",i);
+//        });
+//    }
 //    NSLog(@"刷新页面1");如果不加dispatch_group_notify  会在一开始的时候就会走到这儿，group_async 不会阻碍当前线程
     
 

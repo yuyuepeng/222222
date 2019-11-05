@@ -35,6 +35,7 @@ static const char * rightKey = "rightKey";
 }
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+    
     CGRect rect = [self clickAreaRect];
     if (CGRectEqualToRect(rect, self.bounds)) {
         return [super hitTest:point withEvent:event];
@@ -42,5 +43,9 @@ static const char * rightKey = "rightKey";
         //判断点击点是否在rect内
         return CGRectContainsPoint(rect, point) ? self : nil;
     }
+}
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+
+    return YES;
 }
 @end

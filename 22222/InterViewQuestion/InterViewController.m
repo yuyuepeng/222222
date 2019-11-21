@@ -60,6 +60,7 @@
     NSLog(@"%@,%@",arr1,arr2);
     NSLog(@"%p,%p",arr1,arr2);
     NSLog(@"%p,%p",arr1[0],arr2[0]);
+    
     // Do any additional setup after loading the view.
 }
 

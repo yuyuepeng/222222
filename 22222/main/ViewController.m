@@ -36,6 +36,18 @@ NSArray *getArr(NSString *str) {
     return [str componentsSeparatedByString:@","];
 }
 
+@interface YYPCellHeightModel : NSObject
+
+@property(nonatomic, assign) CGFloat cellHeight;
+
+@end
+
+@implementation YYPCellHeightModel
+
+
+
+@end
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
 
@@ -44,11 +56,21 @@ NSArray *getArr(NSString *str) {
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *dataSource;
+
+@property (nonatomic, strong) NSMutableArray <YYPCellHeightModel *>*dataModels;
+
 @property (nonatomic, strong) InterViewController *intVC;
 
 @end
 
 @implementation ViewController
+
+- (NSMutableArray<YYPCellHeightModel *> *)dataModels {
+    if (_dataModels == nil) {
+        _dataModels = [NSMutableArray array];
+    }
+    return _dataModels;
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     NSLog(@"我的class = %@, nav = %@",NSStringFromClass(self.class),self.navigationController.viewControllers);
@@ -60,6 +82,7 @@ NSArray *getArr(NSString *str) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, mainWidth, mainHeight - 64) style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        _tableView.rowHeight = UITableViewAutomaticDimension;
     }
     return _tableView;
 }
@@ -72,7 +95,10 @@ NSArray *getArr(NSString *str) {
     NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
     NSLog(@"mainwidth %lf",mainWidth);
 //    NSLog(@"",self.navigationController);
-    _dataSource = @[@"YYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法",@"修饰词",@"关于block",@"面试题"];
+    _dataSource = @[@"YYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法",@"修饰词",@"关于block",@"面试题"];
+    for (NSInteger i = 0; i < _dataSource.count; i ++) {
+        [self.dataModels addObject:[[YYPCellHeightModel alloc] init]];
+    }
     [self.view addSubview:self.tableView];
     [[[Person alloc] init] sayhahahaToAmy];
     [Person sayHelloToAmy];
@@ -92,7 +118,17 @@ NSArray *getArr(NSString *str) {
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = self.dataSource[indexPath.row];
+    //高度缓存
+    YYPCellHeightModel *model = self.dataModels[indexPath.row];
+    CGFloat height = [cell systemLayoutSizeFittingSize:CGSizeMake(tableView.frame.size.width, 0) withHorizontalFittingPriority:UILayoutPriorityRequired verticalFittingPriority:UILayoutPriorityFittingSizeLevel].height;
+    
+    model.cellHeight = height;
+
     return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = self.dataModels[indexPath.row].cellHeight;
+    return  height ? height : UITableViewAutomaticDimension;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //#import "YYPScrollViewController.h"
@@ -259,10 +295,7 @@ NSArray *getArr(NSString *str) {
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return 64;
-}
 
 
 

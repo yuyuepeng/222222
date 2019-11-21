@@ -26,7 +26,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _dataSource = @[@"判断数组中随机三个数之和等于一个已知数",@"数组奇偶数排列",@"斐波那契数"];
+    _dataSource = @[@"判断数组中随机三个数之和等于一个已知数",@"数组奇偶数排列",@"斐波那契数",@"冒泡排序",@"递归计算1-n的和"];
     [self.view addSubview:self.tableView];
     // Do any additional setup after loading the view.
 }
@@ -63,7 +63,18 @@
         }
             break;
         case 3:{
-            
+            NSMutableArray *arr = [NSMutableArray arrayWithObjects:@(4),@(9),@(3),@(11),@(5),@(8),@(10),@(1), nil];
+            NSLog(@"%@",arr);
+            [self maopaoSortWithArr:arr];
+        }
+            break;
+        case 4:{
+            NSLog(@"%ld",[self diguiSum:10]);
+            NSLog(@"%ld",[self diguiSum:9]);
+            NSLog(@"%ld",[self diguiSum:8]);
+            NSLog(@"%ld",[self diguiSum:7]);
+            NSLog(@"%ld",[self diguiSum:6]);
+            NSLog(@"%ld",[self diguiSum:5]);
         }
             break;
             
@@ -195,7 +206,6 @@
     return arr1;
 }
 #pragma mark -- 斐波那契数列 求第n个斐波那契数
-
 - (NSInteger)fib:(NSInteger)n {
     if (n <= 1) {
         return n;
@@ -210,7 +220,25 @@
     }
     return second;
 }
- 
+//冒泡排序算法
+- (void)maopaoSortWithArr:(NSMutableArray *)arr {
+    for (NSInteger i = 0; i < arr.count - 1; i ++) {
+        for (NSInteger j = i + 1; j < arr.count; j ++) {
+            if ([arr[i] integerValue] > [arr[j] integerValue]) {
+                NSNumber *temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    NSLog(@"%@",arr);
+}
+- (NSInteger)diguiSum:(NSInteger)n {
+    if (n == 1) {
+        return 1;
+    }
+    return [self diguiSum:n - 1] + n;
+}
 /*
 #pragma mark - Navigation
 

@@ -296,36 +296,42 @@
     dispatch_queue_t concurrentQueue = dispatch_queue_create("test1", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_group_t group = dispatch_group_create();
+    dispatch_group_enter(group);
     
     dispatch_group_async(group, concurrentQueue, ^{
-               
                sleep(1.0f);
                NSLog(@"网络请求");
+        dispatch_group_leave(group);
         
     });
+    dispatch_group_enter(group);
     dispatch_group_async(group, concurrentQueue, ^{
-               
                sleep(1.0f);
                NSLog(@"网络请求0");
+        dispatch_group_leave(group);
         
     });
+    dispatch_group_enter(group);
     dispatch_group_async(group, concurrentQueue, ^{
-               
                sleep(1.0f);
                NSLog(@"网络请求1");
-        
+        dispatch_group_leave(group);
+
     });
+    dispatch_group_enter(group);
     dispatch_group_async(group, concurrentQueue, ^{
                
                sleep(1.0f);
                NSLog(@"网络请求2");
-        
+        dispatch_group_leave(group);
     });
+    dispatch_group_enter(group);
     dispatch_group_async(group, concurrentQueue, ^{
                
                sleep(1.0f);
                NSLog(@"网络请求3");
-        
+        dispatch_group_leave(group);
+
     });
 //    for (NSInteger i = 0; i < 10; i++) {
 //
@@ -370,7 +376,7 @@
 //    保证线程安全，为线程加锁
 }
 - (void)test10 {
-    for (NSInteger i = 0; i < 100; i++) {
+    for (NSInteger i = 0; i < 10; i++) {
         
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             

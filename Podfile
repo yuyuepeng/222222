@@ -7,7 +7,9 @@ target '22222' do
    pod 'MJRefresh', '~> 3.1.15.3'
    pod 'SDWebImage', '~> 5.0.0-beta3'
    pod 'lottie-ios'
+   pod 'YYKit'
    pod 'ZSSModel'
+   pod 'MJExtension'
   # Pods for 22222
 
   target '22222Tests' do

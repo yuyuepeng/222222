@@ -65,33 +65,45 @@ static NSString *yypUserDisabled = @"yypUserDisabled";
     }
     return yyp_string;
 }
-- (void)setSelected:(BOOL)selected {
-    [super setSelected:selected];
-    if (selected) {
-        self.backgroundColor = (UIColor *)[self.stateBackgroundColor objectForKey:yypSelected];
-    }else {
-        self.backgroundColor = (UIColor *)[self.stateBackgroundColor objectForKey:yypNormal];
-    }
-}
-- (void)setHighlighted:(BOOL)highlighted {
-    [super setHighlighted:highlighted];
-    if (highlighted) {
-        UIColor *color = (UIColor *)[self.stateBackgroundColor objectForKey:yypHighlighted];
-        if (!color) {
-            color = [UIColor lightGrayColor];
-        }
-        self.backgroundColor = color;
-    }else {
-
-    }
-}
-- (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled {
-    [super setUserInteractionEnabled:userInteractionEnabled];
-    if (!userInteractionEnabled) {
-        self.backgroundColor = (UIColor *)[self.stateBackgroundColor objectForKey:yypUserDisabled];
-    }else {
-        self.backgroundColor = (UIColor *)[self.stateBackgroundColor objectForKey:yypNormal];
-    }
-}
+//- (void)setSelected:(BOOL)selected {
+//    if (self.stateBackgroundColor) {
+//        if (selected) {
+//            self.backgroundColor = (UIColor *)[self.stateBackgroundColor objectForKey:yypSelected];
+//        }else {
+//            self.backgroundColor = (UIColor *)[self.stateBackgroundColor objectForKey:yypNormal];
+//        }
+//    }else {
+//        [super setSelected:selected];
+//    }
+    
+//}
+//- (void)setHighlighted:(BOOL)highlighted {
+//    if (self.stateBackgroundColor) {
+//        if (highlighted) {
+//            UIColor *color = (UIColor *)[self.stateBackgroundColor objectForKey:yypHighlighted];
+//            if (!color) {
+//                color = [UIColor lightGrayColor];
+//            }
+//            self.backgroundColor = color;
+//        }else {
+//
+//        }
+//    }else {
+//        [super setHighlighted:highlighted];
+//    }
+    
+//}
+//- (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled {
+//    if (self.stateBackgroundColor) {
+//        if (!userInteractionEnabled) {
+//            self.backgroundColor = (UIColor *)[self.stateBackgroundColor objectForKey:yypUserDisabled];
+//        }else {
+//            self.backgroundColor = (UIColor *)[self.stateBackgroundColor objectForKey:yypNormal];
+//        }
+//    }else {
+//        [super setUserInteractionEnabled:userInteractionEnabled];
+//    }
+    
+//}
 
 @end

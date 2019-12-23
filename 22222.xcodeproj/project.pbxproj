@@ -3,16 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6077359E2B9BC405B66A8B16 /* Pods_22222UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE60F772972A000C4DC7B862 /* Pods_22222UITests.framework */; };
 		A600CA6A236C3AB200AA4E55 /* UIButton+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA69236C3AB200AA4E55 /* UIButton+extension.m */; };
 		A600CA6D2370685B00AA4E55 /* NSData+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA6C2370685B00AA4E55 /* NSData+Add.m */; };
+		A6021904238E7E3500B4F93E /* RMYMasController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6021903238E7E3500B4F93E /* RMYMasController.m */; };
+		A6021907238EC2A900B4F93E /* RMYMaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6021906238EC2A900B4F93E /* RMYMaskCell.m */; };
+		A6798C3C23AA3282004A8263 /* foldAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6798C3B23AA3282004A8263 /* foldAnimationController.m */; };
+		A6798C4223AA4059004A8263 /* lightedController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6798C4123AA4059004A8263 /* lightedController.m */; };
+		A6798C4D23ACE83A004A8263 /* RMYFoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6798C4C23ACE83A004A8263 /* RMYFoldView.m */; };
+		A6798C5023ACE90F004A8263 /* RMYGradientOverlayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6798C4F23ACE90F004A8263 /* RMYGradientOverlayLayer.m */; };
+		A6798C5323ACE9A6004A8263 /* RMYDoubleSidedLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6798C5223ACE9A6004A8263 /* RMYDoubleSidedLayer.m */; };
+		A6798C5623ACEF5C004A8263 /* UIView+RMYExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A6798C5523ACEF5C004A8263 /* UIView+RMYExtra.m */; };
+		A6798C6A23B061F5004A8263 /* RMYDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6798C6823B061F5004A8263 /* RMYDetailController.m */; };
 		A698675322BD117900A9420E /* UIButton+YYPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A698675222BD117900A9420E /* UIButton+YYPExtension.m */; };
 		A698675622BD11E200A9420E /* BtnCateTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A698675522BD11E200A9420E /* BtnCateTestController.m */; };
+		A6B58C8A2391568D000AD962 /* invocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B58C892391568D000AD962 /* invocationController.m */; };
+		A6B58C8D239159C0000AD962 /* invocationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B58C8C239159C0000AD962 /* invocationTools.m */; };
 		A6D2540B22A5608B006D14C0 /* SingleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2540A22A5608B006D14C0 /* SingleLinkList.m */; };
+		A6EC059223A0FC9E00C90A4F /* RYPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EC059123A0FC9E00C90A4F /* RYPlayerManager.m */; };
+		A6EC059523A1267800C90A4F /* PlayVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EC059423A1267800C90A4F /* PlayVideoController.m */; };
 		B3DA4AD114B17CB5D49CC69F /* Pods_22222Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CA150A60AD39643C25B6C5 /* Pods_22222Tests.framework */; };
 		C102292A22D5DC8200DC835F /* HudController.m in Sources */ = {isa = PBXBuildFile; fileRef = C102292922D5DC8200DC835F /* HudController.m */; };
 		C1060B3C22B39103002DA11D /* DoubleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = C1060B3B22B39103002DA11D /* DoubleLinkList.m */; };
@@ -203,12 +216,38 @@
 		A600CA69236C3AB200AA4E55 /* UIButton+extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+extension.m"; sourceTree = "<group>"; };
 		A600CA6B2370685B00AA4E55 /* NSData+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Add.h"; sourceTree = "<group>"; };
 		A600CA6C2370685B00AA4E55 /* NSData+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Add.m"; sourceTree = "<group>"; };
+		A6021902238E7E3500B4F93E /* RMYMasController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYMasController.h; sourceTree = "<group>"; };
+		A6021903238E7E3500B4F93E /* RMYMasController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYMasController.m; sourceTree = "<group>"; };
+		A6021905238EC2A900B4F93E /* RMYMaskCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYMaskCell.h; sourceTree = "<group>"; };
+		A6021906238EC2A900B4F93E /* RMYMaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYMaskCell.m; sourceTree = "<group>"; };
+		A6798C3A23AA3282004A8263 /* foldAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = foldAnimationController.h; sourceTree = "<group>"; };
+		A6798C3B23AA3282004A8263 /* foldAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = foldAnimationController.m; sourceTree = "<group>"; };
+		A6798C4023AA4059004A8263 /* lightedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lightedController.h; sourceTree = "<group>"; };
+		A6798C4123AA4059004A8263 /* lightedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lightedController.m; sourceTree = "<group>"; };
+		A6798C4B23ACE83A004A8263 /* RMYFoldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYFoldView.h; sourceTree = "<group>"; };
+		A6798C4C23ACE83A004A8263 /* RMYFoldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYFoldView.m; sourceTree = "<group>"; };
+		A6798C4E23ACE90F004A8263 /* RMYGradientOverlayLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYGradientOverlayLayer.h; sourceTree = "<group>"; };
+		A6798C4F23ACE90F004A8263 /* RMYGradientOverlayLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYGradientOverlayLayer.m; sourceTree = "<group>"; };
+		A6798C5123ACE9A6004A8263 /* RMYDoubleSidedLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYDoubleSidedLayer.h; sourceTree = "<group>"; };
+		A6798C5223ACE9A6004A8263 /* RMYDoubleSidedLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYDoubleSidedLayer.m; sourceTree = "<group>"; };
+		A6798C5423ACEF5C004A8263 /* UIView+RMYExtra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+RMYExtra.h"; sourceTree = "<group>"; };
+		A6798C5523ACEF5C004A8263 /* UIView+RMYExtra.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RMYExtra.m"; sourceTree = "<group>"; };
+		A6798C6723B061F5004A8263 /* RMYDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYDetailController.h; sourceTree = "<group>"; };
+		A6798C6823B061F5004A8263 /* RMYDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYDetailController.m; sourceTree = "<group>"; };
 		A698675122BD117900A9420E /* UIButton+YYPExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+YYPExtension.h"; sourceTree = "<group>"; };
 		A698675222BD117900A9420E /* UIButton+YYPExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YYPExtension.m"; sourceTree = "<group>"; };
 		A698675422BD11E200A9420E /* BtnCateTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BtnCateTestController.h; sourceTree = "<group>"; };
 		A698675522BD11E200A9420E /* BtnCateTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BtnCateTestController.m; sourceTree = "<group>"; };
+		A6B58C882391568D000AD962 /* invocationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = invocationController.h; sourceTree = "<group>"; };
+		A6B58C892391568D000AD962 /* invocationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = invocationController.m; sourceTree = "<group>"; };
+		A6B58C8B239159C0000AD962 /* invocationTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = invocationTools.h; sourceTree = "<group>"; };
+		A6B58C8C239159C0000AD962 /* invocationTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = invocationTools.m; sourceTree = "<group>"; };
 		A6D2540922A5608B006D14C0 /* SingleLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLinkList.h; sourceTree = "<group>"; };
 		A6D2540A22A5608B006D14C0 /* SingleLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleLinkList.m; sourceTree = "<group>"; };
+		A6EC059023A0FC9E00C90A4F /* RYPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYPlayerManager.h; sourceTree = "<group>"; };
+		A6EC059123A0FC9E00C90A4F /* RYPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYPlayerManager.m; sourceTree = "<group>"; };
+		A6EC059323A1267800C90A4F /* PlayVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayVideoController.h; sourceTree = "<group>"; };
+		A6EC059423A1267800C90A4F /* PlayVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayVideoController.m; sourceTree = "<group>"; };
 		B09C27B595B76483A1A0003D /* Pods-22222UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B73167CAC309998045534766 /* Pods-22222Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222Tests/Pods-22222Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA0D756271ACAA2A2EF42620 /* Pods_22222.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_22222.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -540,6 +579,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A6798C4A23ACE7AE004A8263 /* RMYFoldView */ = {
+			isa = PBXGroup;
+			children = (
+				A6798C4B23ACE83A004A8263 /* RMYFoldView.h */,
+				A6798C4C23ACE83A004A8263 /* RMYFoldView.m */,
+				A6798C4E23ACE90F004A8263 /* RMYGradientOverlayLayer.h */,
+				A6798C4F23ACE90F004A8263 /* RMYGradientOverlayLayer.m */,
+				A6798C5123ACE9A6004A8263 /* RMYDoubleSidedLayer.h */,
+				A6798C5223ACE9A6004A8263 /* RMYDoubleSidedLayer.m */,
+				A6798C5423ACEF5C004A8263 /* UIView+RMYExtra.h */,
+				A6798C5523ACEF5C004A8263 /* UIView+RMYExtra.m */,
+			);
+			path = RMYFoldView;
+			sourceTree = "<group>";
+		};
 		C115FEE222A0FD260018B79C /* LinkList */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,6 +733,7 @@
 		C19594BF21EC39E500FAB629 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A6798C4A23ACE7AE004A8263 /* RMYFoldView */,
 				C1F5AACC20EE08AE008968A4 /* YYPScrollView.h */,
 				C1F5AACD20EE08AF008968A4 /* YYPScrollView.m */,
 				C19594C021EC3A0A00FAB629 /* GifLoadCell.h */,
@@ -689,6 +744,8 @@
 				C17C06AE221D5510007EEF98 /* wodexiaobaobei.m */,
 				C1F8C1A623332779005D3EEE /* AmyView.h */,
 				C1F8C1A723332779005D3EEE /* AmyView.m */,
+				A6021905238EC2A900B4F93E /* RMYMaskCell.h */,
+				A6021906238EC2A900B4F93E /* RMYMaskCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -745,6 +802,10 @@
 				C15416A720F3060100C20F79 /* HXFAnimationTools.h */,
 				C15416A820F3060100C20F79 /* HXFAnimationTools.m */,
 				A600CA6B2370685B00AA4E55 /* NSData+Add.h */,
+				A6EC059023A0FC9E00C90A4F /* RYPlayerManager.h */,
+				A6EC059123A0FC9E00C90A4F /* RYPlayerManager.m */,
+				A6B58C8B239159C0000AD962 /* invocationTools.h */,
+				A6B58C8C239159C0000AD962 /* invocationTools.m */,
 				A600CA6C2370685B00AA4E55 /* NSData+Add.m */,
 				A698675122BD117900A9420E /* UIButton+YYPExtension.h */,
 				A698675222BD117900A9420E /* UIButton+YYPExtension.m */,
@@ -896,6 +957,18 @@
 				C10F73E722FAA579004BE43A /* XiushiciController.m */,
 				C10BB7E62329D8B4009A260B /* aboutBlockVC.h */,
 				C10BB7E72329D8B4009A260B /* aboutBlockVC.m */,
+				A6021902238E7E3500B4F93E /* RMYMasController.h */,
+				A6021903238E7E3500B4F93E /* RMYMasController.m */,
+				A6B58C882391568D000AD962 /* invocationController.h */,
+				A6B58C892391568D000AD962 /* invocationController.m */,
+				A6EC059323A1267800C90A4F /* PlayVideoController.h */,
+				A6EC059423A1267800C90A4F /* PlayVideoController.m */,
+				A6798C3A23AA3282004A8263 /* foldAnimationController.h */,
+				A6798C3B23AA3282004A8263 /* foldAnimationController.m */,
+				A6798C4023AA4059004A8263 /* lightedController.h */,
+				A6798C4123AA4059004A8263 /* lightedController.m */,
+				A6798C6723B061F5004A8263 /* RMYDetailController.h */,
+				A6798C6823B061F5004A8263 /* RMYDetailController.m */,
 			);
 			path = functions1;
 			sourceTree = "<group>";
@@ -1353,6 +1426,10 @@
 				C1DA12AF216DE33000E8D928 /* YYPScrollViewController.m in Sources */,
 				C1F5AAB120EDF5AD008968A4 /* TestViewConteroller.m in Sources */,
 				C150512E2175827E00C4B8A8 /* RecognizerFactory.m in Sources */,
+				A6798C5623ACEF5C004A8263 /* UIView+RMYExtra.m in Sources */,
+				A6798C4D23ACE83A004A8263 /* RMYFoldView.m in Sources */,
+				A6798C5023ACE90F004A8263 /* RMYGradientOverlayLayer.m in Sources */,
+				A6B58C8D239159C0000AD962 /* invocationTools.m in Sources */,
 				C1DA12BE216DEBB500E8D928 /* NormalStepController.m in Sources */,
 				C1C1CD74215C625900A7C2A2 /* SBJson4StreamParserState.m in Sources */,
 				C15051252175827E00C4B8A8 /* ISEResultTools.m in Sources */,
@@ -1365,6 +1442,7 @@
 				C1E0F921212FD6AF00DC1051 /* YLGradientArcChart.m in Sources */,
 				C1DA12C8216DF93400E8D928 /* HXFCalendarCell.m in Sources */,
 				C15051232175827E00C4B8A8 /* ISEResultWord.m in Sources */,
+				A6021907238EC2A900B4F93E /* RMYMaskCell.m in Sources */,
 				C195939521EC36F500FAB629 /* GIFController.m in Sources */,
 				C13382A021251198001C05DA /* YYPBezierView.m in Sources */,
 				C1B9005421F8651700605B0C /* GifController1.m in Sources */,
@@ -1374,10 +1452,12 @@
 				C12E2B0322670EF7008A340E /* test.swift in Sources */,
 				C150511B2175827E00C4B8A8 /* ISEParams.m in Sources */,
 				C1E0F925212FD6AF00DC1051 /* YLCyclicChart.m in Sources */,
+				A6021904238E7E3500B4F93E /* RMYMasController.m in Sources */,
 				C1C1CD78215C625900A7C2A2 /* SBJson4StreamWriter.m in Sources */,
 				C1DA12BB216DE94C00E8D928 /* HealthStepController.m in Sources */,
 				C1F5AAB620EDF5E0008968A4 /* HXFBaseViewController.m in Sources */,
 				C1F8C1A823332779005D3EEE /* AmyView.m in Sources */,
+				A6EC059523A1267800C90A4F /* PlayVideoController.m in Sources */,
 				C1F5AA8620EDF52B008968A4 /* main.m in Sources */,
 				C1E0F923212FD6AF00DC1051 /* YLRotateCyclic.m in Sources */,
 				C1F5AAB320EDF5AD008968A4 /* HXFTransverseTableViewCell.m in Sources */,
@@ -1395,10 +1475,13 @@
 				C15051222175827E00C4B8A8 /* ISEResultSentence.m in Sources */,
 				C14614E121D619FF00D9D3CF /* ARController.m in Sources */,
 				C1E9BED422BA3D9B002587F0 /* suanfaController.m in Sources */,
+				A6798C6A23B061F5004A8263 /* RMYDetailController.m in Sources */,
 				A6D2540B22A5608B006D14C0 /* SingleLinkList.m in Sources */,
+				A6798C4223AA4059004A8263 /* lightedController.m in Sources */,
 				C1DA12B8216DE8EC00E8D928 /* ChangeStrController.m in Sources */,
 				C1C1CD7A215C625900A7C2A2 /* PcmPlayer.m in Sources */,
 				C1E0F929212FD98900DC1051 /* UIView_extra.m in Sources */,
+				A6B58C8A2391568D000AD962 /* invocationController.m in Sources */,
 				C115FEDD229FC09A0018B79C /* LinkListController.m in Sources */,
 				C152A8CD21708C9300AE41A7 /* TableViewRefreshController.m in Sources */,
 				C1DC898C2177042B009477E3 /* JianBianCirleController.m in Sources */,
@@ -1416,6 +1499,7 @@
 				C183386E21549C69001A8C20 /* ViewController2.m in Sources */,
 				C150511C2175827E00C4B8A8 /* ISEResultSyll.m in Sources */,
 				C1E0F920212FD6AF00DC1051 /* IShootJianBianSlider.m in Sources */,
+				A6798C5323ACE9A6004A8263 /* RMYDoubleSidedLayer.m in Sources */,
 				C115FEEB22A107D90018B79C /* AbstractList.m in Sources */,
 				A600CA6D2370685B00AA4E55 /* NSData+Add.m in Sources */,
 				C15051262175827E00C4B8A8 /* ISEResultFinal.m in Sources */,
@@ -1439,6 +1523,7 @@
 				C1F5AA7820EDF529008968A4 /* AppDelegate.m in Sources */,
 				C17C06AF221D5510007EEF98 /* wodexiaobaobei.m in Sources */,
 				C102292A22D5DC8200DC835F /* HudController.m in Sources */,
+				A6EC059223A0FC9E00C90A4F /* RYPlayerManager.m in Sources */,
 				C19594C221EC3A0A00FAB629 /* GifLoadCell.m in Sources */,
 				C15051202175827E00C4B8A8 /* ISEResultReadWord.m in Sources */,
 				C150511D2175827E00C4B8A8 /* ISEResult.m in Sources */,
@@ -1450,6 +1535,7 @@
 				C1C1CD71215C625900A7C2A2 /* PopupView.m in Sources */,
 				C1C1CD77215C625900A7C2A2 /* SBJson4Parser.m in Sources */,
 				C1060B3C22B39103002DA11D /* DoubleLinkList.m in Sources */,
+				A6798C3C23AA3282004A8263 /* foldAnimationController.m in Sources */,
 				C1DA12C7216DF93400E8D928 /* HXFCalendarView.m in Sources */,
 				C115FEE522A0FD4B0018B79C /* List.m in Sources */,
 				C1C1CD6E215C625900A7C2A2 /* AKPickerView.m in Sources */,

@@ -12,6 +12,7 @@
 #import "UIColor+Hex.h"
 #import "Definition.h"
 #import "ViewController.h"
+#import <Masonry.h>
 #import <Lottie-Swift.h>
 //是否是iPhoneX系列
 #define isIPHONE_X \

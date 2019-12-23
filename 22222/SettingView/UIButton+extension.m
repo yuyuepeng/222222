@@ -44,8 +44,8 @@ static const char * rightKey = "rightKey";
         return CGRectContainsPoint(rect, point) ? self : nil;
     }
 }
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
-
-    return YES;
-}
+//- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+//
+//    return YES;
+//}
 @end

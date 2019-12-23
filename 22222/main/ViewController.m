@@ -29,7 +29,7 @@ extern NSString *CTSettingCopyMyPhoneNumber(void);
 #import "LinkListController.h"
 #import "InterViewController.h"
 #import "Person.h"
-
+#import "Person+cate.h"
 //FOUNDATION_EXPORT NSArray *getArr(NSString *str);
 
 NSArray *getArr(NSString *str) {
@@ -95,15 +95,19 @@ NSArray *getArr(NSString *str) {
     NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
     NSLog(@"mainwidth %lf",mainWidth);
 //    NSLog(@"",self.navigationController);
-    _dataSource = @[@"YYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法",@"修饰词",@"关于block",@"面试题"];
+    _dataSource = @[@"YYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法",@"修饰词",@"关于block",@"面试题",@"masonry",@"invocationController",@"播放器",@"对折View",@"点亮View"];
     for (NSInteger i = 0; i < _dataSource.count; i ++) {
         [self.dataModels addObject:[[YYPCellHeightModel alloc] init]];
     }
     [self.view addSubview:self.tableView];
+    Person *p = [[Person alloc] init];
     [[[Person alloc] init] sayhahahaToAmy];
-    [Person sayHelloToAmy];
-    
+    [[[Person alloc] init] sayIlikeYouAmy];
 
+//    [Person sayHelloToAmy];
+//    [Person ]
+//    [p setValue:@"1213" forKey:@"numuber"];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -287,7 +291,34 @@ NSArray *getArr(NSString *str) {
         case 24:
         {
             InterViewController *intVC = [[InterViewController alloc] init];
+            NSLog(@"%zd", malloc_size((__bridge const void *)intVC));
+
             [self.navigationController pushViewController:intVC animated:YES];
+        }
+            break;
+        case 25:
+        {
+            [self.navigationController pushViewController:[[NSClassFromString(@"RMYMasController") alloc] init] animated:YES];
+        }
+            break;
+        case 26:
+        {
+            [self.navigationController pushViewController:[[NSClassFromString(@"invocationController") alloc] init] animated:YES];
+        }
+            break;
+        case 27:
+        {//foldAnimationController
+            [self.navigationController pushViewController:[[NSClassFromString(@"PlayVideoController") alloc] init] animated:YES];
+        }
+            break;
+        case 28:
+        {//foldAnimationController
+            [self.navigationController pushViewController:[[NSClassFromString(@"foldAnimationController") alloc] init] animated:YES];
+        }
+            break;
+        case 29:
+        {//foldAnimationController
+            [self.navigationController pushViewController:[[NSClassFromString(@"lightedController") alloc] init] animated:YES];
         }
             break;
         default:

@@ -26,7 +26,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _dataSource = @[@"判断数组中随机三个数之和等于一个已知数",@"数组奇偶数排列",@"斐波那契数",@"冒泡排序",@"递归计算1-n的和"];
+    _dataSource = @[@"判断数组中随机三个数之和等于一个已知数",@"数组奇偶数排列",@"斐波那契数",@"冒泡排序",@"递归计算1-n的和",@"选择排序",@"快速排序",@"插入升序排列",@"NSComparator排序"];
     [self.view addSubview:self.tableView];
     // Do any additional setup after loading the view.
 }
@@ -77,6 +77,30 @@
             NSLog(@"%ld",[self diguiSum:5]);
         }
             break;
+            case 5:{
+            NSMutableArray *arr = [NSMutableArray arrayWithObjects:@(4),@(9),@(3),@(11),@(5),@(8),@(10),@(1), nil];
+            NSLog(@"%@",arr);
+            [self selectedSort:arr];
+            }
+                break;
+            case 6:{
+            NSMutableArray *arr = [NSMutableArray arrayWithObjects:@(4),@(9),@(3),@(11),@(5),@(8),@(10),@(1), nil];
+            NSLog(@"%@",arr);
+            [self quickSort:arr];
+            }
+                break;
+            case 7:{
+            NSMutableArray *arr = [NSMutableArray arrayWithObjects:@(4),@(9),@(3),@(11),@(5),@(8),@(10),@(1), nil];
+            NSLog(@"%@",arr);
+            [self insertionAscendingOrderSort:arr];
+            }
+                break;
+            case 8:{
+            NSMutableArray *arr = [NSMutableArray arrayWithObjects:@(4),@(9),@(3),@(11),@(5),@(8),@(10),@(1), nil];
+            NSLog(@"%@",arr);
+            [self sortWithComparator:arr];
+            }
+                break;
             
         default:
             break;
@@ -233,11 +257,124 @@
     }
     NSLog(@"%@",arr);
 }
+
 - (NSInteger)diguiSum:(NSInteger)n {
     if (n == 1) {
         return 1;
     }
     return [self diguiSum:n - 1] + n;
+}
+- (void)selectedSort:(NSMutableArray *)array {
+    
+    NSInteger min;
+      for (int i = 0; i < array.count; i ++) {
+          min = i;
+          for (int j = i + 1; j < array.count; j ++) {//查找最小值
+              if ([array[min] integerValue]> [array[j] integerValue]) {
+                  min = j;
+              }
+          }
+          if (min != i) {//将最小值赋给i位置上的数字对象
+              [array exchangeObjectAtIndex:i withObjectAtIndex:min];
+          }
+      }
+
+    NSLog(@"%@",array);
+}
+- (void)quickSort:(NSMutableArray *)array {
+    NSInteger i = 0, j = array.count - 1;
+//    [self quickAscendingOrderSort:array leftIndex:i rightIndex:j];
+    [self quickSortArray:array withLeftIndex:i andRightIndex:j];
+
+    NSLog(@"%@",array);
+}
+- (void)quickSortArray:(NSMutableArray *)array withLeftIndex:(NSInteger)leftIndex andRightIndex:(NSInteger)rightIndex {
+    
+    if (leftIndex >= rightIndex) {//如果数组长度为0或1时返回
+        return ;
+    }
+
+    NSInteger i = leftIndex;
+    NSInteger j = rightIndex;
+    //记录比较基准数
+    NSInteger key = [array[i] integerValue];
+
+    while (i < j) {
+        /**** 首先从右边j开始查找比基准数小的值 ***/
+        while (i < j && [array[j] integerValue] >= key) {//如果比基准数大，继续查找
+            j--;
+        }
+        //如果比基准数小，则将查找到的小值调换到i的位置
+        array[i] = array[j];
+
+        /**** 当在右边查找到一个比基准数小的值时，就从i开始往后找比基准数大的值 ***/
+        while (i < j && [array[i] integerValue] <= key) {//如果比基准数小，继续查找
+            i++;
+        }
+        //如果比基准数大，则将查找到的大值调换到j的位置
+        array[j] = array[i];
+
+    }
+
+    //将基准数放到正确位置
+    array[i] = @(key);
+
+    /**** 递归排序 ***/
+    //排序基准数左边的
+    [self quickSortArray:array withLeftIndex:leftIndex andRightIndex:i - 1];
+    //排序基准数右边的
+    [self quickSortArray:array withLeftIndex:i + 1 andRightIndex:rightIndex];
+}
+- (void)quickAscendingOrderSort:(NSMutableArray *)arr leftIndex:(NSInteger)left rightIndex:(NSInteger)right
+{
+    if (left < right) {
+        NSInteger temp = [self getMiddleIndex:arr leftIndex:left rightIndex:right];//取一次较小值下标
+        [self quickAscendingOrderSort:arr leftIndex:left rightIndex:temp - 1];//第一次可能会有temp大于left
+        [self quickAscendingOrderSort:arr leftIndex:temp + 1 rightIndex:right];
+    }
+}
+
+- (NSInteger)getMiddleIndex:(NSMutableArray *)arr leftIndex:(NSInteger)left rightIndex:(NSInteger)right
+{
+    NSInteger tempValue = [arr[left] integerValue];
+    while (left < right) {
+        while (left < right && tempValue <= [arr[right] integerValue]) {
+            right --;
+        }
+        if (left < right) {
+            arr[left] = arr[right];
+        }
+        while (left < right && [arr[left] integerValue] <= tempValue) {
+            left ++;
+        }
+        if (left < right) {
+            arr[right] = arr[left];
+        }
+    }
+    arr[left] = [NSNumber numberWithInteger:tempValue];
+    return left;
+}
+- (void)insertionAscendingOrderSort:(NSMutableArray *)ascendingArr {
+    for (NSInteger i = 1; i < ascendingArr.count; i ++) {
+        NSInteger temp = [ascendingArr[i] integerValue];
+        for (NSInteger j = i - 1; j >=0 && temp < [ascendingArr[j] integerValue]; j --) {
+            ascendingArr[j + 1] = ascendingArr[j];
+            ascendingArr[j] = [NSNumber numberWithInteger:temp];//不能直接用数组下标  深拷贝
+        }
+    }
+    NSLog(@"%@",ascendingArr);
+}
+- (void)sortWithComparator:(NSMutableArray *)array {
+    [array sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        NSInteger value1 = [obj1 integerValue];
+        NSInteger value2 = [obj2 integerValue];
+        if (value1 < value2) {
+            return NSOrderedAscending;
+        }else{
+            return NSOrderedDescending;
+        }
+    }];
+    NSLog(@"%@",array);
 }
 /*
 #pragma mark - Navigation

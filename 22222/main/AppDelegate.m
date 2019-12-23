@@ -21,21 +21,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [IFlySetting setLogFile:LVL_ALL];
+//    [IFlySetting setLogFile:LVL_ALL];
     
     //Set whether to output log messages in Xcode console
-    [IFlySetting showLogcat:YES];
+//    [IFlySetting showLogcat:YES];
     
     //Set the local storage path of SDK
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSString *cachePath = [paths objectAtIndex:0];
-    [IFlySetting setLogFilePath:cachePath];
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+//    NSString *cachePath = [paths objectAtIndex:0];
+//    [IFlySetting setLogFilePath:cachePath];
 
     //Set APPID
     NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"5b359cb2"];
     
     //Configure and initialize iflytek services.(This interface must been invoked in application:didFinishLaunchingWithOptions:)
-    [IFlySpeechUtility createUtility:initString];
+//    [IFlySpeechUtility createUtility:initString];
     [self setValue:@"1213" forKey:@"sss"];
     NSLog(@"%@",[self valueForKey:@"sss"]);
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

@@ -8,10 +8,7 @@
 
 #import "Person.h"
 
-
-
 @implementation Person
-
 
 - (void)showObjectInfo {
     NSLog(@"Object instance address is %p, Object isa content is %p",self,*((void **)(__bridge void *)self));
@@ -26,6 +23,7 @@
     }
     return automatic;
 }
+
 + (void)load {
     
 }
@@ -35,6 +33,16 @@
 - (void)sayhahahaToAmy {
     NSLog(@"hahaha Amy");
 }
+//- (void)setNumber:(NSString *)number {
+//
+//}
+//- (NSString *)number {
+//    return @"1212";
+//}
+//+ (BOOL)accessInstanceVariablesDirectly {
+//
+//    return YES;
+//}
 
 //- (void)log1 {
 //    NSLog(@"log1");

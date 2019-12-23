@@ -9,7 +9,7 @@
 #import "InterViewController.h"
 
 #import "UIButton+extension.h"
-
+static InterViewController *_instance = nil;
 @interface InterViewController ()
 
 @property(nonatomic, copy) NSString *brand;
@@ -19,6 +19,34 @@
 @end
 
 @implementation InterViewController
+
++ (instancetype)shareVC {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[self alloc] init];
+    });
+    return _instance;
+}
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken,^{
+        _instance = [super allocWithZone:zone];
+    });
+    return _instance;
+}
+- (id)copy {
+    return _instance;
+}
+- (id)mutableCopy {
+    return _instance;
+}
++ (instancetype)shareMN {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken,^{
+        _instance = [[self alloc] init];
+    });
+    return _instance;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

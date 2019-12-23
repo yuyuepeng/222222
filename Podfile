@@ -10,6 +10,7 @@ target '22222' do
    pod 'YYKit'
    pod 'ZSSModel'
    pod 'MJExtension'
+   pod 'Masonry', '~> 1.1.0'
   # Pods for 22222
 
   target '22222Tests' do

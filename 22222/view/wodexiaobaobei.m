@@ -21,6 +21,7 @@ static wodexiaobaobei *wode;
     return wode;
 }
 + (instancetype)shareObj {
+    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         wode = [[self alloc] init];

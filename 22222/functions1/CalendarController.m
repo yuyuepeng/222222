@@ -23,7 +23,7 @@
 
 - (UILabel *)showTimeLabel {
     if (_showTimeLabel == nil) {
-        _showTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kScreenHeight/2 + 50, kScreenWidth, 50)];
+        _showTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kmainHeight/2 + 50, kmainWidth, 50)];
         _showTimeLabel.numberOfLines = 0;
         _showTimeLabel.textColor = [UIColor blueColor];
         _showTimeLabel.textAlignment = NSTextAlignmentCenter;
@@ -33,7 +33,7 @@
 }
 - (HXFCalendarView *)calendar {
     if (_calendar == nil) {
-        _calendar = [[HXFCalendarView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight/2)];
+        _calendar = [[HXFCalendarView alloc] initWithFrame:CGRectMake(0, 0, kmainWidth, kmainHeight/2)];
     }
     return _calendar;
 }
@@ -43,7 +43,7 @@
         [self.view addSubview:self.calendar];
         NSArray *arr = @[@"上一月",@"下一月",@"上一年",@"下一年"];
         for (NSInteger i = 0; i < arr.count; i ++) {
-            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth/(arr.count) * i, kScreenHeight/2, kScreenWidth/(arr.count), 50)];
+            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(kmainWidth/(arr.count) * i, kmainHeight/2, kmainWidth/(arr.count), 50)];
             [button setTitle:arr[i] forState:UIControlStateNormal];
             [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
             [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];

@@ -115,6 +115,8 @@
 		A6D26C8C23BDF324002D7DC7 /* AlivcLiveBeautifySettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D26C6D23BDF323002D7DC7 /* AlivcLiveBeautifySettingsViewController.m */; };
 		A6D26C8D23BDF324002D7DC7 /* _AlivcLiveBeautifyNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D26C7623BDF323002D7DC7 /* _AlivcLiveBeautifyNavigationView.m */; };
 		A6D26C8E23BDF324002D7DC7 /* AlivcBeautySettingUIDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D26C7823BDF323002D7DC7 /* AlivcBeautySettingUIDefine.m */; };
+		A6D26C9423C2D93C002D7DC7 /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D26C9023C2D93B002D7DC7 /* JKDBModel.m */; };
+		A6D26C9523C2D93C002D7DC7 /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D26C9123C2D93B002D7DC7 /* JKDBHelper.m */; };
 		A6EC059223A0FC9E00C90A4F /* RYPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EC059123A0FC9E00C90A4F /* RYPlayerManager.m */; };
 		A6EC059523A1267800C90A4F /* PlayVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EC059423A1267800C90A4F /* PlayVideoController.m */; };
 		B3DA4AD114B17CB5D49CC69F /* Pods_22222Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CA150A60AD39643C25B6C5 /* Pods_22222Tests.framework */; };
@@ -512,6 +514,10 @@
 		A6D26C7723BDF323002D7DC7 /* AlivcLiveBeautifySettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlivcLiveBeautifySettingsViewController.h; sourceTree = "<group>"; };
 		A6D26C7823BDF323002D7DC7 /* AlivcBeautySettingUIDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlivcBeautySettingUIDefine.m; sourceTree = "<group>"; };
 		A6D26C7923BDF323002D7DC7 /* _AlivcLiveBeautifyLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AlivcLiveBeautifyLevelView.h; sourceTree = "<group>"; };
+		A6D26C9023C2D93B002D7DC7 /* JKDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBModel.m; sourceTree = "<group>"; };
+		A6D26C9123C2D93B002D7DC7 /* JKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBHelper.m; sourceTree = "<group>"; };
+		A6D26C9223C2D93B002D7DC7 /* JKDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBModel.h; sourceTree = "<group>"; };
+		A6D26C9323C2D93B002D7DC7 /* JKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBHelper.h; sourceTree = "<group>"; };
 		A6EC059023A0FC9E00C90A4F /* RYPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYPlayerManager.h; sourceTree = "<group>"; };
 		A6EC059123A0FC9E00C90A4F /* RYPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYPlayerManager.m; sourceTree = "<group>"; };
 		A6EC059323A1267800C90A4F /* PlayVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayVideoController.h; sourceTree = "<group>"; };
@@ -919,10 +925,10 @@
 		A6D26A5023BDECEB002D7DC7 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				A6D26A5423BDECEB002D7DC7 /* AliyunVodPlayerView.h */,
 				A6D26A5123BDECEB002D7DC7 /* AliyunVodPlayerView.m */,
 				A6D26A5223BDECEB002D7DC7 /* AliyunVodPlayerViewSDK.h */,
 				A6D26A5323BDECEB002D7DC7 /* AliyunVodPlayerViewDefine.h */,
-				A6D26A5423BDECEB002D7DC7 /* AliyunVodPlayerView.h */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1255,6 +1261,17 @@
 			path = AlivcBeaitufySettingsPanel;
 			sourceTree = "<group>";
 		};
+		A6D26C8F23C2D93B002D7DC7 /* DBModel */ = {
+			isa = PBXGroup;
+			children = (
+				A6D26C9223C2D93B002D7DC7 /* JKDBModel.h */,
+				A6D26C9023C2D93B002D7DC7 /* JKDBModel.m */,
+				A6D26C9323C2D93B002D7DC7 /* JKDBHelper.h */,
+				A6D26C9123C2D93B002D7DC7 /* JKDBHelper.m */,
+			);
+			path = DBModel;
+			sourceTree = "<group>";
+		};
 		C115FEE222A0FD260018B79C /* LinkList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1420,6 +1437,7 @@
 		C1B9004321F862C000605B0C /* source */ = {
 			isa = PBXGroup;
 			children = (
+				A6D26C8F23C2D93B002D7DC7 /* DBModel */,
 				A6D26C4B23BDF323002D7DC7 /* AlivcAbstraction */,
 				A6D26C3323BDF29A002D7DC7 /* Utilites */,
 				A6D26ADF23BDEEAB002D7DC7 /* Categories */,
@@ -2139,6 +2157,7 @@
 				C15051232175827E00C4B8A8 /* ISEResultWord.m in Sources */,
 				A6D26ADE23BDEDF0002D7DC7 /* AlivcBaseNavigationController+aliyun_autorotate.m in Sources */,
 				A6021907238EC2A900B4F93E /* RMYMaskCell.m in Sources */,
+				A6D26C9523C2D93C002D7DC7 /* JKDBHelper.m in Sources */,
 				C195939521EC36F500FAB629 /* GIFController.m in Sources */,
 				A6D26A9523BDECEC002D7DC7 /* AVCSelectSharpnessView.m in Sources */,
 				A6D26AA823BDECEC002D7DC7 /* AliyunGestureModel.m in Sources */,
@@ -2270,6 +2289,7 @@
 				C1E0F922212FD6AF00DC1051 /* YLArcChart.m in Sources */,
 				A6D26C8223BDF324002D7DC7 /* AlivcSplicingRequestParameter.m in Sources */,
 				C1F5AA7820EDF529008968A4 /* AppDelegate.m in Sources */,
+				A6D26C9423C2D93C002D7DC7 /* JKDBModel.m in Sources */,
 				C17C06AF221D5510007EEF98 /* wodexiaobaobei.m in Sources */,
 				C102292A22D5DC8200DC835F /* HudController.m in Sources */,
 				A6EC059223A0FC9E00C90A4F /* RYPlayerManager.m in Sources */,

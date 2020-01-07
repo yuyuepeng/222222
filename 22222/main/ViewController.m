@@ -322,10 +322,11 @@ NSArray *getArr(NSString *str) {
         }
             break;
         case 30:
-               {//foldAnimationController
-                   [self.navigationController pushViewController:[[NSClassFromString(@"SearchController") alloc] init] animated:YES];
-               }
-                   break;
+         {//foldAnimationController
+             [self.navigationController pushViewController:[[NSClassFromString(@"SearchController") alloc] init] animated:YES];
+             
+         }
+            break;
         case 31:
             {//foldAnimationController
                 [self.navigationController pushViewController:[[NSClassFromString(@"AliVideoController") alloc] init] animated:YES];

@@ -10,6 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "ViewController.h"
 #import "IFlyMSC/IFlyMSC.h"
+#import <AliyunPlayer/AliPlayer.h>
+#import <artpSource/ArtpFactory.h>
 @interface AppDelegate ()
 
 @property(nonatomic, copy) NSString *sss;
@@ -33,7 +35,7 @@
 
     //Set APPID
     NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"5b359cb2"];
-    
+     [AliPlayer initPlayerComponent:[NSString stringWithUTF8String:ARTP_COMPONENT_NAME] function:getArtpFactory];
     //Configure and initialize iflytek services.(This interface must been invoked in application:didFinishLaunchingWithOptions:)
 //    [IFlySpeechUtility createUtility:initString];
     [self setValue:@"1213" forKey:@"sss"];

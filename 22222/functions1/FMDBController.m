@@ -54,6 +54,7 @@ static NSString *YHRequestDownloadMd5String(NSString *key) {
         model.pk = [model.vid intValue];
         NSString *sandBoxPath = [NSString stringWithFormat:@"video%ld",i];
         model.sandBoxPath = YHRequestDownloadMd5String(sandBoxPath);
+        [model save];
     }
 }
 - (void)button1Click {

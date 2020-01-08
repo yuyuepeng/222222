@@ -7,8 +7,10 @@
 //
 
 #import "DBListController.h"
-
+#import "RMYVideoModel.h"
 @interface DBListController ()
+
+@property(nonatomic, strong) NSMutableArray <RMYVideoModel *>*dataSource;
 
 @end
 
@@ -16,6 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _dataSource = [NSMutableArray arrayWithArray:[RMYVideoModel findAll]];
+    for (RMYVideoModel *model in _dataSource) {
+        NSLog(@"%@ --- ",model.sandBoxPath);
+    }
     // Do any additional setup after loading the view.
 }
 

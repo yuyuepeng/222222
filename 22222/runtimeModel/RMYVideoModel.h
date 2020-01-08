@@ -18,6 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// videoid
 @property(nonatomic, copy) NSString *vid;
 
+/// 是否完成 0是未完成 1 是已完成
+@property(nonatomic, assign) int completed;
+
+///  进度  float
+@property(nonatomic, assign) float progress;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

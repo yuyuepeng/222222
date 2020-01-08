@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23FC0B4323C5C43A004DB8B5 /* FMDBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FC0B4223C5C43A004DB8B5 /* FMDBController.m */; };
+		23FC0B4623C5C5B4004DB8B5 /* RMYVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FC0B4523C5C5B4004DB8B5 /* RMYVideoModel.m */; };
+		23FC0B4923C5CB1A004DB8B5 /* DBListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FC0B4823C5CB1A004DB8B5 /* DBListController.m */; };
 		6077359E2B9BC405B66A8B16 /* Pods_22222UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE60F772972A000C4DC7B862 /* Pods_22222UITests.framework */; };
 		A600CA6A236C3AB200AA4E55 /* UIButton+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA69236C3AB200AA4E55 /* UIButton+extension.m */; };
 		A600CA6D2370685B00AA4E55 /* NSData+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA6C2370685B00AA4E55 /* NSData+Add.m */; };
@@ -304,6 +307,12 @@
 
 /* Begin PBXFileReference section */
 		03FB8E4DC71BB6EA6D57266A /* Pods-22222Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222Tests/Pods-22222Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		23FC0B4123C5C43A004DB8B5 /* FMDBController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBController.h; sourceTree = "<group>"; };
+		23FC0B4223C5C43A004DB8B5 /* FMDBController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBController.m; sourceTree = "<group>"; };
+		23FC0B4423C5C5B4004DB8B5 /* RMYVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYVideoModel.h; sourceTree = "<group>"; };
+		23FC0B4523C5C5B4004DB8B5 /* RMYVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYVideoModel.m; sourceTree = "<group>"; };
+		23FC0B4723C5CB1A004DB8B5 /* DBListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DBListController.h; path = 22222/runtimeModel/DBListController.h; sourceTree = SOURCE_ROOT; };
+		23FC0B4823C5CB1A004DB8B5 /* DBListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DBListController.m; path = 22222/runtimeModel/DBListController.m; sourceTree = SOURCE_ROOT; };
 		829B5714657A6A0184431866 /* Pods-22222UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.release.xcconfig"; sourceTree = "<group>"; };
 		A600CA68236C3AB200AA4E55 /* UIButton+extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+extension.h"; sourceTree = "<group>"; };
 		A600CA69236C3AB200AA4E55 /* UIButton+extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+extension.m"; sourceTree = "<group>"; };
@@ -1294,6 +1303,8 @@
 				C115FEF122AE5D500018B79C /* Person.m */,
 				C16194A923161A6600152FD7 /* Person+cate.h */,
 				C16194AA23161A6600152FD7 /* Person+cate.m */,
+				23FC0B4423C5C5B4004DB8B5 /* RMYVideoModel.h */,
+				23FC0B4523C5C5B4004DB8B5 /* RMYVideoModel.m */,
 			);
 			path = runtimeModel;
 			sourceTree = "<group>";
@@ -1668,6 +1679,8 @@
 				A6D2698123BD7746002D7DC7 /* SearchController.m */,
 				A6D2699723BDB807002D7DC7 /* AliVideoController.h */,
 				A6D2699823BDB807002D7DC7 /* AliVideoController.m */,
+				23FC0B4123C5C43A004DB8B5 /* FMDBController.h */,
+				23FC0B4223C5C43A004DB8B5 /* FMDBController.m */,
 			);
 			path = functions1;
 			sourceTree = "<group>";
@@ -1728,6 +1741,8 @@
 		C1E9BED122BA3C72002587F0 /* functions2 */ = {
 			isa = PBXGroup;
 			children = (
+				23FC0B4723C5CB1A004DB8B5 /* DBListController.h */,
+				23FC0B4823C5CB1A004DB8B5 /* DBListController.m */,
 			);
 			path = functions2;
 			sourceTree = "<group>";
@@ -2130,6 +2145,7 @@
 				A6D26AA223BDECEC002D7DC7 /* AliyunPlayerViewPopLayer.m in Sources */,
 				C1DA12AF216DE33000E8D928 /* YYPScrollViewController.m in Sources */,
 				C1F5AAB120EDF5AD008968A4 /* TestViewConteroller.m in Sources */,
+				23FC0B4323C5C43A004DB8B5 /* FMDBController.m in Sources */,
 				C150512E2175827E00C4B8A8 /* RecognizerFactory.m in Sources */,
 				A6D26C8D23BDF324002D7DC7 /* _AlivcLiveBeautifyNavigationView.m in Sources */,
 				A6D26C8A23BDF324002D7DC7 /* AlivcBeautifyDefaultControl.m in Sources */,
@@ -2182,6 +2198,7 @@
 				C1C1CD78215C625900A7C2A2 /* SBJson4StreamWriter.m in Sources */,
 				A6D26AF923BDEEAB002D7DC7 /* NSArray+AliyunDeepCopy.m in Sources */,
 				C1DA12BB216DE94C00E8D928 /* HealthStepController.m in Sources */,
+				23FC0B4923C5CB1A004DB8B5 /* DBListController.m in Sources */,
 				C1F5AAB620EDF5E0008968A4 /* HXFBaseViewController.m in Sources */,
 				A6D26C4523BDF29A002D7DC7 /* AlivcAppServer.m in Sources */,
 				C1F8C1A823332779005D3EEE /* AmyView.m in Sources */,
@@ -2280,6 +2297,7 @@
 				C15051272175827E00C4B8A8 /* ISESettingViewController.m in Sources */,
 				C1C1CD6D215C625900A7C2A2 /* SAMath.m in Sources */,
 				C150512B2175827E00C4B8A8 /* IATConfig.m in Sources */,
+				23FC0B4623C5C5B4004DB8B5 /* RMYVideoModel.m in Sources */,
 				C150512A2175827E00C4B8A8 /* ISRDataHelper.m in Sources */,
 				A6798C7823B20A5F004A8263 /* JCFlipViewAnimationHelper.m in Sources */,
 				A6D26AF823BDEEAB002D7DC7 /* UIApplication+AlivcHelper.m in Sources */,

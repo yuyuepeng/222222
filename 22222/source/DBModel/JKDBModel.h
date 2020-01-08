@@ -14,6 +14,7 @@
 #define SQLREAL     @"REAL"
 #define SQLBLOB     @"BLOB"
 #define SQLNULL     @"NULL"
+
 #define PrimaryKey  @"primary key"
 
 #define primaryId   @"pk"

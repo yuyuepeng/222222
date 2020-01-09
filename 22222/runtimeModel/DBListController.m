@@ -53,6 +53,7 @@
         [[NSRunLoop currentRunLoop] addTimer:timer1 forMode:NSRunLoopCommonModes];
 //        timer1 = i;
     }
+    dispatch_group_t group = dispatch_group_create();
     
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -12,7 +12,6 @@
 		23FC0B4623C5C5B4004DB8B5 /* RMYVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FC0B4523C5C5B4004DB8B5 /* RMYVideoModel.m */; };
 		23FC0B4923C5CB1A004DB8B5 /* DBListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FC0B4823C5CB1A004DB8B5 /* DBListController.m */; };
 		23FD9D2B23C6DBD5005B1F72 /* RMYCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD9D2A23C6DBD5005B1F72 /* RMYCacheHelper.m */; };
-		23FD9D3223C6F7F1005B1F72 /* EUTransLationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD9D3123C6F7F1005B1F72 /* EUTransLationTools.m */; };
 		6077359E2B9BC405B66A8B16 /* Pods_22222UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE60F772972A000C4DC7B862 /* Pods_22222UITests.framework */; };
 		A600CA6A236C3AB200AA4E55 /* UIButton+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA69236C3AB200AA4E55 /* UIButton+extension.m */; };
 		A600CA6D2370685B00AA4E55 /* NSData+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA6C2370685B00AA4E55 /* NSData+Add.m */; };
@@ -320,8 +319,6 @@
 		23FC0B4823C5CB1A004DB8B5 /* DBListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DBListController.m; path = 22222/runtimeModel/DBListController.m; sourceTree = SOURCE_ROOT; };
 		23FD9D2923C6DBD5005B1F72 /* RMYCacheHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYCacheHelper.h; sourceTree = "<group>"; };
 		23FD9D2A23C6DBD5005B1F72 /* RMYCacheHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYCacheHelper.m; sourceTree = "<group>"; };
-		23FD9D3023C6F7F1005B1F72 /* EUTransLationTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUTransLationTools.h; sourceTree = "<group>"; };
-		23FD9D3123C6F7F1005B1F72 /* EUTransLationTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUTransLationTools.m; sourceTree = "<group>"; };
 		829B5714657A6A0184431866 /* Pods-22222UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.release.xcconfig"; sourceTree = "<group>"; };
 		A600CA68236C3AB200AA4E55 /* UIButton+extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+extension.h"; sourceTree = "<group>"; };
 		A600CA69236C3AB200AA4E55 /* UIButton+extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+extension.m"; sourceTree = "<group>"; };
@@ -1513,8 +1510,6 @@
 		C1C1CD38215C625900A7C2A2 /* tools */ = {
 			isa = PBXGroup;
 			children = (
-				23FD9D3023C6F7F1005B1F72 /* EUTransLationTools.h */,
-				23FD9D3123C6F7F1005B1F72 /* EUTransLationTools.m */,
 				C1C1CD7B215C630600A7C2A2 /* Definition.h */,
 				C15416A720F3060100C20F79 /* HXFAnimationTools.h */,
 				C15416A820F3060100C20F79 /* HXFAnimationTools.m */,
@@ -2214,7 +2209,6 @@
 				C1C1CD78215C625900A7C2A2 /* SBJson4StreamWriter.m in Sources */,
 				A6D26AF923BDEEAB002D7DC7 /* NSArray+AliyunDeepCopy.m in Sources */,
 				C1DA12BB216DE94C00E8D928 /* HealthStepController.m in Sources */,
-				23FD9D3223C6F7F1005B1F72 /* EUTransLationTools.m in Sources */,
 				23FC0B4923C5CB1A004DB8B5 /* DBListController.m in Sources */,
 				C1F5AAB620EDF5E0008968A4 /* HXFBaseViewController.m in Sources */,
 				A6D26C4523BDF29A002D7DC7 /* AlivcAppServer.m in Sources */,

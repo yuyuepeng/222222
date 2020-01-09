@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23B28D8A23C6CED4005EDC9A /* RMYVideoDownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B28D8923C6CED4005EDC9A /* RMYVideoDownLoadCell.m */; };
 		23FC0B4323C5C43A004DB8B5 /* FMDBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FC0B4223C5C43A004DB8B5 /* FMDBController.m */; };
 		23FC0B4623C5C5B4004DB8B5 /* RMYVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FC0B4523C5C5B4004DB8B5 /* RMYVideoModel.m */; };
 		23FC0B4923C5CB1A004DB8B5 /* DBListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FC0B4823C5CB1A004DB8B5 /* DBListController.m */; };
+		23FD9D2B23C6DBD5005B1F72 /* RMYCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD9D2A23C6DBD5005B1F72 /* RMYCacheHelper.m */; };
+		23FD9D3223C6F7F1005B1F72 /* EUTransLationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD9D3123C6F7F1005B1F72 /* EUTransLationTools.m */; };
 		6077359E2B9BC405B66A8B16 /* Pods_22222UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE60F772972A000C4DC7B862 /* Pods_22222UITests.framework */; };
 		A600CA6A236C3AB200AA4E55 /* UIButton+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA69236C3AB200AA4E55 /* UIButton+extension.m */; };
 		A600CA6D2370685B00AA4E55 /* NSData+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA6C2370685B00AA4E55 /* NSData+Add.m */; };
@@ -307,12 +310,18 @@
 
 /* Begin PBXFileReference section */
 		03FB8E4DC71BB6EA6D57266A /* Pods-22222Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-22222Tests/Pods-22222Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		23B28D8823C6CED4005EDC9A /* RMYVideoDownLoadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYVideoDownLoadCell.h; sourceTree = "<group>"; };
+		23B28D8923C6CED4005EDC9A /* RMYVideoDownLoadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYVideoDownLoadCell.m; sourceTree = "<group>"; };
 		23FC0B4123C5C43A004DB8B5 /* FMDBController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBController.h; sourceTree = "<group>"; };
 		23FC0B4223C5C43A004DB8B5 /* FMDBController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBController.m; sourceTree = "<group>"; };
 		23FC0B4423C5C5B4004DB8B5 /* RMYVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYVideoModel.h; sourceTree = "<group>"; };
 		23FC0B4523C5C5B4004DB8B5 /* RMYVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYVideoModel.m; sourceTree = "<group>"; };
 		23FC0B4723C5CB1A004DB8B5 /* DBListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DBListController.h; path = 22222/runtimeModel/DBListController.h; sourceTree = SOURCE_ROOT; };
 		23FC0B4823C5CB1A004DB8B5 /* DBListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DBListController.m; path = 22222/runtimeModel/DBListController.m; sourceTree = SOURCE_ROOT; };
+		23FD9D2923C6DBD5005B1F72 /* RMYCacheHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYCacheHelper.h; sourceTree = "<group>"; };
+		23FD9D2A23C6DBD5005B1F72 /* RMYCacheHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYCacheHelper.m; sourceTree = "<group>"; };
+		23FD9D3023C6F7F1005B1F72 /* EUTransLationTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUTransLationTools.h; sourceTree = "<group>"; };
+		23FD9D3123C6F7F1005B1F72 /* EUTransLationTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUTransLationTools.m; sourceTree = "<group>"; };
 		829B5714657A6A0184431866 /* Pods-22222UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-22222UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-22222UITests/Pods-22222UITests.release.xcconfig"; sourceTree = "<group>"; };
 		A600CA68236C3AB200AA4E55 /* UIButton+extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+extension.h"; sourceTree = "<group>"; };
 		A600CA69236C3AB200AA4E55 /* UIButton+extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+extension.m"; sourceTree = "<group>"; };
@@ -1305,6 +1314,8 @@
 				C16194AA23161A6600152FD7 /* Person+cate.m */,
 				23FC0B4423C5C5B4004DB8B5 /* RMYVideoModel.h */,
 				23FC0B4523C5C5B4004DB8B5 /* RMYVideoModel.m */,
+				23FD9D2923C6DBD5005B1F72 /* RMYCacheHelper.h */,
+				23FD9D2A23C6DBD5005B1F72 /* RMYCacheHelper.m */,
 			);
 			path = runtimeModel;
 			sourceTree = "<group>";
@@ -1441,6 +1452,8 @@
 				A6D2698423BD778E002D7DC7 /* searchView.m */,
 				A6D2698723BD8116002D7DC7 /* UIView+RMYExtension.h */,
 				A6D2698823BD8116002D7DC7 /* UIView+RMYExtension.m */,
+				23B28D8823C6CED4005EDC9A /* RMYVideoDownLoadCell.h */,
+				23B28D8923C6CED4005EDC9A /* RMYVideoDownLoadCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1500,6 +1513,8 @@
 		C1C1CD38215C625900A7C2A2 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				23FD9D3023C6F7F1005B1F72 /* EUTransLationTools.h */,
+				23FD9D3123C6F7F1005B1F72 /* EUTransLationTools.m */,
 				C1C1CD7B215C630600A7C2A2 /* Definition.h */,
 				C15416A720F3060100C20F79 /* HXFAnimationTools.h */,
 				C15416A820F3060100C20F79 /* HXFAnimationTools.m */,
@@ -2185,6 +2200,7 @@
 				C10BB7E82329D8B4009A260B /* aboutBlockVC.m in Sources */,
 				A6D26C7D23BDF324002D7DC7 /* AlivcLiveUser.m in Sources */,
 				A6D26AAF23BDECEC002D7DC7 /* AliyunViewMoreView.m in Sources */,
+				23FD9D2B23C6DBD5005B1F72 /* RMYCacheHelper.m in Sources */,
 				C12E2B0322670EF7008A340E /* test.swift in Sources */,
 				A6D26AA523BDECEC002D7DC7 /* AliyunPlayerViewControlView.m in Sources */,
 				A6D26AC123BDED5C002D7DC7 /* AlivcVideoDataBase.m in Sources */,
@@ -2198,6 +2214,7 @@
 				C1C1CD78215C625900A7C2A2 /* SBJson4StreamWriter.m in Sources */,
 				A6D26AF923BDEEAB002D7DC7 /* NSArray+AliyunDeepCopy.m in Sources */,
 				C1DA12BB216DE94C00E8D928 /* HealthStepController.m in Sources */,
+				23FD9D3223C6F7F1005B1F72 /* EUTransLationTools.m in Sources */,
 				23FC0B4923C5CB1A004DB8B5 /* DBListController.m in Sources */,
 				C1F5AAB620EDF5E0008968A4 /* HXFBaseViewController.m in Sources */,
 				A6D26C4523BDF29A002D7DC7 /* AlivcAppServer.m in Sources */,
@@ -2230,6 +2247,7 @@
 				C15051292175827E00C4B8A8 /* IATConfigViewController.m in Sources */,
 				A6D26C8123BDF324002D7DC7 /* AlivcVideoPlayListModel.m in Sources */,
 				A6D26C8423BDF324002D7DC7 /* AlivcPushBeautyParams.m in Sources */,
+				23B28D8A23C6CED4005EDC9A /* RMYVideoDownLoadCell.m in Sources */,
 				A6D26AC423BDED5C002D7DC7 /* AlivcDownloadDataManager.m in Sources */,
 				C15051172175827E00C4B8A8 /* TTSConfigViewController.m in Sources */,
 				A6D26ADA23BDEDF0002D7DC7 /* AlivcImage.m in Sources */,

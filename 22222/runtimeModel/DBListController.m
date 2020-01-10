@@ -33,9 +33,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _dataSource = [NSMutableArray arrayWithArray:[RMYVideoModel findAll]];
-    for (RMYVideoModel *model in _dataSource) {
-        NSLog(@"%@ --- ",model.sandBoxPath);
-    }
+//    for (RMYVideoModel *model in _dataSource) {
+//        NSLog(@"%@ --- ",model.sandBoxPath);
+//    }
     [self.view addSubview:self.tableView];
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(mainWidth - 64, 100, 44, 44)];
     [button setTitle:@"下载3个" forState:UIControlStateNormal];
@@ -46,16 +46,37 @@
     // Do any additional setup after loading the view.
 }
 - (void)buttonClick:(UIButton *)button {
-    for (NSInteger i = 0 ; i < 3; i ++) {
-        NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:0.2f repeats:YES block:^(NSTimer * _Nonnull timer) {
-            NSLog(@"i = %ld", i);
-        }];
-        [[NSRunLoop currentRunLoop] addTimer:timer1 forMode:NSRunLoopCommonModes];
+//    for (NSInteger i = 0 ; i < 3; i ++) {
+//        NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:0.2f repeats:YES block:^(NSTimer * _Nonnull timer) {
+//            NSLog(@"i = %ld", i);
+//        }];
+//        [[NSRunLoop currentRunLoop] addTimer:timer1 forMode:NSRunLoopCommonModes];
 //        timer1 = i;
+
+   
+
+//    dispatch_queue_t queue = dispatch_queue_create("semaphoreQueue", DISPATCH_QUEUE_CONCURRENT);
+//    __block int a = 3,n = 10;
+    NSArray *arr1 = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
+    NSMutableArray *data = [NSMutableArray arrayWithArray:arr1];
+    NSMutableArray *source = [NSMutableArray array];
+    if (data.count > 3) {
+        [source addObjectsFromArray:[data subarrayWithRange:NSMakeRange(0, 3)]];
+        [data removeObjectsInRange:NSMakeRange(0, 3)];
+        NSLog(@"%@--",data);
+        NSLog(@"%@ ---",source);
+        for (NSInteger i = 0; i < 7 ; i ++) {
+            [source addObject:data[0]];
+            [data removeObjectAtIndex:0];
+            NSLog(@"%@---",data);
+            NSLog(@"%@ -----",source);
+        }
+    }else {
+        [source addObjectsFromArray:data];
+        
     }
-    dispatch_group_t group = dispatch_group_create();
-    
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _dataSource.count;
 }

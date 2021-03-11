@@ -15,6 +15,7 @@
 #import <Masonry.h>
 #import <Lottie-Swift.h>
 #import "AlivcImage.h"
+#import <YYKit/YYKit.h>
 //是否是iPhoneX系列
 #define isIPHONE_X \
 ({BOOL isPhoneX = NO;\

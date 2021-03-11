@@ -12,6 +12,7 @@
 #import "IFlyMSC/IFlyMSC.h"
 #import <AliyunPlayer/AliPlayer.h>
 #import <artpSource/ArtpFactory.h>
+#import <AliyunMediaDownloader/AliyunMediaDownloader.h>
 @interface AppDelegate ()
 
 @property(nonatomic, copy) NSString *sss;
@@ -34,6 +35,8 @@
 //    [IFlySetting setLogFilePath:cachePath];
 
     //Set APPID
+    NSString *encrptyFilePath = [[NSBundle mainBundle] pathForResource:@"encryptedApp" ofType:@"dat"];
+    [AliPrivateService initKey:encrptyFilePath];
     NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"5b359cb2"];
      [AliPlayer initPlayerComponent:[NSString stringWithUTF8String:ARTP_COMPONENT_NAME] function:getArtpFactory];
     //Configure and initialize iflytek services.(This interface must been invoked in application:didFinishLaunchingWithOptions:)

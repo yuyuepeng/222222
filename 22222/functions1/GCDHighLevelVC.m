@@ -98,13 +98,15 @@
     [self performSelector:NSSelectorFromString([NSString stringWithFormat:@"test%ld",indexPath.row])];
 }
 - (void)test0 {
-    
+    //延迟运行
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSLog(@"3秒以后");
     });
     NSLog(@"三秒前");
 }
+
 - (void)test1 {
+    //串行，异步顺序下载
     dispatch_queue_t serialQueue = dispatch_queue_create("serial", DISPATCH_QUEUE_SERIAL);
     dispatch_async(serialQueue, ^{
         dispatch_async(serialQueue, ^{
@@ -125,6 +127,7 @@
     NSLog(@"外部主线程");
 }
 - (void)test2 {
+    //并行同步顺序下载
     dispatch_queue_t currentQueue = dispatch_queue_create("currentQueue", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(currentQueue, ^{
         dispatch_sync(currentQueue, ^{
@@ -141,7 +144,9 @@
     });
     
 }
-- (void)test3 {//"任务1、2在子线程上先顺序执行后，任务3、4在主线程上执行，最后任务5、6、7在子线程上并发无序执行
+- (void)test3 {
+    
+    //"任务1、2在子线程上先顺序执行后，任务3、4在主线程上执行，最后任务5、6、7在子线程上并发无序执行
     
     //同步串行队列是一个个执行  异步并发队列是无序执行
     dispatch_queue_t serialQueue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
@@ -175,7 +180,7 @@
     });
 }
 - (void)test4 {
-    //异步并发
+    //异步并发  队列组1
     NSLog(@"begin");
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
@@ -192,7 +197,7 @@
    
 }
 - (void)test5 {
-     //一个一个来
+     //一个一个来 队列组2
     NSLog(@"begin");
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_enter(group);
@@ -213,6 +218,7 @@
     //
 }
 - (void)test6 {
+//    两个网络请求同步问题
 //    NSString *appIdKey = @"8781e4ef1c73ff20a180d3d7a42a8c04";
 //    NSString* urlString_1 = @"http://api.openweathermap.org/data/2.5/weather";
 //    NSString* urlString_2 = @"http://api.openweathermap.org/data/2.5/forecast/daily";
@@ -228,7 +234,7 @@
 //        // 开始网络请求任务
 //        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 //        [manager GET:urlString_1 parameters:dictionary progress:^(NSProgress * _Nonnull downloadProgress) {
-//            
+//
 //        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //            NSLog(@"成功请求数据1:%@",[responseObject class]);
 //            // 如果请求成功，发送信号量
@@ -241,7 +247,7 @@
 //        // 在网络请求任务成功之前，信号量等待中
 //        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
 //    });
-//    
+//
 //    // 将第二个网络请求任务添加到组中
 //    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        // 创建信号量
@@ -268,6 +274,7 @@
 //    });
 }
 - (void)test7 {
+//    dispatch_barrier_sync栅栏函数
     dispatch_queue_t concurrentQueue = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
     
     for (NSInteger i = 0; i < 10; i++) {
@@ -292,7 +299,9 @@
         });
     }
 }
+
 - (void)test8 {
+//    dispatch_group_async
     dispatch_queue_t concurrentQueue = dispatch_queue_create("test1", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_group_t group = dispatch_group_create();
@@ -352,6 +361,7 @@
    
 }
 - (void)test9 {
+//    Dispatch Semaphore信号量
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
     __block NSInteger number = 0;
@@ -375,7 +385,9 @@
 //    保持线程同步，将异步执行任务转换为同步执行任务
 //    保证线程安全，为线程加锁
 }
+
 - (void)test10 {
+//    Dispatch Semaphore为线程加锁
     for (NSInteger i = 0; i < 10; i++) {
         
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -389,7 +401,9 @@
         });
     }
 }
+
 - (void)test11 {
+//    NSOperation和NSOperationQueue
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
         for (int i = 0; i < 2; i++) {
@@ -406,6 +420,7 @@
     [queue addOperation:op];
 }
 - (void)test12 {
+//    NSThread+runloop实现常驻线程
     [self performSelector:@selector(test) onThread:[GCDHighLevelVC shareThread] withObject:nil waitUntilDone:NO];
 
 }

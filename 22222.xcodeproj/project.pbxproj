@@ -17,6 +17,8 @@
 		A600CA6D2370685B00AA4E55 /* NSData+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A600CA6C2370685B00AA4E55 /* NSData+Add.m */; };
 		A6021904238E7E3500B4F93E /* RMYMasController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6021903238E7E3500B4F93E /* RMYMasController.m */; };
 		A6021907238EC2A900B4F93E /* RMYMaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6021906238EC2A900B4F93E /* RMYMaskCell.m */; };
+		A60C62FC26007EC6005CCE5C /* YYPOperationQueueController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60C62FB26007EC5005CCE5C /* YYPOperationQueueController.m */; };
+		A60C632126023CEE005CCE5C /* YYPTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A60C632026023CEE005CCE5C /* YYPTimer.m */; };
 		A6798C3C23AA3282004A8263 /* foldAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6798C3B23AA3282004A8263 /* foldAnimationController.m */; };
 		A6798C4223AA4059004A8263 /* lightedController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6798C4123AA4059004A8263 /* lightedController.m */; };
 		A6798C6A23B061F5004A8263 /* RMYDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6798C6823B061F5004A8263 /* RMYDetailController.m */; };
@@ -328,6 +330,10 @@
 		A6021903238E7E3500B4F93E /* RMYMasController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYMasController.m; sourceTree = "<group>"; };
 		A6021905238EC2A900B4F93E /* RMYMaskCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMYMaskCell.h; sourceTree = "<group>"; };
 		A6021906238EC2A900B4F93E /* RMYMaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMYMaskCell.m; sourceTree = "<group>"; };
+		A60C62FA26007EC5005CCE5C /* YYPOperationQueueController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYPOperationQueueController.h; sourceTree = "<group>"; };
+		A60C62FB26007EC5005CCE5C /* YYPOperationQueueController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYPOperationQueueController.m; sourceTree = "<group>"; };
+		A60C631F26023CEE005CCE5C /* YYPTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYPTimer.h; sourceTree = "<group>"; };
+		A60C632026023CEE005CCE5C /* YYPTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYPTimer.m; sourceTree = "<group>"; };
 		A6798C3A23AA3282004A8263 /* foldAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = foldAnimationController.h; sourceTree = "<group>"; };
 		A6798C3B23AA3282004A8263 /* foldAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = foldAnimationController.m; sourceTree = "<group>"; };
 		A6798C4023AA4059004A8263 /* lightedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lightedController.h; sourceTree = "<group>"; };
@@ -870,6 +876,15 @@
 				829B5714657A6A0184431866 /* Pods-22222UITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A60C631E26023CBC005CCE5C /* PersonalCustomTool */ = {
+			isa = PBXGroup;
+			children = (
+				A60C631F26023CEE005CCE5C /* YYPTimer.h */,
+				A60C632026023CEE005CCE5C /* YYPTimer.m */,
+			);
+			path = PersonalCustomTool;
 			sourceTree = "<group>";
 		};
 		A6798C6C23B20A5F004A8263 /* JCFlipPageViewClass */ = {
@@ -1691,6 +1706,8 @@
 				A6D2699823BDB807002D7DC7 /* AliVideoController.m */,
 				23FC0B4123C5C43A004DB8B5 /* FMDBController.h */,
 				23FC0B4223C5C43A004DB8B5 /* FMDBController.m */,
+				A60C62FA26007EC5005CCE5C /* YYPOperationQueueController.h */,
+				A60C62FB26007EC5005CCE5C /* YYPOperationQueueController.m */,
 			);
 			path = functions1;
 			sourceTree = "<group>";
@@ -1800,8 +1817,10 @@
 		C1F5AA7520EDF529008968A4 /* 22222 */ = {
 			isa = PBXGroup;
 			children = (
-				C1F8C1A2233319B7005D3EEE /* InterViewQuestion */,
+				A60C631E26023CBC005CCE5C /* PersonalCustomTool */,
+				C1DA12C9216DF94700E8D928 /* functions1 */,
 				C1E9BED122BA3C72002587F0 /* functions2 */,
+				C1F8C1A2233319B7005D3EEE /* InterViewQuestion */,
 				C1E9BED022BA3C55002587F0 /* main */,
 				C115FEEF22AE5D020018B79C /* runtimeModel */,
 				C115FEE222A0FD260018B79C /* LinkList */,
@@ -1818,7 +1837,6 @@
 				C1E0F90C212FD6AF00DC1051 /* YLChart */,
 				C133829621250639001C05DA /* YYPBeisaier */,
 				C1F5AAA820EDF5AD008968A4 /* test2 */,
-				C1DA12C9216DF94700E8D928 /* functions1 */,
 				C1F5AA7C20EDF529008968A4 /* Main.storyboard */,
 				C1F5AA7F20EDF52B008968A4 /* Assets.xcassets */,
 				C1F5AA8120EDF52B008968A4 /* LaunchScreen.storyboard */,
@@ -2284,6 +2302,7 @@
 				C150512D2175827E00C4B8A8 /* ABNFViewController.m in Sources */,
 				A6798C7723B20A5F004A8263 /* SBGradientOverlayLayer.m in Sources */,
 				C1F5AAB220EDF5AD008968A4 /* HXFTransverseTableView.m in Sources */,
+				A60C62FC26007EC6005CCE5C /* YYPOperationQueueController.m in Sources */,
 				C183386E21549C69001A8C20 /* ViewController2.m in Sources */,
 				C150511C2175827E00C4B8A8 /* ISEResultSyll.m in Sources */,
 				C1E0F920212FD6AF00DC1051 /* IShootJianBianSlider.m in Sources */,
@@ -2342,6 +2361,7 @@
 				A698675622BD11E200A9420E /* BtnCateTestController.m in Sources */,
 				A6D26AC023BDED5C002D7DC7 /* AVCDownloadVideo.m in Sources */,
 				C1C1CD71215C625900A7C2A2 /* PopupView.m in Sources */,
+				A60C632126023CEE005CCE5C /* YYPTimer.m in Sources */,
 				A6D26A9223BDECEC002D7DC7 /* AlivcVideoPlayerListsTableViewCell.m in Sources */,
 				A6D26AC523BDED5C002D7DC7 /* AVCVideoConfig.m in Sources */,
 				C1C1CD77215C625900A7C2A2 /* SBJson4Parser.m in Sources */,
@@ -2532,7 +2552,7 @@
 				CODE_SIGN_ENTITLEMENTS = 22222/22222.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8858GLHKNB;
+				DEVELOPMENT_TEAM = 6GJF5B8642;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2565,7 +2585,7 @@
 				CODE_SIGN_ENTITLEMENTS = 22222/22222.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8858GLHKNB;
+				DEVELOPMENT_TEAM = 6GJF5B8642;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

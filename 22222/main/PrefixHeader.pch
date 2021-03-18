@@ -36,6 +36,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define isEmpty(x)  [ViewController isNilOrEmpty:x]
 #define getNoneNil(object)  [MyDateSecurity getNoneNilString:object]
 #define WeakSelf __weak typeof(self) weakSelf = self;
+#define StrongSelf __strong typeof(self) strongSelf = self;
 
 
 #define kMyUserDefult [NSUserDefaults standardUserDefaults] //保存本地

@@ -12,5 +12,7 @@
 	<true/>
 	<key>com.apple.developer.siri</key>
 	<true/>
+	<key>keychain-access-groups</key>
+	<array/>
 </dict>
 </plist>

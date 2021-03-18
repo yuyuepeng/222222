@@ -13,9 +13,14 @@
 #import <AliyunPlayer/AliPlayer.h>
 #import <artpSource/ArtpFactory.h>
 #import <AliyunMediaDownloader/AliyunMediaDownloader.h>
+#import "YYPTimer.h"
 @interface AppDelegate ()
 
 @property(nonatomic, copy) NSString *sss;
+
+@property(nonatomic, strong) CADisplayLink *link;
+@property(nonatomic, strong) YYPTimer *timer;
+
 
 @end
 
@@ -69,9 +74,20 @@
         printf("int === %d",a[i]);
         
     }
+//    self.link = [CADisplayLink displayLinkWithTarget:self selector:@selector(testLink)];
+//    self.link.paused = NO;
+//       [self.link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    self.timer = [YYPTimer createTimerWithInterval:0.1 action:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self testLink];
+        });
+    } repeat:YES];
+    [self.timer resumeTimer];
     return YES;
 }
-
+- (void)testLink {
+    NSLog(@"do what ");
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

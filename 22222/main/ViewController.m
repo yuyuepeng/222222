@@ -95,7 +95,7 @@ NSArray *getArr(NSString *str) {
     NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
     NSLog(@"mainwidth %lf",mainWidth);
 //    NSLog(@"",self.navigationController);
-    _dataSource = @[@"YYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法",@"修饰词",@"关于block",@"面试题",@"masonry",@"invocationController",@"播放器",@"对折View",@"点亮View",@"searchViewController",@"AliVideoController",@"FMDBController"];
+    _dataSource = @[@"YYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法Operationqueue",@"修饰词",@"关于block",@"面试题",@"masonry",@"invocationController",@"播放器",@"对折View",@"点亮View",@"searchViewController",@"AliVideoController",@"FMDBController"];
     for (NSInteger i = 0; i < _dataSource.count; i ++) {
         [self.dataModels addObject:[[YYPCellHeightModel alloc] init]];
     }

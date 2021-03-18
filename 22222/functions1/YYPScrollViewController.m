@@ -12,6 +12,10 @@
 
 @interface YYPScrollViewController ()
 
+@property(nonatomic,strong) NSTimer *timer1;
+
+@property(nonatomic,strong) NSTimer *timer2;
+
 @end
 
 @implementation YYPScrollViewController
@@ -32,9 +36,33 @@
     scrollView1.separatorWidth = 15;
     [scrollView1 customImageViewWithImageUrls:imageArray];
     [self.view addSubview:scrollView1];
+    
+    scrollView.frame = CGRectMake(0, 100, mainWidth, 100);
+    NSLog(@"232323232323");
+    WeakSelf
+//    self.timer1 = [NSTimer timerWithTimeInterval:2 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        NSLog(@"%@--- 123",weakSelf);
+//    }];
+//    self.timer1 = [NSTimer timerWithTimeInterval:2 target:self selector:@selector(nnnn) userInfo:nil repeats:YES];
+//
+//    [[NSRunLoop mainRunLoop] addTimer:self.timer1 forMode:NSRunLoopCommonModes];
+//    self.timer2 = [NSTimer timerWithTimeInterval:2 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        NSLog(@"%@--- 456",weakSelf);
+//    }];
+//    [[NSRunLoop mainRunLoop] addTimer:self.timer2 forMode:NSRunLoopCommonModes];
+
     // Do any additional setup after loading the view.
 }
+- (void)nnnn {
+    NSLog(@"%@--- 123",self);
 
+}
+- (void)dealloc {
+//    [self.timer1 invalidate];
+//    [self.timer2 invalidate];
+//    self.timer1 = nil;
+//    self.timer2 = nil;
+}
 /*
 #pragma mark - Navigation
 

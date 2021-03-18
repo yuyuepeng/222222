@@ -55,7 +55,7 @@
     _semaphore = dispatch_semaphore_create(1);
     self.title = @"GCD的高级用法";
     count = 0;
-    _dataSource = @[@"延时执行",@"串行，异步顺序下载",@"并行同步顺序下载",@"任务1、2在子线程上先顺序执行后，任务3、4在主线程上执行，最后任务5、6、7在子线程上并发无序执行",@"队列组1",@"队列组2",@"两个网络请求同步问题",@"dispatch_barrier_sync栅栏函数",@"dispatch_group_async",@"Dispatch Semaphore信号量",@"Dispatch Semaphore为线程加锁",@"NSOperation和NSOperationQueue",@"NSThread+runloop实现常驻线程"];
+    _dataSource = @[@"延时执行",@"串行，异步顺序下载",@"并行同步顺序下载",@"任务1、2在子线程上先顺序执行后，任务3、4在主线程上执行，最后任务5、6、7在子线程上并发无序执行",@"队列组1",@"队列组2",@"两个网络请求同步问题",@"dispatch_barrier_sync栅栏函数",@"dispatch_group_async",@"Dispatch Semaphore信号量",@"Dispatch Semaphore为线程加锁",@"NSOperation和NSOperationQueue",@"NSThread+runloop实现常驻线程",@"operationQueue"];
     
     [self.view addSubview:self.tableView];
     [self.tableView reloadData];
@@ -423,6 +423,9 @@
 //    NSThread+runloop实现常驻线程
     [self performSelector:@selector(test) onThread:[GCDHighLevelVC shareThread] withObject:nil waitUntilDone:NO];
 
+}
+- (void)test13 {
+    [self.navigationController pushViewController:[[NSClassFromString(@"YYPOperationQueueController") alloc] init] animated:YES];
 }
 - (void)test {
     NSLog(@"test:%@", [NSThread currentThread]);

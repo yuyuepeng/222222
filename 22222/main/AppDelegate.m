@@ -31,6 +31,7 @@
     // Override point for customization after application launch.
 //    [IFlySetting setLogFile:LVL_ALL];
     
+    
     //Set whether to output log messages in Xcode console
 //    [IFlySetting showLogcat:YES];
     

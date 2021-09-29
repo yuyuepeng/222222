@@ -14,9 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - AliPlayerSDK_iOS (4.7.2):
-    - AliPlayerSDK_iOS/AliPlayerSDK (= 4.7.2)
-  - AliPlayerSDK_iOS/AliPlayerSDK (4.7.2)
   - FMDB (2.7):
     - FMDB/standard (= 2.7)
   - FMDB/standard (2.7)
@@ -37,7 +34,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
-  - AliPlayerSDK_iOS
   - FMDB (from `https://github.com/ccgus/fmdb.git`, tag `2.7`)
   - JSONModel (~> 1.7.0)
   - lottie-ios
@@ -53,7 +49,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
-    - AliPlayerSDK_iOS
     - JSONModel
     - lottie-ios
     - MBProgressHUD
@@ -78,7 +73,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AliPlayerSDK_iOS: 580fa79a9adbf21d4c591601b2c24f830e670551
   FMDB: 115114e988a7c92a5191f1334c46c99b0a477700
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
@@ -91,6 +85,6 @@ SPEC CHECKSUMS:
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
   ZSSModel: f63bd88a6b5c94109a992d488693e03d58d271dd
 
-PODFILE CHECKSUM: 0e9b3b423a9fe026c11890996d473c206b63ce1f
+PODFILE CHECKSUM: abc4fd78aa18cb804cf5aa57ac7a68a2a5423400
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1

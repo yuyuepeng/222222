@@ -18,7 +18,7 @@
 
 @implementation GCDHighLevelVC {
     dispatch_semaphore_t _semaphore;
-    int count;
+    int count;//信号量执行次数
 }
 + (NSThread *)shareThread {
     
@@ -142,7 +142,8 @@
             });
         });
     });
-    
+    NSLog(@"外部主线程");
+
 }
 - (void)test3 {
     
@@ -279,22 +280,23 @@
     
     for (NSInteger i = 0; i < 10; i++) {
         
-        dispatch_sync(concurrentQueue, ^{
-            
+        dispatch_async(concurrentQueue, ^{
+            sleep(0.1);
             NSLog(@"%zd",i);
         });
     }
 //    而dispatch_barrier_sync和dispatch_barrier_async的区别也就在于会不会阻塞当前线程
 
-    dispatch_barrier_sync(concurrentQueue, ^{//阻碍当前线程
-        
-        NSLog(@"barrier");
-    });
+//    dispatch_barrier_sync(concurrentQueue, ^{//阻碍当前线程
+//        
+//        NSLog(@"barrier");
+//    });
     
     for (NSInteger i = 10; i < 20; i++) {
         
-        dispatch_sync(concurrentQueue, ^{
-            
+        dispatch_async(concurrentQueue, ^{
+            sleep(0.1);
+
             NSLog(@"%zd",i);
         });
     }
@@ -361,21 +363,55 @@
    
 }
 - (void)test9 {
+    //限制最大两个线程执行完，再去执行第三个
+    //只能是并发队列，无所谓是不是耗时操作
+    //串行队列的话，信号量不起作用，无论是不是耗时操作，任务都会顺序执行
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(queue, ^{
+            //等待降低信号量
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            NSLog(@"run task 1");
+            sleep(1);
+            NSLog(@"complete task 1");
+            //提高信号量
+            dispatch_semaphore_signal(semaphore);
+        });
+        dispatch_async(queue, ^{
+            //等待降低信号量
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            NSLog(@"run task 2");
+            sleep(1);
+            NSLog(@"complete task 2");
+            //提高信号量
+            dispatch_semaphore_signal(semaphore);
+        });
+        dispatch_async(queue, ^{
+            //等待降低信号量
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            NSLog(@"run task 3");
+            sleep(1);
+            NSLog(@"complete task 3");
+            //提高信号量
+            dispatch_semaphore_signal(semaphore);
+        });
+    
+    
 //    Dispatch Semaphore信号量
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    
-    __block NSInteger number = 0;
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        异步解锁
-        number = 100;
-        
-        dispatch_semaphore_signal(semaphore);
-    });
-    
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);//加锁
-    
-    NSLog(@"semaphore---end,number = %zd",number);
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+//
+//    __block NSInteger number = 0;
+//
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+////        异步解锁
+//        number = 100;
+//
+//        dispatch_semaphore_signal(semaphore);
+//    });
+//
+//    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);//加锁
+//
+//    NSLog(@"semaphore---end,number = %zd",number);
     
 //    1.dispatch_semaphore_create：创建一个Semaphore并初始化信号的总量
 //    2.dispatch_semaphore_signal：发送一个信号，让信号总量加1
@@ -422,10 +458,24 @@
 - (void)test12 {
 //    NSThread+runloop实现常驻线程
     [self performSelector:@selector(test) onThread:[GCDHighLevelVC shareThread] withObject:nil waitUntilDone:NO];
+//    第二种常驻线程
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//           NSTimer * timer = [NSTimer timerWithTimeInterval:1.f repeats:YES block:^(NSTimer * _Nonnull timer) {
+//               static int count = 0;
+//               [NSThread sleepForTimeInterval:1];
+//               //休息一秒钟，模拟耗时操作
+//               NSLog(@"%s - %d",__func__,count++);
+//           }];
+//           [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+//
+//           //子线程需要手动开启Runloop
+//           [[NSRunLoop currentRunLoop] run];
+//    });
 
 }
 - (void)test13 {
     [self.navigationController pushViewController:[[NSClassFromString(@"YYPOperationQueueController") alloc] init] animated:YES];
+
 }
 - (void)test {
     NSLog(@"test:%@", [NSThread currentThread]);

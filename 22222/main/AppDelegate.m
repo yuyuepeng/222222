@@ -10,9 +10,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import "ViewController.h"
 #import "IFlyMSC/IFlyMSC.h"
-#import <AliyunPlayer/AliPlayer.h>
-#import <artpSource/ArtpFactory.h>
-#import <AliyunMediaDownloader/AliyunMediaDownloader.h>
 #import "YYPTimer.h"
 @interface AppDelegate ()
 
@@ -31,7 +28,6 @@
     // Override point for customization after application launch.
 //    [IFlySetting setLogFile:LVL_ALL];
     
-    
     //Set whether to output log messages in Xcode console
 //    [IFlySetting showLogcat:YES];
     
@@ -42,9 +38,7 @@
 
     //Set APPID
     NSString *encrptyFilePath = [[NSBundle mainBundle] pathForResource:@"encryptedApp" ofType:@"dat"];
-    [AliPrivateService initKey:encrptyFilePath];
     NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"5b359cb2"];
-     [AliPlayer initPlayerComponent:[NSString stringWithUTF8String:ARTP_COMPONENT_NAME] function:getArtpFactory];
     //Configure and initialize iflytek services.(This interface must been invoked in application:didFinishLaunchingWithOptions:)
 //    [IFlySpeechUtility createUtility:initString];
     [self setValue:@"1213" forKey:@"sss"];
@@ -78,12 +72,16 @@
 //    self.link = [CADisplayLink displayLinkWithTarget:self selector:@selector(testLink)];
 //    self.link.paused = NO;
 //       [self.link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    self.timer = [YYPTimer createTimerWithInterval:0.1 action:^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self testLink];
-        });
-    } repeat:YES];
-    [self.timer resumeTimer];
+//    self.timer = [YYPTimer createTimerWithInterval:0.1 action:^{
+//        @autoreleasepool {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self testLink];
+//                
+//            });
+//
+//        }
+//    } repeat:YES];
+//    [self.timer resumeTimer];
     return YES;
 }
 - (void)testLink {

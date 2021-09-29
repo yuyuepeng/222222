@@ -13,7 +13,6 @@ target '22222' do
    pod 'ZSSModel'
    pod 'MJExtension'
    pod 'Masonry', '~> 1.1.0'
-   pod 'AliPlayerSDK_iOS'
    pod 'FMDB',:git => 'https://github.com/ccgus/fmdb.git',:tag => '2.7'
    pod 'JSONModel','~> 1.7.0'
    pod 'ZipArchive','1.4.0'

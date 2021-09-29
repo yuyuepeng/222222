@@ -54,8 +54,28 @@ typedef void(^Block)(void);
         uint64_t secondNum = (uint64_t)(self.interval * NSEC_PER_SEC);
         dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, secondNum, 0);
         dispatch_source_set_event_handler(_timer, self.action);
+
     }
     return _timer;
+}
++ (NSThread *)timerThread {
+    static NSThread *timerThread = nil;
+    
+    static dispatch_once_t oncePredicate;
+    
+    dispatch_once(&oncePredicate, ^{
+        
+        timerThread = [[NSThread alloc] initWithTarget:self selector:@selector(threadTest) object:nil];
+        
+        [timerThread setName:@"threadTest"];
+        
+        [timerThread start];
+    });
+    
+    return timerThread;
+}
+- (void)threadTest {
+    
 }
 - (void)resumeTimer
 {

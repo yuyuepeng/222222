@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@interface YYPCoreView : UIView
+
+@end
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CoreController : UIViewController

@@ -1,10 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-22222/Pods-22222-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
-${PODS_ROOT}/AliPlayerSDK_iOS/AliyunPlayer.framework
-${PODS_ROOT}/AliPlayerSDK_iOS/alivcffmpeg.framework
-${PODS_ROOT}/AliPlayerSDK_iOS/AlivcConan.framework
-${PODS_ROOT}/AliPlayerSDK_iOS/AliyunMediaDownloader.framework
-${PODS_ROOT}/AliPlayerSDK_iOS/artpSource.framework
 ${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework
 ${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework
 ${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework

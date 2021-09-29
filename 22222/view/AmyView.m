@@ -17,6 +17,10 @@
     }
     return self;
 }
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    NSLog(@"AmyView  layoutSubviews");
+}
 - (void)dealloc {
     NSLog(@"AmyView已经销毁");
     [[NSNotificationCenter defaultCenter] postNotificationName:@"wodexiaobaobao" object:nil];

@@ -30,12 +30,45 @@ extern NSString *CTSettingCopyMyPhoneNumber(void);
 #import "InterViewController.h"
 #import "Person.h"
 #import "Person+cate.h"
+#import "AmyView.h"
 //FOUNDATION_EXPORT NSArray *getArr(NSString *str);
-
+#import <UIImage+Transform.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 NSArray *getArr(NSString *str) {
     return [str componentsSeparatedByString:@","];
 }
 
+
+
+
+
+
+//@interface UIImage(YYPClip)
+//
+//
+//- (UIImage *)drawCircleImage;
+//
+//@end
+//
+//@implementation UIImage(YYPClip)
+//
+//
+//- (UIImage *)drawCircleImage {
+//    CGFloat side = MIN(self.size.width, self.size.height);
+//    UIGraphicsBeginImageContextWithOptions(CGSizeMake(side, side), false, [UIScreen mainScreen].scale);
+//    CGContextAddPath(UIGraphicsGetCurrentContext(),
+//                    [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, side, side)].CGPath);
+//    CGContextClip(UIGraphicsGetCurrentContext());
+//    CGFloat marginX = -(self.size.width - side) / 2.f;
+//    CGFloat marginY = -(self.size.height - side) / 2.f;
+//    [self drawInRect:CGRectMake(marginX, marginY, self.size.width, self.size.height)];
+//    CGContextDrawPath(UIGraphicsGetCurrentContext(), kCGPathFillStroke);
+//    UIImage *output = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    return output;
+//}
+//
+//@end
 @interface YYPCellHeightModel : NSObject
 
 @property(nonatomic, assign) CGFloat cellHeight;
@@ -60,6 +93,9 @@ NSArray *getArr(NSString *str) {
 @property (nonatomic, strong) NSMutableArray <YYPCellHeightModel *>*dataModels;
 
 @property (nonatomic, strong) InterViewController *intVC;
+
+@property (nonatomic, strong) AmyView *myview;
+
 
 @end
 
@@ -95,7 +131,7 @@ NSArray *getArr(NSString *str) {
     NSLog(@"statusBarHeight = %f",[[UIApplication sharedApplication] statusBarFrame].size.height);
     NSLog(@"mainwidth %lf",mainWidth);
 //    NSLog(@"",self.navigationController);
-    _dataSource = @[@"YYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法Operationqueue",@"修饰词",@"关于block",@"面试题",@"masonry",@"invocationController",@"播放器",@"对折View",@"点亮View",@"searchViewController",@"AliVideoController",@"FMDBController"];
+    _dataSource = @[@"YYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollViewYYPScrollView",@"YYPBezierView",@"maskVC",@"变换字符串",@"healthKit计步",@"正常计步",@"讯飞听写",@"日历",@"tableViewRefresh",@"渐变圆圈",@"SiriKit",@"ARKit",@"gif加载",@"所有字体",@"lottie",@"只输入中文",@"链表",@"runtime",@"算法",@"按钮根据状态变底色",@"菊花",@"gcd高级用法Operationqueue",@"修饰词",@"关于block",@"面试题",@"masonry",@"invocationController",@"播放器",@"对折View",@"点亮View",@"searchViewController",@"FMDBController",@"动画CAAnimation",@"coreFoundation"];
     for (NSInteger i = 0; i < _dataSource.count; i ++) {
         [self.dataModels addObject:[[YYPCellHeightModel alloc] init]];
     }
@@ -103,14 +139,14 @@ NSArray *getArr(NSString *str) {
     Person *p = [[Person alloc] init];
     [[[Person alloc] init] sayhahahaToAmy];
     [[[Person alloc] init] sayIlikeYouAmy];
-
-//    [Person sayHelloToAmy];
-//    [Person ]
-//    [p setValue:@"1213" forKey:@"numuber"];
+  
     
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)view2Tap:(UITapGestureRecognizer *)tap {
+    tap.view.frame = CGRectMake(0, 0, 70, 70);
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.dataSource.count;
@@ -328,13 +364,18 @@ NSArray *getArr(NSString *str) {
          }
             break;
         case 31:
-            {//foldAnimationController
-                [self.navigationController pushViewController:[[NSClassFromString(@"AliVideoController") alloc] init] animated:YES];
+            {//
+                [self.navigationController pushViewController:[[NSClassFromString(@"FMDBController") alloc] init] animated:YES];
             }
                 break;
         case 32:
-            {//foldAnimationController
-                [self.navigationController pushViewController:[[NSClassFromString(@"FMDBController") alloc] init] animated:YES];
+            {//
+                [self.navigationController pushViewController:[[NSClassFromString(@"YYPAnimationController") alloc] init] animated:YES];
+            }
+                break;
+        case 33:
+            {//
+                [self.navigationController pushViewController:[[NSClassFromString(@"CoreController") alloc] init] animated:YES];
             }
                 break;
         default:

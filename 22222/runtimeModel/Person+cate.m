@@ -18,7 +18,7 @@
         Method originMethod = class_getClassMethod(class, @selector(sayHelloToAmy));
         Method newMethod = class_getClassMethod(class, @selector(sayILoveYouToAmy));
         BOOL success = class_addMethod(class, @selector(sayILoveYouToAmy), method_getImplementation(newMethod), method_getTypeEncoding(newMethod));
-        // 如果方法存在，也会添加失败
+        // 如果方法存在，也会添加失败,为了防止子类重写方法
         if (success) {
             //用刚add的新方法replace旧方法
             class_replaceMethod(class, @selector(sayILoveYouToAmy), method_getImplementation(originMethod), method_getTypeEncoding(originMethod));

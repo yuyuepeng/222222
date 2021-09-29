@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 NSArray *getArr(NSString *str);
+
 @interface ViewController : UIViewController
 + (BOOL)isNilOrEmpty:(id)string;
 
